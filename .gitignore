@@ -1,0 +1,11 @@
+.ipynb_checkpoints/ 
+.venv/ 
+.env/ 
+config/ 
+mlruns/ 
+output/ 
+logs/ 
+__pycache__/
+*.pkl 
+Thumbs.db 
+.DS_Store
