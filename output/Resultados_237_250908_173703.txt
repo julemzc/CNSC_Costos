@@ -1,0 +1,492 @@
+inscritos ~ smmlv + concurso_ascenso + reqs_estudio + reqs_estudio_DOCTORADO + reqs_estudio_ESPECIALIZACION_PROFESIONAL + reqs_estudio_ESPECIALIZACION_TECNICA_PROFESIONAL + reqs_estudio_ESPECIALIZACION_TECNOLOGICA + reqs_estudio_MAESTRIA + reqs_estudio_PROFESIONAL + reqs_estudio_TECNICO_PROFESIONAL + reqs_estudio_TECNOLOGICO + sin_experiencia + vacantes_opec
+
+SIMO ascenso-0
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.196
+Model:                            OLS   Adj. R-squared:                  0.195
+Method:                 Least Squares   F-statistic:                     1110.
+Date:                Mon, 08 Sep 2025   Prob (F-statistic):               0.00
+Time:                        17:37:10   Log-Likelihood:                -82681.
+No. Observations:               54793   AIC:                         1.654e+05
+Df Residuals:                   54780   BIC:                         1.655e+05
+Df Model:                          12                                         
+Covariance Type:            nonrobust                                         
+====================================================================================================================
+                                                       coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------
+Intercept                                            2.9808      0.058     51.482      0.000       2.867       3.094
+concurso_ascenso[T.True]                          3.918e-15   1.06e-15      3.709      0.000    1.85e-15    5.99e-15
+sin_experiencia[T.True]                              0.5319      0.019     28.287      0.000       0.495       0.569
+smmlv                                                0.2046      0.003     71.659      0.000       0.199       0.210
+reqs_estudio                                        -0.6881      0.057    -11.992      0.000      -0.801      -0.576
+reqs_estudio_DOCTORADO                               1.0445      0.667      1.565      0.118      -0.264       2.353
+reqs_estudio_ESPECIALIZACION_PROFESIONAL            -0.6677      0.028    -23.483      0.000      -0.723      -0.612
+reqs_estudio_ESPECIALIZACION_TECNICA_PROFESIONAL    -0.3272      0.274     -1.194      0.233      -0.865       0.210
+reqs_estudio_ESPECIALIZACION_TECNOLOGICA             1.1100      0.288      3.857      0.000       0.546       1.674
+reqs_estudio_MAESTRIA                               -0.6206      0.215     -2.884      0.004      -1.042      -0.199
+reqs_estudio_PROFESIONAL                             0.2315      0.057      4.095      0.000       0.121       0.342
+reqs_estudio_TECNICO_PROFESIONAL                     0.2737      0.055      4.985      0.000       0.166       0.381
+reqs_estudio_TECNOLOGICO                             0.3238      0.049      6.610      0.000       0.228       0.420
+vacantes_opec                                        0.0169      0.000     53.291      0.000       0.016       0.018
+==============================================================================
+Omnibus:                     8431.547   Durbin-Watson:                   1.122
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           151554.646
+Skew:                          -0.024   Prob(JB):                         0.00
+Kurtosis:                      11.147   Cond. No.                     1.14e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 9.4e-26. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ smmlv + concurso_ascenso + reqs_estudio + reqs_estudio_DOCTORADO + reqs_estudio_ESPECIALIZACION_PROFESIONAL + reqs_estudio_ESPECIALIZACION_TECNICA_PROFESIONAL + reqs_estudio_ESPECIALIZACION_TECNOLOGICA + reqs_estudio_MAESTRIA + reqs_estudio_PROFESIONAL + reqs_estudio_TECNICO_PROFESIONAL + reqs_estudio_TECNOLOGICO + sin_experiencia + vacantes_opec
+
+SIMO ascenso-1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.158
+Model:                            OLS   Adj. R-squared:                  0.157
+Method:                 Least Squares   F-statistic:                     91.43
+Date:                Mon, 08 Sep 2025   Prob (F-statistic):          9.04e-208
+Time:                        17:37:10   Log-Likelihood:                -7612.8
+No. Observations:                5843   AIC:                         1.525e+04
+Df Residuals:                    5830   BIC:                         1.534e+04
+Df Model:                          12                                         
+Covariance Type:            nonrobust                                         
+====================================================================================================================
+                                                       coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------
+Intercept                                            0.5468      0.037     14.756      0.000       0.474       0.619
+concurso_ascenso[T.True]                             0.5468      0.037     14.756      0.000       0.474       0.619
+sin_experiencia[T.True]                              1.0050      0.103      9.783      0.000       0.804       1.206
+smmlv                                                0.0160      0.007      2.234      0.025       0.002       0.030
+reqs_estudio                                         0.3503      0.072      4.861      0.000       0.209       0.492
+reqs_estudio_DOCTORADO                               2.2533      0.266      8.474      0.000       1.732       2.775
+reqs_estudio_ESPECIALIZACION_PROFESIONAL            -0.0296      0.034     -0.884      0.377      -0.095       0.036
+reqs_estudio_ESPECIALIZACION_TECNICA_PROFESIONAL    -0.0154      0.232     -0.067      0.947      -0.469       0.439
+reqs_estudio_ESPECIALIZACION_TECNOLOGICA             0.6574      0.227      2.897      0.004       0.213       1.102
+reqs_estudio_MAESTRIA                               -0.2945      0.224     -1.313      0.189      -0.734       0.145
+reqs_estudio_PROFESIONAL                             0.1499      0.068      2.198      0.028       0.016       0.284
+reqs_estudio_TECNICO_PROFESIONAL                     0.0375      0.064      0.583      0.560      -0.089       0.164
+reqs_estudio_TECNOLOGICO                            -0.0226      0.056     -0.402      0.688      -0.133       0.088
+vacantes_opec                                        0.0576      0.002     26.055      0.000       0.053       0.062
+==============================================================================
+Omnibus:                     1595.410   Durbin-Watson:                   1.001
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            17448.680
+Skew:                           0.988   Prob(JB):                         0.00
+Kurtosis:                      11.232   Cond. No.                     1.85e+15
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 6.72e-26. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ smmlv + concurso_ascenso + reqs_estudio + sin_experiencia + vacantes_opec
+
+SENA
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.218
+Model:                            OLS   Adj. R-squared:                  0.218
+Method:                 Least Squares   F-statistic:                     259.8
+Date:                Mon, 08 Sep 2025   Prob (F-statistic):          4.19e-197
+Time:                        17:37:10   Log-Likelihood:                -4764.1
+No. Observations:                3724   AIC:                             9538.
+Df Residuals:                    3719   BIC:                             9569.
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                    0.7056      0.032     22.315      0.000       0.644       0.768
+concurso_ascenso[T.True]    -0.5420      0.178     -3.039      0.002      -0.892      -0.192
+sin_experiencia[T.True]      1.5131      0.080     18.991      0.000       1.357       1.669
+smmlv                        0.3117      0.014     21.659      0.000       0.284       0.340
+reqs_estudio                 0.7056      0.032     22.315      0.000       0.644       0.768
+vacantes_opec                0.1710      0.010     16.317      0.000       0.150       0.191
+==============================================================================
+Omnibus:                       86.786   Durbin-Watson:                   1.460
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               92.758
+Skew:                           0.371   Prob(JB):                     7.21e-21
+Kurtosis:                       3.218   Cond. No.                     2.42e+15
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 1.33e-26. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ smmlv + concurso_ascenso + reqs_estudio + reqs_estudio_ESPECIALIZACION_PROFESIONAL + reqs_estudio_ESPECIALIZACION_TECNICA_PROFESIONAL + reqs_estudio_MAESTRIA + reqs_estudio_PROFESIONAL + reqs_estudio_TECNICO_PROFESIONAL + reqs_estudio_TECNOLOGICO + sin_experiencia + vacantes_opec
+
+Esc1 Sena436 / Contralorias Terr
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.381
+Model:                            OLS   Adj. R-squared:                  0.379
+Method:                 Least Squares   F-statistic:                     233.8
+Date:                Mon, 08 Sep 2025   Prob (F-statistic):               0.00
+Time:                        17:37:10   Log-Likelihood:                -5588.7
+No. Observations:                4195   AIC:                         1.120e+04
+Df Residuals:                    4183   BIC:                         1.128e+04
+Df Model:                          11                                         
+Covariance Type:            nonrobust                                         
+====================================================================================================================
+                                                       coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------
+Intercept                                            3.4262      0.224     15.326      0.000       2.988       3.864
+concurso_ascenso[T.True]                            -3.4170      0.096    -35.692      0.000      -3.605      -3.229
+sin_experiencia[T.True]                              1.4899      0.084     17.653      0.000       1.324       1.655
+smmlv                                                0.2220      0.014     15.886      0.000       0.195       0.249
+reqs_estudio                                        -1.6278      0.217     -7.504      0.000      -2.053      -1.202
+reqs_estudio_ESPECIALIZACION_PROFESIONAL            -0.4226      0.181     -2.329      0.020      -0.778      -0.067
+reqs_estudio_ESPECIALIZACION_TECNICA_PROFESIONAL    -0.8552      0.379     -2.258      0.024      -1.598      -0.113
+reqs_estudio_MAESTRIA                               -0.6004      0.672     -0.893      0.372      -1.919       0.718
+reqs_estudio_PROFESIONAL                             0.3212      0.210      1.532      0.126      -0.090       0.732
+reqs_estudio_TECNICO_PROFESIONAL                     0.1028      0.205      0.500      0.617      -0.300       0.505
+reqs_estudio_TECNOLOGICO                             0.1004      0.178      0.562      0.574      -0.250       0.450
+vacantes_opec                                        0.1862      0.010     18.099      0.000       0.166       0.206
+==============================================================================
+Omnibus:                      213.177   Durbin-Watson:                   1.389
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              268.493
+Skew:                           0.512   Prob(JB):                     4.98e-59
+Kurtosis:                       3.697   Cond. No.                         216.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+inscritos ~ smmlv + concurso_ascenso + reqs_estudio + reqs_estudio_ESPECIALIZACION_PROFESIONAL + reqs_estudio_ESPECIALIZACION_TECNICA_PROFESIONAL + reqs_estudio_MAESTRIA + reqs_estudio_PROFESIONAL + reqs_estudio_TECNICO_PROFESIONAL + reqs_estudio_TECNOLOGICO + sin_experiencia + vacantes_opec
+
+Esc2 Sena436 / Contralorias Terr / EON2020-2
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.332
+Model:                            OLS   Adj. R-squared:                  0.331
+Method:                 Least Squares   F-statistic:                     217.8
+Date:                Mon, 08 Sep 2025   Prob (F-statistic):               0.00
+Time:                        17:37:10   Log-Likelihood:                -6753.7
+No. Observations:                4825   AIC:                         1.353e+04
+Df Residuals:                    4813   BIC:                         1.361e+04
+Df Model:                          11                                         
+Covariance Type:            nonrobust                                         
+====================================================================================================================
+                                                       coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------
+Intercept                                            3.2026      0.235     13.608      0.000       2.741       3.664
+concurso_ascenso[T.True]                            -2.1107      0.060    -35.382      0.000      -2.228      -1.994
+sin_experiencia[T.True]                              1.4564      0.081     17.954      0.000       1.297       1.615
+smmlv                                                0.1940      0.013     15.194      0.000       0.169       0.219
+reqs_estudio                                        -1.0812      0.230     -4.692      0.000      -1.533      -0.629
+reqs_estudio_ESPECIALIZACION_PROFESIONAL            -0.4693      0.194     -2.419      0.016      -0.850      -0.089
+reqs_estudio_ESPECIALIZACION_TECNICA_PROFESIONAL    -0.7356      0.405     -1.816      0.069      -1.530       0.058
+reqs_estudio_MAESTRIA                               -0.8605      0.719     -1.197      0.231      -2.270       0.549
+reqs_estudio_PROFESIONAL                             0.3928      0.224      1.753      0.080      -0.047       0.832
+reqs_estudio_TECNICO_PROFESIONAL                     0.1503      0.220      0.685      0.494      -0.280       0.581
+reqs_estudio_TECNOLOGICO                             0.2050      0.191      1.075      0.282      -0.169       0.579
+vacantes_opec                                        0.1196      0.006     18.719      0.000       0.107       0.132
+==============================================================================
+Omnibus:                      168.609   Durbin-Watson:                   1.235
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              207.678
+Skew:                           0.403   Prob(JB):                     8.00e-46
+Kurtosis:                       3.618   Cond. No.                         236.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+inscritos ~ smmlv + concurso_ascenso + reqs_estudio + sin_experiencia + vacantes_opec
+
+Esc3 Sena436 / EON2020-2
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.237
+Model:                            OLS   Adj. R-squared:                  0.236
+Method:                 Least Squares   F-statistic:                     333.3
+Date:                Mon, 08 Sep 2025   Prob (F-statistic):          3.56e-250
+Time:                        17:37:10   Log-Likelihood:                -5724.4
+No. Observations:                4302   AIC:                         1.146e+04
+Df Residuals:                    4297   BIC:                         1.149e+04
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                    0.9451      0.027     34.490      0.000       0.891       0.999
+concurso_ascenso[T.True]    -1.4333      0.068    -21.016      0.000      -1.567      -1.300
+sin_experiencia[T.True]      1.5147      0.076     19.884      0.000       1.365       1.664
+smmlv                        0.2355      0.013     18.450      0.000       0.211       0.261
+reqs_estudio                 0.9451      0.027     34.490      0.000       0.891       0.999
+vacantes_opec                0.1093      0.006     17.801      0.000       0.097       0.121
+==============================================================================
+Omnibus:                       73.090   Durbin-Watson:                   1.386
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               77.624
+Skew:                           0.305   Prob(JB):                     1.39e-17
+Kurtosis:                       3.249   Cond. No.                     1.29e+15
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 5.68e-26. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+SIMO ascenso-0
+
+              smmlv  vacantes_opec  mun_inscritos
+count  54793.000000   54793.000000   54793.000000
+mean       3.544936       2.337598      66.621083
+std        1.716778      14.734795     380.839892
+min        1.000000       1.000000       1.000000
+25%        2.200000       1.000000       9.000000
+50%        3.360000       1.000000      22.000000
+75%        4.580000       1.000000      52.000000
+max       43.000000    1948.000000   31088.000000
+
+count    54793.000000
+mean        66.621083
+std        380.839892
+min          1.000000
+25%          9.000000
+50%         22.000000
+75%         52.000000
+max      31088.000000
+Name: mun_inscritos, dtype: float64
+
+SIMO ascenso-1
+
+             smmlv  vacantes_opec  mun_inscritos
+count  5843.000000    5843.000000    5843.000000
+mean      4.819959       1.873353       9.380113
+std       1.915905       5.287624      32.812010
+min       1.000000       1.000000       1.000000
+25%       3.250000       1.000000       1.000000
+50%       4.700000       1.000000       2.000000
+75%       5.940000       1.000000       6.000000
+max      13.280000     242.000000     788.000000
+
+count    5843.000000
+mean        9.380113
+std        32.812010
+min         1.000000
+25%         1.000000
+50%         2.000000
+75%         6.000000
+max       788.000000
+Name: mun_inscritos, dtype: float64
+
+SENA
+
+             smmlv  vacantes_opec  mun_inscritos
+count  3724.000000    3724.000000     3724.00000
+mean      4.003421       1.423201       30.77014
+std       1.005288       1.378925       48.54676
+min       2.270000       1.000000        1.00000
+25%       3.410000       1.000000        8.00000
+50%       3.410000       1.000000       17.00000
+75%       4.910000       1.000000       37.00000
+max       8.290000      29.000000     1330.00000
+
+count    3724.00000
+mean       30.77014
+std        48.54676
+min         1.00000
+25%         8.00000
+50%        17.00000
+75%        37.00000
+max      1330.00000
+Name: mun_inscritos, dtype: float64
+
+Esc1 Sena436 / Contralorias Terr
+
+             smmlv  vacantes_opec  mun_inscritos
+count  4195.000000    4195.000000    4195.000000
+mean      3.970505       1.439333      48.350656
+std       1.045727       1.394289     147.003832
+min       1.000000       1.000000       1.000000
+25%       3.410000       1.000000       9.000000
+50%       3.410000       1.000000      19.000000
+75%       4.910000       1.000000      44.000000
+max       8.770000      29.000000    5968.000000
+
+count    4195.000000
+mean       48.350656
+std       147.003832
+min         1.000000
+25%         9.000000
+50%        19.000000
+75%        44.000000
+max      5968.000000
+Name: mun_inscritos, dtype: float64
+
+Esc2 Sena436 / Contralorias Terr / EON2020-2
+
+             smmlv  vacantes_opec  mun_inscritos
+count  4825.000000    4825.000000    4825.000000
+mean      3.994808       1.484974      50.631710
+std       1.139015       2.228972     146.312124
+min       1.000000       1.000000       1.000000
+25%       3.410000       1.000000       9.000000
+50%       3.410000       1.000000      20.000000
+75%       4.910000       1.000000      47.000000
+max       9.110000      78.000000    5968.000000
+
+count    4825.000000
+mean       50.631710
+std       146.312124
+min         1.000000
+25%         9.000000
+50%        20.000000
+75%        47.000000
+max      5968.000000
+Name: mun_inscritos, dtype: float64
+
+Esc3 Sena436 / EON2020-2
+
+             smmlv  vacantes_opec  mun_inscritos
+count  4302.000000    4302.000000    4302.000000
+mean      4.024737       1.472571      34.530451
+std       1.113776       2.292607      63.760019
+min       1.000000       1.000000       1.000000
+25%       3.410000       1.000000       8.000000
+50%       3.410000       1.000000      18.000000
+75%       4.910000       1.000000      39.000000
+max       9.110000      78.000000    1465.000000
+
+count    4302.000000
+mean       34.530451
+std        63.760019
+min         1.000000
+25%         8.000000
+50%        18.000000
+75%        39.000000
+max      1465.000000
+Name: mun_inscritos, dtype: float64
+
+SIMO ascenso-0
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 37.764%
+
+Test Mean Squared Error (MSE): 0.926
+
+Test Mean Absolute Error (MAE): 0.760
+
+SIMO ascenso-0
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 38.237%
+
+Test Mean Squared Error (MSE): 0.919
+
+Test Mean Absolute Error (MAE): 0.755
+
+SIMO ascenso-1
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 26.185%
+
+Test Mean Squared Error (MSE): 0.695
+
+Test Mean Absolute Error (MAE): 0.601
+
+SIMO ascenso-1
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 27.061%
+
+Test Mean Squared Error (MSE): 0.687
+
+Test Mean Absolute Error (MAE): 0.612
+
+SENA
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 47.718%
+
+Test Mean Squared Error (MSE): 0.506
+
+Test Mean Absolute Error (MAE): 0.558
+
+SENA
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 48.422%
+
+Test Mean Squared Error (MSE): 0.499
+
+Test Mean Absolute Error (MAE): 0.555
+
+Esc1 Sena436 / Contralorias Terr
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 63.165%
+
+Test Mean Squared Error (MSE): 0.500
+
+Test Mean Absolute Error (MAE): 0.558
+
+Esc1 Sena436 / Contralorias Terr
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 65.879%
+
+Test Mean Squared Error (MSE): 0.463
+
+Test Mean Absolute Error (MAE): 0.537
+
+Esc2 Sena436 / Contralorias Terr / EON2020-2
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 50.366%
+
+Test Mean Squared Error (MSE): 0.715
+
+Test Mean Absolute Error (MAE): 0.649
+
+Esc2 Sena436 / Contralorias Terr / EON2020-2
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 58.218%
+
+Test Mean Squared Error (MSE): 0.602
+
+Test Mean Absolute Error (MAE): 0.598
+
+Esc3 Sena436 / EON2020-2
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 29.087%
+
+Test Mean Squared Error (MSE): 0.779
+
+Test Mean Absolute Error (MAE): 0.659
+
+Esc3 Sena436 / EON2020-2
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 49.155%
+
+Test Mean Squared Error (MSE): 0.558
+
+Test Mean Absolute Error (MAE): 0.578
+

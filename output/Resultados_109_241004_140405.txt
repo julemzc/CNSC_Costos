@@ -1,0 +1,197 @@
+mun_inscritos~denominacion+concurso_ascenso+vacantes_opec+vacantes_municipios+smmlv
+
+Esc1-DIAN 2023-0
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.179
+Model:                            OLS   Adj. R-squared:                  0.155
+Method:                 Least Squares   F-statistic:                     7.490
+Date:                Fri, 04 Oct 2024   Prob (F-statistic):           6.70e-17
+Time:                        14:04:08   Log-Likelihood:                -3956.0
+No. Observations:                 602   AIC:                             7948.
+Df Residuals:                     584   BIC:                             8027.
+Df Model:                          17                                         
+Covariance Type:            nonrobust                                         
+===================================================================================================
+                                      coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+Intercept                          38.0901    254.512      0.150      0.881    -461.780     537.961
+denominacion[T.ANALISTA II]        39.6397    165.882      0.239      0.811    -286.159     365.438
+denominacion[T.ANALISTA III]       38.5935    151.522      0.255      0.799    -259.002     336.189
+denominacion[T.ANALISTA IV]         2.4029    132.800      0.018      0.986    -258.421     263.227
+denominacion[T.ANALISTA V]        -38.5209    118.798     -0.324      0.746    -271.845     194.803
+denominacion[T.FACILITADOR II]    129.0896    189.468      0.681      0.496    -243.031     501.210
+denominacion[T.FACILITADOR III]    67.6752    183.554      0.369      0.712    -292.831     428.181
+denominacion[T.FACILITADOR IV]     81.5278    177.166      0.460      0.646    -266.433     429.488
+denominacion[T.GESTOR I]          -13.6217    212.455     -0.064      0.949    -430.890     403.647
+denominacion[T.GESTOR II]          49.1270    102.889      0.477      0.633    -152.951     251.205
+denominacion[T.GESTOR III]         46.3817     94.092      0.493      0.622    -138.417     231.181
+denominacion[T.GESTOR IV]          36.6793     79.130      0.464      0.643    -118.734     192.093
+denominacion[T.INSPECTOR I]      -101.5118     81.005     -1.253      0.211    -260.608      57.584
+denominacion[T.INSPECTOR II]      -55.6462     64.154     -0.867      0.386    -181.647      70.355
+denominacion[T.INSPECTOR III]     -48.3216     81.096     -0.596      0.552    -207.597     110.954
+denominacion[T.INSPECTOR IV]       81.2088    108.445      0.749      0.454    -131.781     294.199
+concurso_ascenso[T.True]        -1.993e-15    1.7e-14     -0.117      0.907   -3.54e-14    3.14e-14
+vacantes_opec                       1.3372      0.241      5.550      0.000       0.864       1.810
+vacantes_municipios                -6.5344      1.126     -5.804      0.000      -8.745      -4.323
+smmlv                              21.7023     26.584      0.816      0.415     -30.510      73.915
+==============================================================================
+Omnibus:                      419.782   Durbin-Watson:                   1.864
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             5299.214
+Skew:                           3.009   Prob(JB):                         0.00
+Kurtosis:                      16.231   Cond. No.                     1.58e+20
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 1.87e-34. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+Esc1-DIAN 2023-1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.500
+Model:                            OLS   Adj. R-squared:                  0.474
+Method:                 Least Squares   F-statistic:                     18.76
+Date:                Fri, 04 Oct 2024   Prob (F-statistic):           7.34e-28
+Time:                        14:04:08   Log-Likelihood:                -971.14
+No. Observations:                 238   AIC:                             1968.
+Df Residuals:                     225   BIC:                             2013.
+Df Model:                          12                                         
+Covariance Type:            nonrobust                                         
+=================================================================================================
+                                    coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------
+Intercept                        -8.4532     11.308     -0.748      0.456     -30.737      13.831
+denominacion[T.ANALISTA III]     -0.7964     14.529     -0.055      0.956     -29.426      27.833
+denominacion[T.ANALISTA IV]      -5.7334     12.129     -0.473      0.637     -29.635      18.168
+denominacion[T.ANALISTA V]       -7.8497     10.928     -0.718      0.473     -29.385      13.685
+denominacion[T.GESTOR II]       -13.1623      9.626     -1.367      0.173     -32.130       5.806
+denominacion[T.GESTOR III]      -14.7911      7.266     -2.036      0.043     -29.108      -0.474
+denominacion[T.GESTOR IV]       -10.5370      6.836     -1.541      0.125     -24.007       2.933
+denominacion[T.INSPECTOR I]      19.3343      7.070      2.735      0.007       5.403      33.265
+denominacion[T.INSPECTOR II]     35.9943      5.204      6.917      0.000      25.740      46.249
+denominacion[T.INSPECTOR III]     0.0999      7.115      0.014      0.989     -13.921      14.121
+denominacion[T.INSPECTOR IV]    -12.8055      9.006     -1.422      0.156     -30.553       4.942
+concurso_ascenso[T.True]         -8.4532     11.308     -0.748      0.456     -30.737      13.831
+vacantes_opec                     0.1449      0.062      2.320      0.021       0.022       0.268
+vacantes_municipios              -0.0927      0.232     -0.399      0.690      -0.550       0.365
+smmlv                             5.2205      2.331      2.239      0.026       0.627       9.814
+==============================================================================
+Omnibus:                      104.638   Durbin-Watson:                   1.902
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1410.851
+Skew:                           1.326   Prob(JB):                    4.34e-307
+Kurtosis:                      14.629   Cond. No.                     1.16e+18
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 2.79e-31. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+Esc1-DIAN 2023-0
+
+            smmlv  vacantes_municipios  vacantes_opec  mun_inscritos
+count  602.000000           602.000000     602.000000     602.000000
+mean     4.704535            14.490033      56.360465     154.785714
+std      1.620314            10.734618      66.028416     190.951228
+min      2.600000             1.000000       1.000000      30.000000
+25%      3.420000             5.000000      12.000000      52.000000
+50%      4.700000            13.000000      42.000000      85.000000
+75%      5.870000            22.000000      63.500000     157.000000
+max     12.940000            37.000000     284.000000    1370.000000
+
+count     602.000000
+mean      154.785714
+std       190.951228
+min        30.000000
+25%        52.000000
+50%        85.000000
+75%       157.000000
+max      1370.000000
+Name: mun_inscritos, dtype: float64
+
+Esc1-DIAN 2023-1
+
+            smmlv  vacantes_municipios  vacantes_opec  mun_inscritos
+count  238.000000           238.000000     238.000000     238.000000
+mean     6.487311             9.117647      25.718487      10.848739
+std      1.541781             7.923875      27.966687      20.294099
+min      3.420000             1.000000       1.000000       1.000000
+25%      5.270000             2.000000       4.000000       2.000000
+50%      6.870000             6.000000      13.000000       4.000000
+75%      6.870000            17.000000      46.000000       9.000000
+max     12.940000            24.000000      97.000000     126.000000
+
+count    238.000000
+mean      10.848739
+std       20.294099
+min        1.000000
+25%        2.000000
+50%        4.000000
+75%        9.000000
+max      126.000000
+Name: mun_inscritos, dtype: float64
+
+Esc1-DIAN 2023-0
+
+Red Neuronal lr001_01
+
+Coeficiente de Determinación por r2_score: 19.063%
+
+Test Mean Squared Error (MSE): 29462.409
+
+Test Mean Absolute Error (MAE): 95.342
+
+Esc1-DIAN 2023-0
+
+Red Neuronal lr001_015
+
+Coeficiente de Determinación por r2_score: -136.228%
+
+Test Mean Squared Error (MSE): 85991.165
+
+Test Mean Absolute Error (MAE): 106.071
+
+Esc1-DIAN 2023-0
+
+Red Neuronal lr01_01
+
+Coeficiente de Determinación por r2_score: -654.929%
+
+Test Mean Squared Error (MSE): 274807.830
+
+Test Mean Absolute Error (MAE): 113.942
+
+Esc1-DIAN 2023-1
+
+Red Neuronal lr001_01
+
+Coeficiente de Determinación por r2_score: 36.175%
+
+Test Mean Squared Error (MSE): 261.760
+
+Test Mean Absolute Error (MAE): 7.096
+
+Esc1-DIAN 2023-1
+
+Red Neuronal lr001_015
+
+Coeficiente de Determinación por r2_score: 26.768%
+
+Test Mean Squared Error (MSE): 300.339
+
+Test Mean Absolute Error (MAE): 7.340
+
+Esc1-DIAN 2023-1
+
+Red Neuronal lr01_01
+
+Coeficiente de Determinación por r2_score: 42.963%
+
+Test Mean Squared Error (MSE): 233.922
+
+Test Mean Absolute Error (MAE): 7.221
+

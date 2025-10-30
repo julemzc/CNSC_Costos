@@ -1,0 +1,120 @@
+va_inscritos~deno_nombre+vacantes+exp_relacionada+exp_laboral+exp_prof_relacionada+mun_categoria+smmlv
+
+Convocatorias EON Ministerios
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           va_inscritos   R-squared:                       0.329
+Model:                            OLS   Adj. R-squared:                  0.317
+Method:                 Least Squares   F-statistic:                     28.85
+Date:                Thu, 22 Aug 2024   Prob (F-statistic):           2.18e-83
+Time:                        19:37:59   Log-Likelihood:                -5663.7
+No. Observations:                1139   AIC:                         1.137e+04
+Df Residuals:                    1119   BIC:                         1.147e+04
+Df Model:                          19                                         
+Covariance Type:            nonrobust                                         
+====================================================================================================================
+                                                       coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------
+Intercept                                          -31.5521      8.391     -3.760      0.000     -48.015     -15.089
+deno_nombre[T.AUXILIAR ADMINISTRATIVO]              42.3004      8.228      5.141      0.000      26.157      58.444
+deno_nombre[T.AUXILIAR DE ESCENA]                   76.5100     41.294      1.853      0.064      -4.513     157.533
+deno_nombre[T.AUXILIAR DE SERVICIOS GENERALES]      37.1695     17.216      2.159      0.031       3.390      70.949
+deno_nombre[T.CONDUCTOR MECANICO]                    4.8347     10.402      0.465      0.642     -15.576      25.245
+deno_nombre[T.OPERARIO CALIFICADO]                 -11.3160     21.632     -0.523      0.601     -53.759      31.127
+deno_nombre[T.PROFESIONAL ESPECIALIZADO]           -10.7785      5.599     -1.925      0.054     -21.764       0.207
+deno_nombre[T.PROFESIONAL UNIVERSITARIO]            33.5060      6.786      4.938      0.000      20.192      46.820
+deno_nombre[T.RESTAURADOR O MUSEOLOGO O CURADOR]     2.4447     21.211      0.115      0.908     -39.174      44.063
+deno_nombre[T.SECRETARIO]                           53.8329     12.360      4.355      0.000      29.581      78.085
+deno_nombre[T.SECRETARIO EJECUTIVO]                 27.8042      8.431      3.298      0.001      11.261      44.347
+deno_nombre[T.TECNICO]                              13.2517     25.782      0.514      0.607     -37.335      63.839
+deno_nombre[T.TECNICO ADMINISTRATIVO]               44.2082      7.995      5.529      0.000      28.520      59.896
+deno_nombre[T.TECNICO OPERATIVO]                    11.9743     12.200      0.982      0.327     -11.962      35.911
+vacantes                                            16.9643      0.962     17.643      0.000      15.078      18.851
+exp_relacionada                                    -26.8742      6.804     -3.950      0.000     -40.225     -13.523
+exp_laboral                                         -6.0385      2.508     -2.408      0.016     -10.960      -1.117
+exp_prof_relacionada                               -18.4723      2.282     -8.094      0.000     -22.951     -13.994
+mun_categoria                                       -2.5808      1.707     -1.512      0.131      -5.931       0.769
+smmlv                                               16.3300      1.692      9.649      0.000      13.009      19.651
+==============================================================================
+Omnibus:                     1070.426   Durbin-Watson:                   1.624
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            74535.591
+Skew:                           4.111   Prob(JB):                         0.00
+Kurtosis:                      41.768   Cond. No.                         213.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Convocatorias EON Ministerios
+
+             smmlv  mun_categoria  exp_prof_relacionada  exp_laboral  \
+count  1139.000000    1139.000000           1139.000000  1139.000000   
+mean      4.231106       0.104478              1.672520     0.178227   
+std       2.014590       0.636173              1.299199     0.590508   
+min       1.300000       0.000000              0.000000     0.000000   
+25%       2.440000       0.000000              0.000000     0.000000   
+50%       3.630000       0.000000              2.000000     0.000000   
+75%       5.610000       0.000000              3.000000     0.000000   
+max       9.920000       6.000000              5.000000     3.000000   
+
+       exp_relacionada     vacantes  va_inscritos  
+count      1139.000000  1139.000000   1139.000000  
+mean          0.033363     1.211589     37.448639  
+std           0.198262     1.113114     42.664792  
+min           0.000000     1.000000      1.000000  
+25%           0.000000     1.000000     14.500000  
+50%           0.000000     1.000000     25.000000  
+75%           0.000000     1.000000     45.000000  
+max           3.000000    24.000000    578.000000  
+
+count    1139.000000
+mean       37.448639
+std        42.664792
+min         1.000000
+25%        14.500000
+50%        25.000000
+75%        45.000000
+max       578.000000
+Name: va_inscritos, dtype: float64
+
+Convocatorias EON Ministerios
+
+Red Neuronal lr001_01
+
+Coeficiente de Determinación por r2_score: 49.919%
+
+Test Mean Squared Error (MSE): 910.810
+
+Test Mean Absolute Error (MAE): 17.941
+
+Convocatorias EON Ministerios
+
+Red Neuronal lr001_015
+
+Coeficiente de Determinación por r2_score: 47.700%
+
+Test Mean Squared Error (MSE): 951.170
+
+Test Mean Absolute Error (MAE): 18.446
+
+Convocatorias EON Ministerios
+
+Red Neuronal lr01_01
+
+Coeficiente de Determinación por r2_score: 43.413%
+
+Test Mean Squared Error (MSE): 1029.148
+
+Test Mean Absolute Error (MAE): 18.070
+
+Convocatorias EON Ministerios
+
+Red Neuronal lr01_015
+
+Coeficiente de Determinación por r2_score: 47.335%
+
+Test Mean Squared Error (MSE): 957.819
+
+Test Mean Absolute Error (MAE): 17.981
+

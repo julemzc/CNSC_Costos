@@ -1,0 +1,320 @@
+mun_inscritos~exp_relacionada+exp_laboral+exp_prof_relacionada+exp_profesional+concurso_ascenso+vacantes+smmlv
+
+Esc1_Territorial2019_y_centrooriente
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.377
+Model:                            OLS   Adj. R-squared:                  0.377
+Method:                 Least Squares   F-statistic:                     949.4
+Date:                Wed, 05 Mar 2025   Prob (F-statistic):               0.00
+Time:                        18:35:37   Log-Likelihood:                -11424.
+No. Observations:               10988   AIC:                         2.286e+04
+Df Residuals:                   10980   BIC:                         2.292e+04
+Df Model:                           7                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                    1.5523      0.021     73.218      0.000       1.511       1.594
+concurso_ascenso[T.True]    -0.1738      0.153     -1.134      0.257      -0.474       0.127
+exp_relacionada             -0.0345      0.005     -6.563      0.000      -0.045      -0.024
+exp_laboral                  0.1162      0.011     10.285      0.000       0.094       0.138
+exp_prof_relacionada        -0.2352      0.011    -22.376      0.000      -0.256      -0.215
+exp_profesional             -0.1256      0.011    -11.587      0.000      -0.147      -0.104
+vacantes                     0.1387      0.004     36.383      0.000       0.131       0.146
+smmlv                        0.4411      0.007     64.934      0.000       0.428       0.454
+==============================================================================
+Omnibus:                        3.044   Durbin-Watson:                   1.246
+Prob(Omnibus):                  0.218   Jarque-Bera (JB):                2.959
+Skew:                          -0.016   Prob(JB):                        0.228
+Kurtosis:                       2.927   Cond. No.                         95.1
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Esc2_Territorial2022_y_9
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.718
+Model:                            OLS   Adj. R-squared:                  0.717
+Method:                 Least Squares   F-statistic:                     628.1
+Date:                Wed, 05 Mar 2025   Prob (F-statistic):               0.00
+Time:                        18:35:37   Log-Likelihood:                -1965.1
+No. Observations:                1731   AIC:                             3946.
+Df Residuals:                    1723   BIC:                             3990.
+Df Model:                           7                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                    3.0686      0.074     41.261      0.000       2.923       3.214
+concurso_ascenso[T.True]    -2.6141      0.041    -63.859      0.000      -2.694      -2.534
+exp_relacionada             -0.1246      0.024     -5.302      0.000      -0.171      -0.079
+exp_laboral                  0.0927      0.031      2.981      0.003       0.032       0.154
+exp_prof_relacionada        -0.3916      0.025    -15.930      0.000      -0.440      -0.343
+exp_profesional             -0.2006      0.031     -6.531      0.000      -0.261      -0.140
+vacantes                     0.0933      0.008     11.019      0.000       0.077       0.110
+smmlv                        0.3006      0.019     15.810      0.000       0.263       0.338
+==============================================================================
+Omnibus:                       33.813   Durbin-Watson:                   1.268
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               63.936
+Skew:                          -0.089   Prob(JB):                     1.31e-14
+Kurtosis:                       3.924   Cond. No.                         20.4
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Esc3_Territorial9
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.786
+Model:                            OLS   Adj. R-squared:                  0.784
+Method:                 Least Squares   F-statistic:                     348.8
+Date:                Wed, 05 Mar 2025   Prob (F-statistic):          1.24e-217
+Time:                        18:35:38   Log-Likelihood:                -693.53
+No. Observations:                 672   AIC:                             1403.
+Df Residuals:                     664   BIC:                             1439.
+Df Model:                           7                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                    3.0599      0.111     27.539      0.000       2.842       3.278
+concurso_ascenso[T.True]    -2.6799      0.057    -46.940      0.000      -2.792      -2.568
+exp_relacionada             -0.1125      0.034     -3.316      0.001      -0.179      -0.046
+exp_laboral                  0.2872      0.063      4.574      0.000       0.164       0.411
+exp_prof_relacionada        -0.3329      0.040     -8.238      0.000      -0.412      -0.254
+exp_profesional              0.0199      0.061      0.328      0.743      -0.099       0.139
+vacantes                     0.1102      0.012      9.008      0.000       0.086       0.134
+smmlv                        0.2859      0.028     10.324      0.000       0.232       0.340
+==============================================================================
+Omnibus:                       10.877   Durbin-Watson:                   1.477
+Prob(Omnibus):                  0.004   Jarque-Bera (JB):               12.429
+Skew:                          -0.225   Prob(JB):                      0.00200
+Kurtosis:                       3.491   Cond. No.                         21.1
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Esc1_Territorial2019_y_centrooriente
+
+              smmlv      vacantes  exp_profesional  exp_prof_relacionada  \
+count  10988.000000  10988.000000     10988.000000          10988.000000   
+mean       3.252185      1.492446         0.274481              0.468420   
+std        1.459285      1.736705         0.742069              0.943186   
+min        1.000000      1.000000         0.000000              0.000000   
+25%        2.120000      1.000000         0.000000              0.000000   
+50%        3.040000      1.000000         0.000000              0.000000   
+75%        4.090000      1.000000         0.000000              0.000000   
+max       11.240000     44.000000         5.000000              5.000000   
+
+        exp_laboral  exp_relacionada  mun_inscritos  
+count  10988.000000     10988.000000   10988.000000  
+mean       0.233254         0.536767       3.057396  
+std        0.618219         1.331479       0.867108  
+min        0.000000         0.000000       1.386294  
+25%        0.000000         0.000000       2.397895  
+50%        0.000000         0.000000       3.044522  
+75%        0.000000         1.000000       3.713572  
+max        7.000000        60.000000       4.897840  
+
+count    10988.000000
+mean        29.565526
+std         27.101899
+min          3.000000
+25%         10.000000
+50%         20.000000
+75%         40.000000
+max        133.000000
+Name: mun_inscritos, dtype: float64
+
+Esc2_Territorial2022_y_9
+
+             smmlv     vacantes  exp_profesional  exp_prof_relacionada  \
+count  1731.000000  1731.000000      1731.000000           1731.000000   
+mean      3.958030     1.490468         0.292894              0.690930   
+std       1.510628     2.164959         0.710980              1.118331   
+min       1.100000     1.000000         0.000000              0.000000   
+25%       2.920000     1.000000         0.000000              0.000000   
+50%       3.810000     1.000000         0.000000              0.000000   
+75%       4.845000     1.000000         0.000000              1.000000   
+max       9.130000    50.000000         4.000000              5.000000   
+
+       exp_laboral  exp_relacionada  mun_inscritos  
+count  1731.000000      1731.000000    1731.000000  
+mean      0.181976         0.530329       3.241231  
+std       0.641385         0.942006       1.419485  
+min       0.000000         0.000000       0.693147  
+25%       0.000000         0.000000       1.945910  
+50%       0.000000         0.000000       3.583519  
+75%       0.000000         1.000000       4.382027  
+max       8.000000         6.000000       5.568345  
+
+count    1731.000000
+mean       52.664356
+std        55.452088
+min         1.000000
+25%         6.000000
+50%        35.000000
+75%        79.000000
+max       261.000000
+Name: mun_inscritos, dtype: float64
+
+Esc3_Territorial9
+
+            smmlv    vacantes  exp_profesional  exp_prof_relacionada  \
+count  672.000000  672.000000       672.000000            672.000000   
+mean     3.938661    1.516369         0.233631              0.558036   
+std      1.538800    2.192597         0.500849              0.946983   
+min      1.100000    1.000000         0.000000              0.000000   
+25%      2.790000    1.000000         0.000000              0.000000   
+50%      3.960000    1.000000         0.000000              0.000000   
+75%      4.870000    1.000000         0.000000              1.000000   
+max      9.110000   26.000000         3.000000              4.000000   
+
+       exp_laboral  exp_relacionada  mun_inscritos  
+count   672.000000       672.000000     672.000000  
+mean      0.132440         0.544643       3.195521  
+std       0.452206         0.938227       1.469896  
+min       0.000000         0.000000       0.693147  
+25%       0.000000         0.000000       1.791759  
+50%       0.000000         0.000000       3.526361  
+75%       0.000000         1.000000       4.409750  
+max       3.000000         5.000000       5.605802  
+
+count    672.000000
+mean      54.328869
+std       60.864589
+min        1.000000
+25%        5.000000
+50%       33.000000
+75%       81.250000
+max      271.000000
+Name: mun_inscritos, dtype: float64
+
+Esc1_Territorial2019_y_centrooriente
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: -493.387%
+
+Test Mean Squared Error (MSE): 4.461
+
+Test Mean Absolute Error (MAE): 1.944
+
+Esc1_Territorial2019_y_centrooriente
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: -465.413%
+
+Test Mean Squared Error (MSE): 4.251
+
+Test Mean Absolute Error (MAE): 1.892
+
+Esc1_Territorial2019_y_centrooriente
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: -470.882%
+
+Test Mean Squared Error (MSE): 4.292
+
+Test Mean Absolute Error (MAE): 1.911
+
+Esc1_Territorial2019_y_centrooriente
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: -530.344%
+
+Test Mean Squared Error (MSE): 4.739
+
+Test Mean Absolute Error (MAE): 2.008
+
+Esc2_Territorial2022_y_9
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: -238.037%
+
+Test Mean Squared Error (MSE): 6.807
+
+Test Mean Absolute Error (MAE): 2.265
+
+Esc2_Territorial2022_y_9
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: -220.603%
+
+Test Mean Squared Error (MSE): 6.456
+
+Test Mean Absolute Error (MAE): 2.202
+
+Esc2_Territorial2022_y_9
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: -215.575%
+
+Test Mean Squared Error (MSE): 6.355
+
+Test Mean Absolute Error (MAE): 2.186
+
+Esc2_Territorial2022_y_9
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: -221.289%
+
+Test Mean Squared Error (MSE): 6.470
+
+Test Mean Absolute Error (MAE): 2.207
+
+Esc3_Territorial9
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: -260.541%
+
+Test Mean Squared Error (MSE): 7.778
+
+Test Mean Absolute Error (MAE): 2.414
+
+Esc3_Territorial9
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: -226.414%
+
+Test Mean Squared Error (MSE): 7.042
+
+Test Mean Absolute Error (MAE): 2.290
+
+Esc3_Territorial9
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: -215.552%
+
+Test Mean Squared Error (MSE): 6.808
+
+Test Mean Absolute Error (MAE): 2.231
+
+Esc3_Territorial9
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: -222.423%
+
+Test Mean Squared Error (MSE): 6.956
+
+Test Mean Absolute Error (MAE): 2.262
+

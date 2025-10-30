@@ -1,0 +1,280 @@
+mun_inscritos~concurso_ascenso+tipo_entidad+vacantes+smmlv
+
+MinTrabajo2024
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.808
+Model:                            OLS   Adj. R-squared:                  0.807
+Method:                 Least Squares   F-statistic:                     523.1
+Date:                Thu, 28 Nov 2024   Prob (F-statistic):          4.83e-133
+Time:                        11:33:26   Log-Likelihood:                -1451.7
+No. Observations:                 376   AIC:                             2911.
+Df Residuals:                     372   BIC:                             2927.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                    6.1891      1.757      3.523      0.000       2.734       9.644
+concurso_ascenso[T.True]    -8.7723      1.385     -6.335      0.000     -11.495      -6.049
+vacantes                     2.4787      0.065     38.131      0.000       2.351       2.606
+smmlv                        0.4966      0.384      1.295      0.196      -0.258       1.251
+==============================================================================
+Omnibus:                      451.302   Durbin-Watson:                   1.484
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            38577.877
+Skew:                           5.443   Prob(JB):                         0.00
+Kurtosis:                      51.414   Cond. No.                         29.7
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Antioquia3
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.490
+Model:                            OLS   Adj. R-squared:                  0.489
+Method:                 Least Squares   F-statistic:                     608.7
+Date:                Thu, 28 Nov 2024   Prob (F-statistic):               0.00
+Time:                        11:33:26   Log-Likelihood:                -13733.
+No. Observations:                2539   AIC:                         2.748e+04
+Df Residuals:                    2534   BIC:                         2.751e+04
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==================================================================================================================================
+                                                                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                         14.1745      3.129      4.530      0.000       8.038      20.311
+concurso_ascenso[T.True]                                         -52.7056      2.442    -21.587      0.000     -57.493     -47.918
+tipo_entidad[T.Territorial categorías cuarta, quinta, y sexta]     3.2845     11.896      0.276      0.782     -20.043      26.612
+vacantes                                                           7.0645      0.161     43.923      0.000       6.749       7.380
+smmlv                                                              6.3237      0.698      9.057      0.000       4.955       7.693
+==============================================================================
+Omnibus:                     2789.201   Durbin-Watson:                   1.763
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           515237.934
+Skew:                           5.182   Prob(JB):                         0.00
+Kurtosis:                      72.014   Cond. No.                         78.6
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Territorial10
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.593
+Model:                            OLS   Adj. R-squared:                  0.588
+Method:                 Least Squares   F-statistic:                     132.1
+Date:                Thu, 28 Nov 2024   Prob (F-statistic):           1.70e-69
+Time:                        11:33:26   Log-Likelihood:                -2346.3
+No. Observations:                 368   AIC:                             4703.
+Df Residuals:                     363   BIC:                             4722.
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==================================================================================================================================
+                                                                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                         79.0023     16.322      4.840      0.000      46.906     111.099
+concurso_ascenso[T.True]                                        -159.2607     16.093     -9.896      0.000    -190.908    -127.613
+tipo_entidad[T.Territorial categorías cuarta, quinta, y sexta]   -65.5259     64.784     -1.011      0.312    -192.925      61.873
+vacantes                                                           8.3458      0.415     20.133      0.000       7.531       9.161
+smmlv                                                             16.7071      4.111      4.064      0.000       8.623      24.792
+==============================================================================
+Omnibus:                      270.609   Durbin-Watson:                   1.418
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             7392.618
+Skew:                           2.707   Prob(JB):                         0.00
+Kurtosis:                      24.279   Cond. No.                         162.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+MinTrabajo2024
+
+            smmlv    vacantes  mun_inscritos
+count  376.000000  376.000000     376.000000
+mean     4.576543    2.819149      12.579787
+std      1.687837    9.240448      26.293706
+min      1.590000    1.000000       1.000000
+25%      3.350000    1.000000       2.750000
+50%      4.300000    1.000000       6.000000
+75%      5.800000    2.000000      13.000000
+max      8.140000  162.000000     412.000000
+
+count    376.000000
+mean      12.579787
+std       26.293706
+min        1.000000
+25%        2.750000
+50%        6.000000
+75%       13.000000
+max      412.000000
+Name: mun_inscritos, dtype: float64
+
+Antioquia3
+
+             smmlv     vacantes  mun_inscritos
+count  2539.000000  2539.000000    2539.000000
+mean      4.301528     1.868846      38.849941
+std       1.610137     6.702543      75.697684
+min       1.190000     1.000000       1.000000
+25%       2.970000     1.000000       5.000000
+50%       4.300000     1.000000      22.000000
+75%       5.370000     1.000000      43.000000
+max       8.680000   275.000000    1296.000000
+
+count    2539.000000
+mean       38.849941
+std        75.697684
+min         1.000000
+25%         5.000000
+50%        22.000000
+75%        43.000000
+max      1296.000000
+Name: mun_inscritos, dtype: float64
+
+Territorial10
+
+            smmlv    vacantes  mun_inscritos
+count  368.000000  368.000000     368.000000
+mean     3.580978    4.255435     108.105978
+std      1.924596   18.171750     223.023922
+min      1.040000    1.000000       1.000000
+25%      2.122500    1.000000       5.000000
+50%      3.040000    1.000000      42.000000
+75%      5.120000    2.000000     112.000000
+max     10.670000  236.000000    2851.000000
+
+count     368.000000
+mean      108.105978
+std       223.023922
+min         1.000000
+25%         5.000000
+50%        42.000000
+75%       112.000000
+max      2851.000000
+Name: mun_inscritos, dtype: float64
+
+MinTrabajo2024
+
+Red Neuronal bajo2
+
+Coeficiente de Determinación por r2_score: -22.453%
+
+Test Mean Squared Error (MSE): 844.336
+
+Test Mean Absolute Error (MAE): 12.347
+
+MinTrabajo2024
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: 31.531%
+
+Test Mean Squared Error (MSE): 472.107
+
+Test Mean Absolute Error (MAE): 7.122
+
+MinTrabajo2024
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: 20.100%
+
+Test Mean Squared Error (MSE): 550.927
+
+Test Mean Absolute Error (MAE): 7.495
+
+MinTrabajo2024
+
+Red Neuronal alto2
+
+Coeficiente de Determinación por r2_score: 66.539%
+
+Test Mean Squared Error (MSE): 230.721
+
+Test Mean Absolute Error (MAE): 6.769
+
+Antioquia3
+
+Red Neuronal bajo2
+
+Coeficiente de Determinación por r2_score: 56.855%
+
+Test Mean Squared Error (MSE): 2471.298
+
+Test Mean Absolute Error (MAE): 18.409
+
+Antioquia3
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: -23.071%
+
+Test Mean Squared Error (MSE): 7049.364
+
+Test Mean Absolute Error (MAE): 21.766
+
+Antioquia3
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: 5.380%
+
+Test Mean Squared Error (MSE): 5419.698
+
+Test Mean Absolute Error (MAE): 18.860
+
+Antioquia3
+
+Red Neuronal alto2
+
+Coeficiente de Determinación por r2_score: 35.731%
+
+Test Mean Squared Error (MSE): 3681.228
+
+Test Mean Absolute Error (MAE): 19.907
+
+Territorial10
+
+Red Neuronal bajo2
+
+Coeficiente de Determinación por r2_score: -13.189%
+
+Test Mean Squared Error (MSE): 56146.699
+
+Test Mean Absolute Error (MAE): 94.208
+
+Territorial10
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: 14.264%
+
+Test Mean Squared Error (MSE): 42528.780
+
+Test Mean Absolute Error (MAE): 74.632
+
+Territorial10
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: 38.581%
+
+Test Mean Squared Error (MSE): 30466.705
+
+Test Mean Absolute Error (MAE): 68.864
+
+Territorial10
+
+Red Neuronal alto2
+
+Coeficiente de Determinación por r2_score: 44.084%
+
+Test Mean Squared Error (MSE): 27736.997
+
+Test Mean Absolute Error (MAE): 61.852
+

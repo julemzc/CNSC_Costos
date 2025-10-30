@@ -1,0 +1,229 @@
+mun_inscritos~nivel+concurso_ascenso+vacantes+smmlv
+
+Esc1 (Rama - 428/2016 - EON6 - EON2022 - EON2020-2)
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.194
+Model:                            OLS   Adj. R-squared:                  0.193
+Method:                 Least Squares   F-statistic:                     289.9
+Date:                Tue, 11 Mar 2025   Prob (F-statistic):               0.00
+Time:                        16:40:06   Log-Likelihood:                -46641.
+No. Observations:                8461   AIC:                         9.330e+04
+Df Residuals:                    8453   BIC:                         9.335e+04
+Df Model:                           7                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                   20.6267      5.306      3.887      0.000      10.226      31.028
+nivel[T.Asistencial]        34.1102      5.191      6.571      0.000      23.935      44.285
+nivel[T.Instructor]         15.9942      9.433      1.695      0.090      -2.498      34.486
+nivel[T.Profesional]        -8.5201      4.263     -1.999      0.046     -16.877      -0.163
+nivel[T.Técnico]            14.5588      4.988      2.918      0.004       4.780      24.337
+concurso_ascenso[T.True]   -38.0849      1.641    -23.203      0.000     -41.302     -34.867
+vacantes                     9.1776      0.289     31.717      0.000       8.610       9.745
+smmlv                        3.5489      0.433      8.194      0.000       2.700       4.398
+==============================================================================
+Omnibus:                     9301.278   Durbin-Watson:                   1.403
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):          1303949.296
+Skew:                           5.430   Prob(JB):                         0.00
+Kurtosis:                      62.839   Cond. No.                         89.1
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Esc2 (EON2022 y EON2020-2)
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.421
+Model:                            OLS   Adj. R-squared:                  0.420
+Method:                 Least Squares   F-statistic:                     394.4
+Date:                Tue, 11 Mar 2025   Prob (F-statistic):               0.00
+Time:                        16:40:06   Log-Likelihood:                -19947.
+No. Observations:                3808   AIC:                         3.991e+04
+Df Residuals:                    3800   BIC:                         3.996e+04
+Df Model:                           7                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                  -25.2792      5.724     -4.416      0.000     -36.501     -14.057
+nivel[T.Asistencial]        45.8437      5.687      8.061      0.000      34.694      56.994
+nivel[T.Instructor]         36.5218      8.042      4.541      0.000      20.755      52.289
+nivel[T.Profesional]         6.4659      4.894      1.321      0.187      -3.130      16.062
+nivel[T.Técnico]            29.3423      5.554      5.283      0.000      18.453      40.231
+concurso_ascenso[T.True]   -37.7603      1.756    -21.499      0.000     -41.204     -34.317
+vacantes                    20.1033      0.469     42.873      0.000      19.184      21.023
+smmlv                        7.3863      0.522     14.160      0.000       6.364       8.409
+==============================================================================
+Omnibus:                     3716.474   Durbin-Watson:                   1.257
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           284659.750
+Skew:                           4.565   Prob(JB):                         0.00
+Kurtosis:                      44.361   Cond. No.                         77.6
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Esc3 EON2022
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.468
+Model:                            OLS   Adj. R-squared:                  0.467
+Method:                 Least Squares   F-statistic:                     443.1
+Date:                Tue, 11 Mar 2025   Prob (F-statistic):               0.00
+Time:                        16:40:06   Log-Likelihood:                -15237.
+No. Observations:                3026   AIC:                         3.049e+04
+Df Residuals:                    3019   BIC:                         3.053e+04
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                  -30.6519      5.102     -6.008      0.000     -40.656     -20.648
+nivel[T.Asistencial]        38.5168      5.077      7.586      0.000      28.561      48.472
+nivel[T.Profesional]         8.6335      4.388      1.967      0.049       0.029      17.238
+nivel[T.Técnico]            27.1524      5.083      5.342      0.000      17.186      37.119
+concurso_ascenso[T.True]   -30.4936      1.630    -18.711      0.000     -33.689     -27.298
+vacantes                    23.5021      0.543     43.258      0.000      22.437      24.567
+smmlv                        5.9631      0.459     12.998      0.000       5.064       6.863
+==============================================================================
+Omnibus:                     2658.641   Durbin-Watson:                   1.156
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           156476.446
+Skew:                           3.893   Prob(JB):                         0.00
+Kurtosis:                      37.357   Cond. No.                         67.0
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Esc1 (Rama - 428/2016 - EON6 - EON2022 - EON2020-2)
+
+             smmlv     vacantes  mun_inscritos
+count  8461.000000  8461.000000    8461.000000
+mean      4.254958     1.431864      40.615530
+std       2.016081     2.261037      66.765583
+min       1.000000     1.000000       1.000000
+25%       2.830000     1.000000       7.000000
+50%       3.780000     1.000000      21.000000
+75%       5.540000     1.000000      47.000000
+max      13.070000   106.000000    1282.000000
+
+count    8461.000000
+mean       40.615530
+std        66.765583
+min         1.000000
+25%         7.000000
+50%        21.000000
+75%        47.000000
+max      1282.000000
+Name: mun_inscritos, dtype: float64
+
+Esc2 (EON2022 y EON2020-2)
+
+             smmlv     vacantes  mun_inscritos
+count  3808.000000  3808.000000    3808.000000
+mean      4.064467     1.394695      36.298057
+std       1.817110     1.594396      59.880506
+min       1.000000     1.000000       1.000000
+25%       2.822500     1.000000       5.000000
+50%       3.530000     1.000000      20.000000
+75%       4.930000     1.000000      39.000000
+max       9.700000    49.000000     921.000000
+
+count    3808.000000
+mean       36.298057
+std        59.880506
+min         1.000000
+25%         5.000000
+50%        20.000000
+75%        39.000000
+max       921.000000
+Name: mun_inscritos, dtype: float64
+
+Esc3 EON2022
+
+             smmlv     vacantes  mun_inscritos
+count  3026.000000  3026.000000    3026.000000
+mean      4.110400     1.382683      31.943820
+std       1.869762     1.262668      51.033259
+min       1.150000     1.000000       1.000000
+25%       2.760000     1.000000       5.000000
+50%       3.630000     1.000000      18.000000
+75%       5.320000     1.000000      35.000000
+max       9.700000    23.000000     755.000000
+
+count    3026.000000
+mean       31.943820
+std        51.033259
+min         1.000000
+25%         5.000000
+50%        18.000000
+75%        35.000000
+max       755.000000
+Name: mun_inscritos, dtype: float64
+
+Esc1 (Rama - 428/2016 - EON6 - EON2022 - EON2020-2)
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: -394.063%
+
+Test Mean Squared Error (MSE): 7.965
+
+Test Mean Absolute Error (MAE): 2.553
+
+Esc1 (Rama - 428/2016 - EON6 - EON2022 - EON2020-2)
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: -397.216%
+
+Test Mean Squared Error (MSE): 8.016
+
+Test Mean Absolute Error (MAE): 2.560
+
+Esc2 (EON2022 y EON2020-2)
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: -273.193%
+
+Test Mean Squared Error (MSE): 6.044
+
+Test Mean Absolute Error (MAE): 2.175
+
+Esc2 (EON2022 y EON2020-2)
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: -302.386%
+
+Test Mean Squared Error (MSE): 6.517
+
+Test Mean Absolute Error (MAE): 2.289
+
+Esc3 EON2022
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: -311.933%
+
+Test Mean Squared Error (MSE): 6.395
+
+Test Mean Absolute Error (MAE): 2.264
+
+Esc3 EON2022
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: -292.465%
+
+Test Mean Squared Error (MSE): 6.093
+
+Test Mean Absolute Error (MAE): 2.185
+

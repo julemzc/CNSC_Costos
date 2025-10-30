@@ -1,0 +1,462 @@
+inscritos ~ smmlv + concurso_ascenso + sin_experiencia + vacantes_opec
+
+Esc1 Sena436 / Contralorias Terr-0
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.130
+Model:                            OLS   Adj. R-squared:                  0.130
+Method:                 Least Squares   F-statistic:                     202.9
+Date:                Tue, 09 Sep 2025   Prob (F-statistic):          1.18e-122
+Time:                        17:15:16   Log-Likelihood:                -6011.7
+No. Observations:                4071   AIC:                         1.203e+04
+Df Residuals:                    4067   BIC:                         1.206e+04
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                    1.9036      0.071     26.974      0.000       1.765       2.042
+concurso_ascenso[T.True]  1.915e-15   7.63e-17     25.080      0.000    1.76e-15    2.06e-15
+sin_experiencia[T.True]      1.3420      0.097     13.791      0.000       1.151       1.533
+smmlv                        0.2295      0.016     14.169      0.000       0.198       0.261
+vacantes_opec                0.1954      0.012     16.318      0.000       0.172       0.219
+==============================================================================
+Omnibus:                      240.899   Durbin-Watson:                   0.918
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              284.856
+Skew:                           0.621   Prob(JB):                     1.39e-62
+Kurtosis:                       3.369   Cond. No.                     9.53e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 8.86e-30. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ smmlv + concurso_ascenso + sin_experiencia + vacantes_opec
+
+Esc1 Sena436 / Contralorias Terr-1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.515
+Model:                            OLS   Adj. R-squared:                  0.507
+Method:                 Least Squares   F-statistic:                     64.20
+Date:                Tue, 09 Sep 2025   Prob (F-statistic):           9.90e-20
+Time:                        17:15:16   Log-Likelihood:                -90.365
+No. Observations:                 124   AIC:                             186.7
+Df Residuals:                     121   BIC:                             195.2
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                   -0.1074      0.085     -1.258      0.211      -0.276       0.062
+concurso_ascenso[T.True]    -0.1074      0.085     -1.258      0.211      -0.276       0.062
+sin_experiencia[T.True]   2.481e-19   1.47e-17      0.017      0.987   -2.89e-17    2.94e-17
+smmlv                        0.2499      0.037      6.681      0.000       0.176       0.324
+vacantes_opec                0.3375      0.041      8.204      0.000       0.256       0.419
+==============================================================================
+Omnibus:                       30.199   Durbin-Watson:                   1.507
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               51.102
+Skew:                           1.113   Prob(JB):                     8.00e-12
+Kurtosis:                       5.222   Cond. No.                     1.24e+17
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 1.95e-31. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ smmlv + concurso_ascenso + sin_experiencia + vacantes_opec
+
+Esc2 Sena436 / Contralorias Terr / EON2020-2-0
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.124
+Model:                            OLS   Adj. R-squared:                  0.123
+Method:                 Least Squares   F-statistic:                     212.4
+Date:                Tue, 09 Sep 2025   Prob (F-statistic):          7.51e-129
+Time:                        17:15:16   Log-Likelihood:                -6697.2
+No. Observations:                4508   AIC:                         1.340e+04
+Df Residuals:                    4504   BIC:                         1.343e+04
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                    2.1952      0.062     35.248      0.000       2.073       2.317
+concurso_ascenso[T.True]   3.04e-16   1.72e-17     17.647      0.000     2.7e-16    3.38e-16
+sin_experiencia[T.True]      1.3520      0.089     15.221      0.000       1.178       1.526
+smmlv                        0.2016      0.015     13.750      0.000       0.173       0.230
+vacantes_opec                0.1187      0.007     16.404      0.000       0.104       0.133
+==============================================================================
+Omnibus:                      190.075   Durbin-Watson:                   0.926
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              216.964
+Skew:                           0.501   Prob(JB):                     7.71e-48
+Kurtosis:                       3.390   Cond. No.                     4.36e+17
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 4.82e-31. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ smmlv + concurso_ascenso + sin_experiencia + vacantes_opec
+
+Esc2 Sena436 / Contralorias Terr / EON2020-2-1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.174
+Model:                            OLS   Adj. R-squared:                  0.166
+Method:                 Least Squares   F-statistic:                     21.94
+Date:                Tue, 09 Sep 2025   Prob (F-statistic):           6.36e-13
+Time:                        17:15:16   Log-Likelihood:                -412.95
+No. Observations:                 317   AIC:                             833.9
+Df Residuals:                     313   BIC:                             848.9
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                    0.4558      0.082      5.532      0.000       0.294       0.618
+concurso_ascenso[T.True]     0.4558      0.082      5.532      0.000       0.294       0.618
+sin_experiencia[T.True]      0.9157      0.637      1.437      0.152      -0.338       2.169
+smmlv                        0.0968      0.033      2.940      0.004       0.032       0.162
+vacantes_opec                0.1622      0.021      7.680      0.000       0.121       0.204
+==============================================================================
+Omnibus:                       86.539   Durbin-Watson:                   0.892
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              170.689
+Skew:                           1.438   Prob(JB):                     8.62e-38
+Kurtosis:                       5.156   Cond. No.                     1.02e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 8.44e-29. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ smmlv + concurso_ascenso + sin_experiencia + vacantes_opec
+
+Esc3 Sena436 / EON2020-2-0
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.194
+Model:                            OLS   Adj. R-squared:                  0.194
+Method:                 Least Squares   F-statistic:                     330.0
+Date:                Tue, 09 Sep 2025   Prob (F-statistic):          6.16e-192
+Time:                        17:15:16   Log-Likelihood:                -5426.0
+No. Observations:                4109   AIC:                         1.086e+04
+Df Residuals:                    4105   BIC:                         1.089e+04
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                    1.7891      0.057     31.356      0.000       1.677       1.901
+concurso_ascenso[T.True] -1.457e-15   4.08e-17    -35.725      0.000   -1.54e-15   -1.38e-15
+sin_experiencia[T.True]      1.5214      0.076     20.038      0.000       1.373       1.670
+smmlv                        0.2616      0.013     19.592      0.000       0.235       0.288
+vacantes_opec                0.1073      0.006     16.993      0.000       0.095       0.120
+==============================================================================
+Omnibus:                       57.165   Durbin-Watson:                   1.321
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               59.698
+Skew:                           0.279   Prob(JB):                     1.09e-13
+Kurtosis:                       3.195   Cond. No.                     6.34e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 2.1e-29. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ smmlv + concurso_ascenso + sin_experiencia + vacantes_opec
+
+Esc3 Sena436 / EON2020-2-1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.140
+Model:                            OLS   Adj. R-squared:                  0.126
+Method:                 Least Squares   F-statistic:                     10.26
+Date:                Tue, 09 Sep 2025   Prob (F-statistic):           2.74e-06
+Time:                        17:15:16   Log-Likelihood:                -275.45
+No. Observations:                 193   AIC:                             558.9
+Df Residuals:                     189   BIC:                             571.9
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                    0.7512      0.115      6.514      0.000       0.524       0.979
+concurso_ascenso[T.True]     0.7512      0.115      6.514      0.000       0.524       0.979
+sin_experiencia[T.True]      0.6476      0.727      0.890      0.374      -0.787       2.082
+smmlv                        0.0089      0.044      0.202      0.840      -0.078       0.096
+vacantes_opec                0.1376      0.025      5.455      0.000       0.088       0.187
+==============================================================================
+Omnibus:                       36.444   Durbin-Watson:                   0.769
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               50.344
+Skew:                           1.176   Prob(JB):                     1.17e-11
+Kurtosis:                       3.853   Cond. No.                     7.82e+15
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 9.35e-29. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+Esc1 Sena436 / Contralorias Terr-0
+
+             smmlv  vacantes_opec  mun_inscritos
+count  4071.000000    4071.000000    4071.000000
+mean      3.960346       1.437976      49.686809
+std       1.037941       1.401832     149.019402
+min       1.000000       1.000000       1.000000
+25%       3.410000       1.000000       9.000000
+50%       3.410000       1.000000      20.000000
+75%       4.910000       1.000000      46.000000
+max       8.290000      29.000000    5968.000000
+
+count    4071.000000
+mean       49.686809
+std       149.019402
+min         1.000000
+25%         9.000000
+50%        20.000000
+75%        46.000000
+max      5968.000000
+Name: mun_inscritos, dtype: float64
+
+Esc1 Sena436 / Contralorias Terr-1
+
+            smmlv  vacantes_opec  mun_inscritos
+count  124.000000     124.000000     124.000000
+mean     4.304032       1.483871       4.483871
+std      1.234371       1.122453       6.617891
+min      1.330000       1.000000       1.000000
+25%      3.337500       1.000000       1.000000
+50%      4.220000       1.000000       2.000000
+75%      5.215000       1.250000       5.000000
+max      8.770000       8.000000      45.000000
+
+count    124.000000
+mean       4.483871
+std        6.617891
+min        1.000000
+25%        1.000000
+50%        2.000000
+75%        5.000000
+max       45.000000
+Name: mun_inscritos, dtype: float64
+
+Esc2 Sena436 / Contralorias Terr / EON2020-2-0
+
+             smmlv  vacantes_opec  mun_inscritos
+count  4508.000000    4508.000000    4508.000000
+mean      3.953680       1.485581      53.544144
+std       1.093982       2.217088     150.833697
+min       1.000000       1.000000       1.000000
+25%       3.410000       1.000000      10.000000
+50%       3.410000       1.000000      22.000000
+75%       4.910000       1.000000      50.000000
+max       9.110000      78.000000    5968.000000
+
+count    4508.000000
+mean       53.544144
+std       150.833697
+min         1.000000
+25%        10.000000
+50%        22.000000
+75%        50.000000
+max      5968.000000
+Name: mun_inscritos, dtype: float64
+
+Esc2 Sena436 / Contralorias Terr / EON2020-2-1
+
+            smmlv  vacantes_opec  mun_inscritos
+count  317.000000     317.000000     317.000000
+mean     4.579685       1.476341       9.214511
+std      1.538967       2.395323      21.687176
+min      1.330000       1.000000       1.000000
+25%      3.380000       1.000000       1.000000
+50%      4.220000       1.000000       3.000000
+75%      5.380000       1.000000       7.000000
+max      8.770000      30.000000     201.000000
+
+count    317.000000
+mean       9.214511
+std       21.687176
+min        1.000000
+25%        1.000000
+50%        3.000000
+75%        7.000000
+max      201.000000
+Name: mun_inscritos, dtype: float64
+
+Esc3 Sena436 / EON2020-2-0
+
+             smmlv  vacantes_opec  mun_inscritos
+count  4109.000000    4109.000000    4109.000000
+mean      3.990353       1.472621      35.576783
+std       1.067529       2.258176      64.793269
+min       1.000000       1.000000       1.000000
+25%       3.410000       1.000000       9.000000
+50%       3.410000       1.000000      19.000000
+75%       4.910000       1.000000      40.000000
+max       9.110000      78.000000    1465.000000
+
+count    4109.000000
+mean       35.576783
+std        64.793269
+min         1.000000
+25%         9.000000
+50%        19.000000
+75%        40.000000
+max      1465.000000
+Name: mun_inscritos, dtype: float64
+
+Esc3 Sena436 / EON2020-2-1
+
+            smmlv  vacantes_opec  mun_inscritos
+count  193.000000     193.000000     193.000000
+mean     4.756788       1.471503      12.253886
+std      1.685621       2.938691      26.875539
+min      1.970000       1.000000       1.000000
+25%      3.380000       1.000000       2.000000
+50%      4.460000       1.000000       3.000000
+75%      6.020000       1.000000       8.000000
+max      8.200000      30.000000     201.000000
+
+count    193.000000
+mean      12.253886
+std       26.875539
+min        1.000000
+25%        2.000000
+50%        3.000000
+75%        8.000000
+max      201.000000
+Name: mun_inscritos, dtype: float64
+
+Esc1 Sena436 / Contralorias Terr-0
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 53.615%
+
+Test Mean Squared Error (MSE): 0.464
+
+Test Mean Absolute Error (MAE): 0.526
+
+Esc1 Sena436 / Contralorias Terr-0
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 55.008%
+
+Test Mean Squared Error (MSE): 0.450
+
+Test Mean Absolute Error (MAE): 0.525
+
+Esc1 Sena436 / Contralorias Terr-1
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 53.884%
+
+Test Mean Squared Error (MSE): 0.461
+
+Test Mean Absolute Error (MAE): 0.521
+
+Esc1 Sena436 / Contralorias Terr-1
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 60.101%
+
+Test Mean Squared Error (MSE): 0.399
+
+Test Mean Absolute Error (MAE): 0.486
+
+Esc2 Sena436 / Contralorias Terr / EON2020-2-0
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 51.814%
+
+Test Mean Squared Error (MSE): 0.482
+
+Test Mean Absolute Error (MAE): 0.535
+
+Esc2 Sena436 / Contralorias Terr / EON2020-2-0
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 49.263%
+
+Test Mean Squared Error (MSE): 0.507
+
+Test Mean Absolute Error (MAE): 0.545
+
+Esc2 Sena436 / Contralorias Terr / EON2020-2-1
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 14.852%
+
+Test Mean Squared Error (MSE): 0.851
+
+Test Mean Absolute Error (MAE): 0.725
+
+Esc2 Sena436 / Contralorias Terr / EON2020-2-1
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 18.420%
+
+Test Mean Squared Error (MSE): 0.816
+
+Test Mean Absolute Error (MAE): 0.700
+
+Esc3 Sena436 / EON2020-2-0
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 50.208%
+
+Test Mean Squared Error (MSE): 0.498
+
+Test Mean Absolute Error (MAE): 0.553
+
+Esc3 Sena436 / EON2020-2-0
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 49.989%
+
+Test Mean Squared Error (MSE): 0.500
+
+Test Mean Absolute Error (MAE): 0.550
+
+Esc3 Sena436 / EON2020-2-1
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 4.992%
+
+Test Mean Squared Error (MSE): 0.950
+
+Test Mean Absolute Error (MAE): 0.793
+
+Esc3 Sena436 / EON2020-2-1
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 8.808%
+
+Test Mean Squared Error (MSE): 0.912
+
+Test Mean Absolute Error (MAE): 0.767
+

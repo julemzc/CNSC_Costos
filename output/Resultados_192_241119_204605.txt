@@ -1,0 +1,200 @@
+mun_inscritos~mun_categoria+vacantes_opec+concurso_ascenso+smmlv
+
+Esc2 / Boy-Ces-Mag
+
+ERROR
+
+Esc1 / Territorial 4-5-6
+
+ERROR
+
+Esc1-DIAN 2023
+
+ERROR
+
+Esc2 / Boy-Ces-Mag
+
+             smmlv  vacantes_opec  mun_inscritos
+count  1752.000000    1752.000000         1752.0
+mean      2.993607       1.497717            0.0
+std       1.560022       3.103579            0.0
+min       1.000000       1.000000            0.0
+25%       1.800000       1.000000            0.0
+50%       2.640000       1.000000            0.0
+75%       3.612500       1.000000            0.0
+max       8.710000      70.000000            0.0
+
+count    1752.0
+mean        0.0
+std         0.0
+min         0.0
+25%         0.0
+50%         0.0
+75%         0.0
+max         0.0
+Name: mun_inscritos, dtype: float64
+
+Esc1 / Territorial 4-5-6
+
+              smmlv  vacantes_opec  mun_inscritos
+count  11418.000000   11740.000000        11740.0
+mean       2.385789       1.632964            0.0
+std        0.988804       9.295251            0.0
+min        1.000000       1.000000            0.0
+25%        1.610000       1.000000            0.0
+50%        2.160000       1.000000            0.0
+75%        2.970000       1.000000            0.0
+max        9.680000     879.000000            0.0
+
+count    11740.0
+mean         0.0
+std          0.0
+min          0.0
+25%          0.0
+50%          0.0
+75%          0.0
+max          0.0
+Name: mun_inscritos, dtype: float64
+
+Esc1-DIAN 2023
+
+            smmlv  vacantes_opec  mun_inscritos
+count  196.000000     196.000000          196.0
+mean     5.984388      16.530612            0.0
+std      2.206065      31.973131            0.0
+min      2.600000       1.000000            0.0
+25%      4.700000       1.000000            0.0
+50%      5.870000       3.000000            0.0
+75%      7.250000      16.000000            0.0
+max     12.940000     284.000000            0.0
+
+count    196.0
+mean       0.0
+std        0.0
+min        0.0
+25%        0.0
+50%        0.0
+75%        0.0
+max        0.0
+Name: mun_inscritos, dtype: float64
+
+Esc2 / Boy-Ces-Mag
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: 0.000%
+
+Test Mean Squared Error (MSE): 0.000
+
+Test Mean Absolute Error (MAE): 0.000
+
+Esc2 / Boy-Ces-Mag
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: 0.000%
+
+Test Mean Squared Error (MSE): 0.000
+
+Test Mean Absolute Error (MAE): 0.001
+
+Esc2 / Boy-Ces-Mag
+
+Red Neuronal alto1
+
+Coeficiente de Determinación por r2_score: 0.000%
+
+Test Mean Squared Error (MSE): 0.000
+
+Test Mean Absolute Error (MAE): 0.000
+
+Esc2 / Boy-Ces-Mag
+
+Red Neuronal alto2
+
+Coeficiente de Determinación por r2_score: 0.000%
+
+Test Mean Squared Error (MSE): 0.000
+
+Test Mean Absolute Error (MAE): 0.000
+
+Esc1 / Territorial 4-5-6
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: 100.000%
+
+Test Mean Squared Error (MSE): 0.000
+
+Test Mean Absolute Error (MAE): 0.000
+
+Esc1 / Territorial 4-5-6
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: 100.000%
+
+Test Mean Squared Error (MSE): 0.000
+
+Test Mean Absolute Error (MAE): 0.000
+
+Esc1 / Territorial 4-5-6
+
+Red Neuronal alto1
+
+Coeficiente de Determinación por r2_score: 100.000%
+
+Test Mean Squared Error (MSE): 0.000
+
+Test Mean Absolute Error (MAE): 0.000
+
+Esc1 / Territorial 4-5-6
+
+Red Neuronal alto2
+
+Coeficiente de Determinación por r2_score: 100.000%
+
+Test Mean Squared Error (MSE): 0.000
+
+Test Mean Absolute Error (MAE): 0.000
+
+Esc1-DIAN 2023
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: 0.000%
+
+Test Mean Squared Error (MSE): 0.003
+
+Test Mean Absolute Error (MAE): 0.057
+
+Esc1-DIAN 2023
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: 0.000%
+
+Test Mean Squared Error (MSE): 0.001
+
+Test Mean Absolute Error (MAE): 0.029
+
+Esc1-DIAN 2023
+
+Red Neuronal alto1
+
+Coeficiente de Determinación por r2_score: 0.000%
+
+Test Mean Squared Error (MSE): 0.000
+
+Test Mean Absolute Error (MAE): 0.000
+
+Esc1-DIAN 2023
+
+Red Neuronal alto2
+
+Coeficiente de Determinación por r2_score: 0.000%
+
+Test Mean Squared Error (MSE): 0.000
+
+Test Mean Absolute Error (MAE): 0.002
+

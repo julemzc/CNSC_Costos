@@ -1,0 +1,196 @@
+mun_inscritos~nucleos+vacantes+concurso_ascenso+smmlv
+
+ENTIDADES ORDEN NACIONAL 2022
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.341
+Model:                            OLS   Adj. R-squared:                  0.338
+Method:                 Least Squares   F-statistic:                     119.4
+Date:                Tue, 26 Nov 2024   Prob (F-statistic):          1.47e-220
+Time:                        14:00:44   Log-Likelihood:                -11707.
+No. Observations:                2554   AIC:                         2.344e+04
+Df Residuals:                    2542   BIC:                         2.351e+04
+Df Model:                          11                                         
+Covariance Type:            nonrobust                                         
+======================================================================================================================================
+                                                                         coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                            -12.6908      2.538     -4.999      0.000     -17.668      -7.713
+nucleos[T.{"ESPECIALIZACION TECNOLOGICA",PROFESIONAL,TECNOLOGICO}]    -3.8924     11.933     -0.326      0.744     -27.292      19.508
+nucleos[T.{"ESPECIALIZACION TECNOLOGICA",TECNOLOGICO}]                25.5799      8.014      3.192      0.001       9.865      41.295
+nucleos[T.{"ESPECIALIZACION TECNOLOGICA"}]                            64.6924     11.958      5.410      0.000      41.244      88.141
+nucleos[T.{"TECNICO PROFESIONAL"}]                                    11.8587      2.831      4.189      0.000       6.308      17.409
+nucleos[T.{PROFESIONAL,"TECNICO PROFESIONAL"}]                        35.3476     13.843      2.553      0.011       8.202      62.493
+nucleos[T.{PROFESIONAL,TECNOLOGICO}]                                   5.4216      3.893      1.393      0.164      -2.212      13.055
+nucleos[T.{PROFESIONAL}]                                               8.5118      1.426      5.971      0.000       5.717      11.307
+nucleos[T.{TECNOLOGICO}]                                              27.5707      3.329      8.281      0.000      21.042      34.099
+concurso_ascenso[T.True]                                             -26.9584      1.083    -24.883      0.000     -29.083     -24.834
+vacantes                                                              12.5127      0.612     20.441      0.000      11.312      13.713
+smmlv                                                                  5.4925      0.420     13.091      0.000       4.670       6.315
+==============================================================================
+Omnibus:                     1079.821   Durbin-Watson:                   1.200
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             6117.669
+Skew:                           1.934   Prob(JB):                         0.00
+Kurtosis:                       9.522   Cond. No.                         149.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Esc1-DIAN 2023
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.425
+Model:                            OLS   Adj. R-squared:                  0.421
+Method:                 Least Squares   F-statistic:                     97.52
+Date:                Tue, 26 Nov 2024   Prob (F-statistic):           6.57e-77
+Time:                        14:00:44   Log-Likelihood:                -4039.9
+No. Observations:                 666   AIC:                             8092.
+Df Residuals:                     660   BIC:                             8119.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================================================================
+                                                                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                     11.9074     45.515      0.262      0.794     -77.464     101.279
+nucleos[T.{PROFESIONAL,"TECNICO PROFESIONAL",TECNOLOGICO}]     1.9520     31.287      0.062      0.950     -59.482      63.386
+nucleos[T.{PROFESIONAL}]                                      65.7656     25.129      2.617      0.009      16.424     115.107
+concurso_ascenso[T.True]                                    -160.5410     10.729    -14.963      0.000    -181.609    -139.473
+vacantes                                                      12.5252      0.806     15.534      0.000      10.942      14.108
+smmlv                                                         10.8913      4.102      2.655      0.008       2.836      18.946
+==============================================================================
+Omnibus:                      391.410   Durbin-Watson:                   1.561
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             4792.689
+Skew:                           2.396   Prob(JB):                         0.00
+Kurtosis:                      15.237   Cond. No.                         105.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+ENTIDADES ORDEN NACIONAL 2022
+
+             smmlv     vacantes  mun_inscritos
+count  2683.000000  2683.000000    2683.000000
+mean      4.335777     1.271711      24.911666
+std       1.796302     0.777413      29.289524
+min       1.150000     1.000000       1.000000
+25%       3.070000     1.000000       4.000000
+50%       3.850000     1.000000      15.000000
+75%       5.450000     1.000000      33.000000
+max       9.700000     9.000000     157.000000
+
+count    2683.000000
+mean       24.911666
+std        29.289524
+min         1.000000
+25%         4.000000
+50%        15.000000
+75%        33.000000
+max       157.000000
+Name: mun_inscritos, dtype: float64
+
+Esc1-DIAN 2023
+
+            smmlv    vacantes  mun_inscritos
+count  809.000000  809.000000     809.000000
+mean     5.151187    2.877627     111.412855
+std      1.809299    4.753436     150.068038
+min      2.600000    1.000000       3.000000
+25%      3.990000    1.000000      30.000000
+50%      5.270000    1.000000      64.000000
+75%      5.870000    3.000000     126.000000
+max     12.940000   73.000000    1011.000000
+
+count     809.000000
+mean      111.412855
+std       150.068038
+min         3.000000
+25%        30.000000
+50%        64.000000
+75%       126.000000
+max      1011.000000
+Name: mun_inscritos, dtype: float64
+
+ENTIDADES ORDEN NACIONAL 2022
+
+Red Neuronal bajo2
+
+Coeficiente de Determinación por r2_score: 36.175%
+
+Test Mean Squared Error (MSE): 547.332
+
+Test Mean Absolute Error (MAE): 14.415
+
+ENTIDADES ORDEN NACIONAL 2022
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: 40.292%
+
+Test Mean Squared Error (MSE): 512.034
+
+Test Mean Absolute Error (MAE): 14.369
+
+ENTIDADES ORDEN NACIONAL 2022
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: 37.949%
+
+Test Mean Squared Error (MSE): 532.119
+
+Test Mean Absolute Error (MAE): 14.524
+
+ENTIDADES ORDEN NACIONAL 2022
+
+Red Neuronal alto2
+
+Coeficiente de Determinación por r2_score: 39.203%
+
+Test Mean Squared Error (MSE): 521.369
+
+Test Mean Absolute Error (MAE): 15.139
+
+Esc1-DIAN 2023
+
+Red Neuronal bajo2
+
+Coeficiente de Determinación por r2_score: 49.530%
+
+Test Mean Squared Error (MSE): 11351.900
+
+Test Mean Absolute Error (MAE): 56.910
+
+Esc1-DIAN 2023
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: 57.873%
+
+Test Mean Squared Error (MSE): 9475.404
+
+Test Mean Absolute Error (MAE): 46.072
+
+Esc1-DIAN 2023
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: 54.316%
+
+Test Mean Squared Error (MSE): 10275.427
+
+Test Mean Absolute Error (MAE): 48.209
+
+Esc1-DIAN 2023
+
+Red Neuronal alto2
+
+Coeficiente de Determinación por r2_score: 40.622%
+
+Test Mean Squared Error (MSE): 13355.699
+
+Test Mean Absolute Error (MAE): 47.560
+

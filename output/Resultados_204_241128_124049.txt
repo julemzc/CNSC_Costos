@@ -1,0 +1,615 @@
+mun_inscritos~denominacion+concurso_ascenso+vacantes+smmlv
+
+MinTrabajo2024
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.850
+Model:                            OLS   Adj. R-squared:                  0.846
+Method:                 Least Squares   F-statistic:                     207.5
+Date:                Thu, 28 Nov 2024   Prob (F-statistic):          6.90e-144
+Time:                        12:40:57   Log-Likelihood:                -1405.1
+No. Observations:                 376   AIC:                             2832.
+Df Residuals:                     365   BIC:                             2876.
+Df Model:                          10                                         
+Covariance Type:            nonrobust                                         
+===========================================================================================================================
+                                                              coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------------------
+Intercept                                                  -5.8200      4.595     -1.267      0.206     -14.855       3.215
+denominacion[T.AUXILIAR ADMINISTRATIVO]                    10.2830      4.298      2.392      0.017       1.831      18.735
+denominacion[T.CONDUCTOR MECANICO]                          0.8928      8.282      0.108      0.914     -15.394      17.180
+denominacion[T.INSPECTOR DE TRABAJO Y SEGURIDAD SOCIAL]    -7.5805      3.695     -2.052      0.041     -14.846      -0.315
+denominacion[T.PROFESIONAL ESPECIALIZADO]                  -5.6329      3.229     -1.745      0.082     -11.982       0.716
+denominacion[T.PROFESIONAL UNIVERSITARIO]                   6.2634      3.913      1.601      0.110      -1.432      13.959
+denominacion[T.SECRETARIO EJECUTIVO]                        8.4730      5.274      1.607      0.109      -1.898      18.844
+denominacion[T.TECNICO ADMINISTRATIVO]                     17.8874      4.426      4.041      0.000       9.184      26.591
+concurso_ascenso[T.True]                                  -10.7318      1.257     -8.539      0.000     -13.203      -8.260
+vacantes                                                    2.5710      0.063     40.765      0.000       2.447       2.695
+smmlv                                                       3.5517      0.548      6.481      0.000       2.474       4.629
+==============================================================================
+Omnibus:                      435.956   Durbin-Watson:                   1.679
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            37074.186
+Skew:                           5.108   Prob(JB):                         0.00
+Kurtosis:                      50.561   Cond. No.                         205.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Antioquia3
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.518
+Model:                            OLS   Adj. R-squared:                  0.510
+Method:                 Least Squares   F-statistic:                     68.82
+Date:                Thu, 28 Nov 2024   Prob (F-statistic):               0.00
+Time:                        12:40:57   Log-Likelihood:                -13662.
+No. Observations:                2539   AIC:                         2.740e+04
+Df Residuals:                    2499   BIC:                         2.764e+04
+Df Model:                          39                                         
+Covariance Type:            nonrobust                                         
+=================================================================================================================================================
+                                                                                    coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                      -114.2428     16.578     -6.891      0.000    -146.751     -81.734
+denominacion[T.AUXILIAR ADMINISTRATIVO]                                         122.9789     16.009      7.682      0.000      91.587     154.371
+denominacion[T.AUXILIAR AREA SALUD]                                             120.3692     23.737      5.071      0.000      73.822     166.916
+denominacion[T.AUXILIAR DE SERVICIOS GENERALES]                                 110.7080     18.647      5.937      0.000      74.143     147.273
+denominacion[T.AYUDANTE]                                                        173.1105     22.962      7.539      0.000     128.083     218.138
+denominacion[T.CELADOR]                                                         237.5981     28.278      8.402      0.000     182.148     293.048
+denominacion[T.COMANDANTE DE TRANSITO]                                          108.5102     40.971      2.648      0.008      28.169     188.851
+denominacion[T.COMISARIO DE FAMILIA]                                             98.1649     22.909      4.285      0.000      53.242     143.087
+denominacion[T.CONDUCTOR]                                                       143.4571     19.346      7.416      0.000     105.522     181.392
+denominacion[T.CONDUCTOR MECANICO]                                              101.5485     40.696      2.495      0.013      21.746     181.351
+denominacion[T.DIRECTOR DE BANDA]                                                99.7113     55.309      1.803      0.072      -8.745     208.167
+denominacion[T.DIRECTOR DE ORQUESTA]                                             97.2606     55.433      1.755      0.079     -11.440     205.961
+denominacion[T.ENFERMERO ESPECIALISTA]                                          106.8414     41.040      2.603      0.009      26.365     187.318
+denominacion[T.GUARDIAN]                                                        161.5321     40.510      3.987      0.000      82.096     240.969
+denominacion[T.INSPECTOR DE POLICIA 3ª A 6ª CATEGORIA]                           94.9444     40.684      2.334      0.020      15.166     174.723
+denominacion[T.INSPECTOR DE POLICIA URBANO 2ª CATEGORIA]                         96.4379     34.464      2.798      0.005      28.856     164.019
+denominacion[T.INSPECTOR DE POLICIA URBANO CATEGORIA ESPECIAL Y 1ª CATEGORIA]   102.4753     26.046      3.934      0.000      51.401     153.550
+denominacion[T.INSPECTOR DE TRANSITO Y TRANSPORTE]                              100.2112     30.876      3.246      0.001      39.667     160.756
+denominacion[T.INSTRUCTOR]                                                      115.8515     26.826      4.319      0.000      63.248     168.455
+denominacion[T.LIDER DE PROGRAMA]                                                95.5477     18.603      5.136      0.000      59.069     132.027
+denominacion[T.LIDER DE PROYECTO]                                                96.8790     18.462      5.248      0.000      60.677     133.080
+denominacion[T.MEDICO ESPECIALISTA]                                              56.4449     24.509      2.303      0.021       8.384     104.506
+denominacion[T.MEDICO GENERAL]                                                   73.5602     26.991      2.725      0.006      20.633     126.488
+denominacion[T.ODONTOLOGO]                                                      185.1639     55.281      3.349      0.001      76.762     293.565
+denominacion[T.ODONTOLOGO ESPECIALISTA]                                         120.5614     55.573      2.169      0.030      11.588     229.535
+denominacion[T.OPERARIO]                                                        105.1636     34.466      3.051      0.002      37.579     172.748
+denominacion[T.PROFESIONAL ESPECIALIZADO]                                       108.7071     17.703      6.141      0.000      73.993     143.421
+denominacion[T.PROFESIONAL ESPECIALIZADO AREA SALUD]                             57.1393     35.366      1.616      0.106     -12.210     126.489
+denominacion[T.PROFESIONAL UNIVERSITARIO]                                       114.0804     16.323      6.989      0.000      82.072     146.089
+denominacion[T.PROFESIONAL UNIVERSITARIO AREA SALUD]                            108.2816     21.155      5.118      0.000      66.798     149.765
+denominacion[T.SECRETARIO]                                                      127.0655     17.162      7.404      0.000      93.412     160.719
+denominacion[T.SECRETARIO EJECUTIVO]                                            129.5829     21.265      6.094      0.000      87.884     171.282
+denominacion[T.SUBCOMANDANTE DE TRANSITO]                                       114.0778     34.456      3.311      0.001      46.512     181.644
+denominacion[T.TECNICO ADMINISTRATIVO]                                          116.5312     16.283      7.156      0.000      84.601     148.462
+denominacion[T.TECNICO AREA SALUD]                                               97.6727     16.896      5.781      0.000      64.541     130.805
+denominacion[T.TECNICO OPERATIVO]                                               115.8032     16.271      7.117      0.000      83.897     147.709
+denominacion[T.TECNICO OPERATIVO DE TRANSITO]                                   111.2162     40.634      2.737      0.006      31.536     190.896
+concurso_ascenso[T.True]                                                        -52.7894      2.495    -21.160      0.000     -57.681     -47.897
+vacantes                                                                          7.4399      0.170     43.646      0.000       7.106       7.774
+smmlv                                                                             9.5091      1.617      5.879      0.000       6.337      12.681
+==============================================================================
+Omnibus:                     2704.483   Durbin-Watson:                   1.770
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           484407.482
+Skew:                           4.905   Prob(JB):                         0.00
+Kurtosis:                      69.952   Cond. No.                         682.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Territorial10
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.661
+Model:                            OLS   Adj. R-squared:                  0.625
+Method:                 Least Squares   F-statistic:                     18.46
+Date:                Thu, 28 Nov 2024   Prob (F-statistic):           1.62e-58
+Time:                        12:40:57   Log-Likelihood:                -2312.7
+No. Observations:                 368   AIC:                             4697.
+Df Residuals:                     332   BIC:                             4838.
+Df Model:                          35                                         
+Covariance Type:            nonrobust                                         
+=================================================================================================================================================
+                                                                                    coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                      -289.2005     68.113     -4.246      0.000    -423.188    -155.213
+denominacion[T.ASESOR]                                                          224.2679     85.367      2.627      0.009      56.339     392.197
+denominacion[T.AUXILIAR ADMINISTRATIVO]                                         329.3281     68.459      4.811      0.000     194.660     463.996
+denominacion[T.AUXILIAR AREA SALUD]                                             443.2290    117.369      3.776      0.000     212.348     674.110
+denominacion[T.AUXILIAR DE SERVICIOS GENERALES]                                 368.9125     75.331      4.897      0.000     220.727     517.098
+denominacion[T.AYUDANTE]                                                        261.8795    152.042      1.722      0.086     -37.208     560.967
+denominacion[T.CELADOR]                                                         419.3718     78.663      5.331      0.000     264.630     574.113
+denominacion[T.COMANDANTE DE TRANSITO]                                          283.5688    154.280      1.838      0.067     -19.921     587.059
+denominacion[T.COMISARIO DE FAMILIA]                                            298.5523    103.790      2.876      0.004      94.382     502.722
+denominacion[T.CONDUCTOR]                                                       315.8922    117.193      2.695      0.007      85.359     546.426
+denominacion[T.CONDUCTOR MECANICO]                                              277.9642    151.833      1.831      0.068     -20.712     576.640
+denominacion[T.CORREGIDOR]                                                      246.9398    151.871      1.626      0.105     -51.811     545.690
+denominacion[T.INSPECTOR DE POLICIA 3ª A 6ª CATEGORIA]                          297.7248    117.097      2.543      0.011      67.379     528.071
+denominacion[T.INSPECTOR DE POLICIA RURAL]                                      242.6425    151.831      1.598      0.111     -56.030     541.315
+denominacion[T.INSPECTOR DE POLICIA URBANO 2ª CATEGORIA]                        514.9290    152.819      3.370      0.001     214.313     815.545
+denominacion[T.INSPECTOR DE POLICIA URBANO CATEGORIA ESPECIAL Y 1ª CATEGORIA]   274.6532    154.203      1.781      0.076     -28.685     577.992
+denominacion[T.INSPECTOR DE TRANSITO Y TRANSPORTE]                              235.8208    117.146      2.013      0.045       5.378     466.263
+denominacion[T.LIDER DE PROGRAMA]                                               262.9843     83.806      3.138      0.002      98.126     427.842
+denominacion[T.MEDICO ESPECIALISTA]                                             199.7831    157.275      1.270      0.205    -109.598     509.164
+denominacion[T.MEDICO GENERAL]                                                  143.5664    104.839      1.369      0.172     -62.665     349.798
+denominacion[T.ODONTOLOGO]                                                      217.6017    118.311      1.839      0.067     -15.131     450.335
+denominacion[T.OPERARIO]                                                        429.4576    152.874      2.809      0.005     128.734     730.181
+denominacion[T.OPERARIO CALIFICADO]                                             241.2371     81.998      2.942      0.003      79.936     402.538
+denominacion[T.PROFESIONAL ESPECIALIZADO]                                       238.2610     83.058      2.869      0.004      74.875     401.647
+denominacion[T.PROFESIONAL UNIVERSITARIO]                                       328.4991     69.192      4.748      0.000     192.388     464.610
+denominacion[T.PROFESIONAL UNIVERSITARIO AREA SALUD]                            411.4732    103.781      3.965      0.000     207.323     615.624
+denominacion[T.SECRETARIO]                                                      429.1054     74.329      5.773      0.000     282.890     575.321
+denominacion[T.SECRETARIO EJECUTIVO]                                            352.8998    103.372      3.414      0.001     149.553     556.246
+denominacion[T.SUBCOMANDANTE DE TRANSITO]                                       234.9096    151.848      1.547      0.123     -63.796     533.616
+denominacion[T.TECNICO ADMINISTRATIVO]                                          348.6952     70.773      4.927      0.000     209.474     487.916
+denominacion[T.TECNICO AREA SALUD]                                              360.2285     90.204      3.993      0.000     182.785     537.671
+denominacion[T.TECNICO OPERATIVO]                                               377.9537     69.966      5.402      0.000     240.321     515.587
+denominacion[T.TECNICO OPERATIVO DE TRANSITO]                                   324.7974    117.558      2.763      0.006      93.544     556.050
+concurso_ascenso[T.True]                                                       -186.5282     16.422    -11.358      0.000    -218.833    -154.223
+vacantes                                                                          8.9157      0.454     19.627      0.000       8.022       9.809
+smmlv                                                                            30.1975      6.671      4.527      0.000      17.076      43.319
+==============================================================================
+Omnibus:                      265.577   Durbin-Watson:                   1.441
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             6615.747
+Skew:                           2.667   Prob(JB):                         0.00
+Kurtosis:                      23.075   Cond. No.                     1.03e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.03e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+Esce2_MinTrabajo3_Territorial10
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.573
+Model:                            OLS   Adj. R-squared:                  0.551
+Method:                 Least Squares   F-statistic:                     26.32
+Date:                Thu, 28 Nov 2024   Prob (F-statistic):          2.10e-106
+Time:                        12:40:57   Log-Likelihood:                -4537.4
+No. Observations:                 744   AIC:                             9149.
+Df Residuals:                     707   BIC:                             9319.
+Df Model:                          36                                         
+Covariance Type:            nonrobust                                         
+=================================================================================================================================================
+                                                                                    coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                      -185.5635     53.432     -3.473      0.001    -290.467     -80.660
+denominacion[T.ASESOR]                                                          100.9723     60.148      1.679      0.094     -17.118     219.062
+denominacion[T.AUXILIAR ADMINISTRATIVO]                                         193.0269     53.731      3.593      0.000      87.536     298.517
+denominacion[T.AUXILIAR AREA SALUD]                                             315.4578     94.293      3.345      0.001     130.329     500.586
+denominacion[T.AUXILIAR DE SERVICIOS GENERALES]                                 338.5355     60.827      5.566      0.000     219.113     457.958
+denominacion[T.AYUDANTE]                                                        166.7972    122.516      1.361      0.174     -73.741     407.336
+denominacion[T.CELADOR]                                                         331.4555     63.127      5.251      0.000     207.516     455.395
+denominacion[T.COMANDANTE DE TRANSITO]                                          128.2987    123.320      1.040      0.299    -113.819     370.416
+denominacion[T.COMISARIO DE FAMILIA]                                            193.6697     83.024      2.333      0.020      30.667     356.673
+denominacion[T.CONDUCTOR]                                                       225.5064     94.270      2.392      0.017      40.424     410.589
+denominacion[T.CONDUCTOR MECANICO]                                              151.5470     82.688      1.833      0.067     -10.797     313.891
+denominacion[T.CORREGIDOR]                                                      163.4804    122.457      1.335      0.182     -76.943     403.904
+denominacion[T.INSPECTOR DE POLICIA 3ª A 6ª CATEGORIA]                          217.9751     94.205      2.314      0.021      33.020     402.930
+denominacion[T.INSPECTOR DE POLICIA RURAL]                                      155.6692    122.440      1.271      0.204     -84.720     396.058
+denominacion[T.INSPECTOR DE POLICIA URBANO 2ª CATEGORIA]                        343.9139    122.779      2.801      0.005     102.860     584.968
+denominacion[T.INSPECTOR DE POLICIA URBANO CATEGORIA ESPECIAL Y 1ª CATEGORIA]   120.9101    123.272      0.981      0.327    -121.114     362.934
+denominacion[T.INSPECTOR DE TRABAJO Y SEGURIDAD SOCIAL]                          45.3741     54.424      0.834      0.405     -61.478     152.226
+denominacion[T.INSPECTOR DE TRANSITO Y TRANSPORTE]                              149.5908     94.256      1.587      0.113     -35.464     334.646
+denominacion[T.LIDER DE PROGRAMA]                                               158.2890     66.271      2.389      0.017      28.178     288.400
+denominacion[T.MEDICO ESPECIALISTA]                                              62.1228    124.447      0.499      0.618    -182.208     306.453
+denominacion[T.MEDICO GENERAL]                                                   76.3024     83.479      0.914      0.361     -87.595     240.200
+denominacion[T.ODONTOLOGO]                                                      147.4207     94.721      1.556      0.120     -38.546     333.388
+denominacion[T.OPERARIO]                                                        243.7788    122.823      1.985      0.048       2.637     484.921
+denominacion[T.OPERARIO CALIFICADO]                                             153.2890     65.589      2.337      0.020      24.517     282.061
+denominacion[T.PROFESIONAL ESPECIALIZADO]                                        94.3700     54.475      1.732      0.084     -12.583     201.323
+denominacion[T.PROFESIONAL UNIVERSITARIO]                                       192.1322     53.870      3.567      0.000      86.368     297.896
+denominacion[T.PROFESIONAL UNIVERSITARIO AREA SALUD]                            307.3474     83.011      3.702      0.000     144.370     470.325
+denominacion[T.SECRETARIO]                                                      311.5740     59.258      5.258      0.000     195.230     427.918
+denominacion[T.SECRETARIO EJECUTIVO]                                            168.3687     62.265      2.704      0.007      46.121     290.616
+denominacion[T.SUBCOMANDANTE DE TRANSITO]                                       145.6388    122.445      1.189      0.235     -94.760     386.038
+denominacion[T.TECNICO ADMINISTRATIVO]                                          194.7526     54.979      3.542      0.000      86.811     302.694
+denominacion[T.TECNICO AREA SALUD]                                              239.9519     72.203      3.323      0.001      98.193     381.711
+denominacion[T.TECNICO OPERATIVO]                                               244.1726     55.461      4.403      0.000     135.284     353.061
+denominacion[T.TECNICO OPERATIVO DE TRANSITO]                                   186.8496     94.395      1.979      0.048       1.521     372.178
+concurso_ascenso[T.True]                                                        -90.7960      9.380     -9.680      0.000    -109.211     -72.381
+vacantes                                                                          7.3886      0.323     22.905      0.000       6.755       8.022
+smmlv                                                                            23.4400      3.719      6.303      0.000      16.138      30.742
+==============================================================================
+Omnibus:                      641.266   Durbin-Watson:                   1.255
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            39184.532
+Skew:                           3.473   Prob(JB):                         0.00
+Kurtosis:                      37.868   Cond. No.                     1.15e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.15e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+Esce3_MinTrabajo2024_Antioquia3_Territorial10
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.507
+Model:                            OLS   Adj. R-squared:                  0.501
+Method:                 Least Squares   F-statistic:                     75.76
+Date:                Thu, 28 Nov 2024   Prob (F-statistic):               0.00
+Time:                        12:40:57   Log-Likelihood:                -18721.
+No. Observations:                3283   AIC:                         3.753e+04
+Df Residuals:                    3238   BIC:                         3.781e+04
+Df Model:                          44                                         
+Covariance Type:            nonrobust                                         
+=================================================================================================================================================
+                                                                                    coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                      -136.6339     18.830     -7.256      0.000    -173.554     -99.713
+denominacion[T.ASESOR]                                                          119.2619     25.211      4.731      0.000      69.831     168.693
+denominacion[T.AUXILIAR ADMINISTRATIVO]                                         146.9341     18.545      7.923      0.000     110.573     183.295
+denominacion[T.AUXILIAR AREA SALUD]                                             167.5153     28.625      5.852      0.000     111.390     223.640
+denominacion[T.AUXILIAR DE SERVICIOS GENERALES]                                 175.6390     21.368      8.220      0.000     133.743     217.535
+denominacion[T.AYUDANTE]                                                        187.2171     28.559      6.555      0.000     131.221     243.213
+denominacion[T.CELADOR]                                                         280.0574     26.402     10.607      0.000     228.291     331.823
+denominacion[T.COMANDANTE DE TRANSITO]                                          128.1716     46.235      2.772      0.006      37.519     218.824
+denominacion[T.COMISARIO DE FAMILIA]                                            132.3135     27.021      4.897      0.000      79.333     185.293
+denominacion[T.CONDUCTOR]                                                       166.3949     23.520      7.075      0.000     120.280     212.510
+denominacion[T.CONDUCTOR MECANICO]                                              125.3292     37.433      3.348      0.001      51.933     198.725
+denominacion[T.CORREGIDOR]                                                      150.6062     75.253      2.001      0.045       3.057     298.155
+denominacion[T.DIRECTOR DE BANDA]                                               119.2029     75.263      1.584      0.113     -28.365     266.771
+denominacion[T.DIRECTOR DE ORQUESTA]                                            115.4142     75.352      1.532      0.126     -32.328     263.156
+denominacion[T.ENFERMERO ESPECIALISTA]                                          124.1021     55.025      2.255      0.024      16.214     231.990
+denominacion[T.GUARDIAN]                                                        180.2398     54.642      3.299      0.001      73.103     287.376
+denominacion[T.INSPECTOR DE POLICIA 3ª A 6ª CATEGORIA]                          161.0868     40.824      3.946      0.000      81.043     241.131
+denominacion[T.INSPECTOR DE POLICIA RURAL]                                      135.9531     75.256      1.807      0.071     -11.601     283.508
+denominacion[T.INSPECTOR DE POLICIA URBANO 2ª CATEGORIA]                        164.7934     40.854      4.034      0.000      84.691     244.896
+denominacion[T.INSPECTOR DE POLICIA URBANO CATEGORIA ESPECIAL Y 1ª CATEGORIA]   121.3845     32.044      3.788      0.000      58.556     184.213
+denominacion[T.INSPECTOR DE TRABAJO Y SEGURIDAD SOCIAL]                          41.7125     20.820      2.004      0.045       0.891      82.534
+denominacion[T.INSPECTOR DE TRANSITO Y TRANSPORTE]                              124.1306     34.980      3.549      0.000      55.546     192.715
+denominacion[T.INSTRUCTOR]                                                      136.1684     34.985      3.892      0.000      67.573     204.764
+denominacion[T.LIDER DE PROGRAMA]                                               118.7494     21.196      5.603      0.000      77.191     160.308
+denominacion[T.LIDER DE PROYECTO]                                               115.8117     21.446      5.400      0.000      73.763     157.860
+denominacion[T.MEDICO ESPECIALISTA]                                              75.3389     30.115      2.502      0.012      16.293     134.385
+denominacion[T.MEDICO GENERAL]                                                   92.7964     30.638      3.029      0.002      32.725     152.868
+denominacion[T.ODONTOLOGO]                                                      175.2972     45.992      3.811      0.000      85.121     265.474
+denominacion[T.ODONTOLOGO ESPECIALISTA]                                         137.9262     75.447      1.828      0.068     -10.003     285.855
+denominacion[T.OPERARIO]                                                        139.9625     40.850      3.426      0.001      59.868     220.057
+denominacion[T.OPERARIO CALIFICADO]                                             131.2708     31.662      4.146      0.000      69.191     193.350
+denominacion[T.PROFESIONAL ESPECIALIZADO]                                       112.3371     19.366      5.801      0.000      74.367     150.307
+denominacion[T.PROFESIONAL ESPECIALIZADO AREA SALUD]                             73.3311     46.596      1.574      0.116     -18.030     164.693
+denominacion[T.PROFESIONAL UNIVERSITARIO]                                       139.3766     18.732      7.441      0.000     102.649     176.104
+denominacion[T.PROFESIONAL UNIVERSITARIO AREA SALUD]                            154.2129     25.155      6.131      0.000     104.892     203.534
+denominacion[T.SECRETARIO]                                                      176.2659     20.084      8.776      0.000     136.887     215.644
+denominacion[T.SECRETARIO EJECUTIVO]                                            145.2571     23.406      6.206      0.000      99.365     191.149
+denominacion[T.SUBCOMANDANTE DE TRANSITO]                                       131.9387     40.838      3.231      0.001      51.867     212.010
+denominacion[T.TECNICO ADMINISTRATIVO]                                          142.2736     18.884      7.534      0.000     105.248     179.299
+denominacion[T.TECNICO AREA SALUD]                                              122.8805     19.914      6.171      0.000      83.836     161.925
+denominacion[T.TECNICO OPERATIVO]                                               148.7991     18.881      7.881      0.000     111.778     185.820
+denominacion[T.TECNICO OPERATIVO DE TRANSITO]                                   137.5779     40.831      3.369      0.001      57.521     217.635
+concurso_ascenso[T.True]                                                        -55.4598      2.968    -18.686      0.000     -61.279     -49.640
+vacantes                                                                          7.6481      0.154     49.798      0.000       7.347       7.949
+smmlv                                                                            10.2824      1.523      6.751      0.000       7.296      13.269
+==============================================================================
+Omnibus:                     3565.195   Durbin-Watson:                   1.487
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           703200.035
+Skew:                           5.084   Prob(JB):                         0.00
+Kurtosis:                      73.974   Cond. No.                         921.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+MinTrabajo2024
+
+            smmlv    vacantes  mun_inscritos
+count  376.000000  376.000000     376.000000
+mean     4.576543    2.819149      12.579787
+std      1.687837    9.240448      26.293706
+min      1.590000    1.000000       1.000000
+25%      3.350000    1.000000       2.750000
+50%      4.300000    1.000000       6.000000
+75%      5.800000    2.000000      13.000000
+max      8.140000  162.000000     412.000000
+
+count    376.000000
+mean      12.579787
+std       26.293706
+min        1.000000
+25%        2.750000
+50%        6.000000
+75%       13.000000
+max      412.000000
+Name: mun_inscritos, dtype: float64
+
+Antioquia3
+
+             smmlv     vacantes  mun_inscritos
+count  2539.000000  2539.000000    2539.000000
+mean      4.301528     1.868846      38.849941
+std       1.610137     6.702543      75.697684
+min       1.190000     1.000000       1.000000
+25%       2.970000     1.000000       5.000000
+50%       4.300000     1.000000      22.000000
+75%       5.370000     1.000000      43.000000
+max       8.680000   275.000000    1296.000000
+
+count    2539.000000
+mean       38.849941
+std        75.697684
+min         1.000000
+25%         5.000000
+50%        22.000000
+75%        43.000000
+max      1296.000000
+Name: mun_inscritos, dtype: float64
+
+Territorial10
+
+            smmlv    vacantes  mun_inscritos
+count  368.000000  368.000000     368.000000
+mean     3.580978    4.255435     108.105978
+std      1.924596   18.171750     223.023922
+min      1.040000    1.000000       1.000000
+25%      2.122500    1.000000       5.000000
+50%      3.040000    1.000000      42.000000
+75%      5.120000    2.000000     112.000000
+max     10.670000  236.000000    2851.000000
+
+count     368.000000
+mean      108.105978
+std       223.023922
+min         1.000000
+25%         5.000000
+50%        42.000000
+75%       112.000000
+max      2851.000000
+Name: mun_inscritos, dtype: float64
+
+Esce2_MinTrabajo3_Territorial10
+
+            smmlv    vacantes  mun_inscritos
+count  744.000000  744.000000     744.000000
+mean     4.084113    3.529570      59.829301
+std      1.874969   14.377685     164.929200
+min      1.040000    1.000000       1.000000
+25%      2.760000    1.000000       3.000000
+50%      3.710000    1.000000      10.000000
+75%      5.390000    2.000000      48.000000
+max     10.670000  236.000000    2851.000000
+
+count     744.000000
+mean       59.829301
+std       164.929200
+min         1.000000
+25%         3.000000
+50%        10.000000
+75%        48.000000
+max      2851.000000
+Name: mun_inscritos, dtype: float64
+
+Esce3_MinTrabajo2024_Antioquia3_Territorial10
+
+             smmlv     vacantes  mun_inscritos
+count  3283.000000  3283.000000    3283.000000
+mean      4.252257     2.245203      43.604325
+std       1.676003     9.056590     103.278321
+min       1.040000     1.000000       1.000000
+25%       2.900000     1.000000       4.000000
+50%       4.070000     1.000000      19.000000
+75%       5.370000     1.000000      44.000000
+max      10.670000   275.000000    2851.000000
+
+count    3283.000000
+mean       43.604325
+std       103.278321
+min         1.000000
+25%         4.000000
+50%        19.000000
+75%        44.000000
+max      2851.000000
+Name: mun_inscritos, dtype: float64
+
+MinTrabajo2024
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 5.588%
+
+Test Mean Squared Error (MSE): 650.991
+
+Test Mean Absolute Error (MAE): 8.170
+
+MinTrabajo2024
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: 63.051%
+
+Test Mean Squared Error (MSE): 254.772
+
+Test Mean Absolute Error (MAE): 7.071
+
+MinTrabajo2024
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: 57.736%
+
+Test Mean Squared Error (MSE): 291.420
+
+Test Mean Absolute Error (MAE): 6.451
+
+MinTrabajo2024
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: 75.985%
+
+Test Mean Squared Error (MSE): 165.589
+
+Test Mean Absolute Error (MAE): 6.071
+
+Antioquia3
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: -3851.981%
+
+Test Mean Squared Error (MSE): 226364.851
+
+Test Mean Absolute Error (MAE): 31.691
+
+Antioquia3
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: -11426.516%
+
+Test Mean Squared Error (MSE): 660225.307
+
+Test Mean Absolute Error (MAE): 42.552
+
+Antioquia3
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: -3957.974%
+
+Test Mean Squared Error (MSE): 232436.003
+
+Test Mean Absolute Error (MAE): 32.635
+
+Antioquia3
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: -398612.904%
+
+Test Mean Squared Error (MSE): 22837806.891
+
+Test Mean Absolute Error (MAE): 151.265
+
+Territorial10
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: -39144.458%
+
+Test Mean Squared Error (MSE): 19467020.400
+
+Test Mean Absolute Error (MAE): 331.348
+
+Territorial10
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: -1976220.843%
+
+Test Mean Squared Error (MSE): 980344226.373
+
+Test Mean Absolute Error (MAE): 2145.572
+
+Territorial10
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: -672259.703%
+
+Test Mean Squared Error (MSE): 333520721.429
+
+Test Mean Absolute Error (MAE): 1247.416
+
+Territorial10
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: -31000197.526%
+
+Test Mean Squared Error (MSE): 15377545001.131
+
+Test Mean Absolute Error (MAE): 7674.482
+
+Esce2_MinTrabajo3_Territorial10
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: -590200.206%
+
+Test Mean Squared Error (MSE): 160355521.682
+
+Test Mean Absolute Error (MAE): 866.189
+
+Esce2_MinTrabajo3_Territorial10
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: -3058.313%
+
+Test Mean Squared Error (MSE): 857958.243
+
+Test Mean Absolute Error (MAE): 110.174
+
+Esce2_MinTrabajo3_Territorial10
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: -20110426.419%
+
+Test Mean Squared Error (MSE): 5463040536.296
+
+Test Mean Absolute Error (MAE): 4805.505
+
+Esce2_MinTrabajo3_Territorial10
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: -3255713.235%
+
+Test Mean Squared Error (MSE): 884444261.142
+
+Test Mean Absolute Error (MAE): 1697.505
+
+Esce3_MinTrabajo2024_Antioquia3_Territorial10
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: -1028.962%
+
+Test Mean Squared Error (MSE): 120383.073
+
+Test Mean Absolute Error (MAE): 29.057
+
+Esce3_MinTrabajo2024_Antioquia3_Territorial10
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: -2478.079%
+
+Test Mean Squared Error (MSE): 274904.730
+
+Test Mean Absolute Error (MAE): 31.711
+
+Esce3_MinTrabajo2024_Antioquia3_Territorial10
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: -187.507%
+
+Test Mean Squared Error (MSE): 30657.355
+
+Test Mean Absolute Error (MAE): 25.559
+
+Esce3_MinTrabajo2024_Antioquia3_Territorial10
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: -1.539%
+
+Test Mean Squared Error (MSE): 10827.237
+
+Test Mean Absolute Error (MAE): 24.770
+

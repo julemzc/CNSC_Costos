@@ -1,0 +1,111 @@
+mun_inscritos~vacantes_opec+exp_profesional+exp_laboral+exp_prof_relacionada+vacantes+nivel+smmlv
+
+Esc1-DIAN 2023
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.723
+Model:                            OLS   Adj. R-squared:                  0.721
+Method:                 Least Squares   F-statistic:                     292.2
+Date:                Fri, 04 Oct 2024   Prob (F-statistic):          1.43e-243
+Time:                        10:08:28   Log-Likelihood:                -6299.4
+No. Observations:                 904   AIC:                         1.262e+04
+Df Residuals:                     895   BIC:                         1.266e+04
+Df Model:                           8                                         
+Covariance Type:            nonrobust                                         
+========================================================================================
+                           coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------
+Intercept               98.4804     56.372      1.747      0.081     -12.157     209.117
+nivel[T.PROFESIONAL]  -197.9339    120.218     -1.646      0.100    -433.875      38.007
+nivel[T.TECNICO]      -233.2851     40.335     -5.784      0.000    -312.448    -154.123
+vacantes_opec           -0.3901      0.185     -2.107      0.035      -0.753      -0.027
+exp_profesional         34.7418     83.287      0.417      0.677    -128.718     198.202
+exp_laboral              9.8916     17.821      0.555      0.579     -25.085      44.868
+exp_prof_relacionada   -81.4324     26.369     -3.088      0.002    -133.185     -29.680
+vacantes                48.5562      1.047     46.358      0.000      46.501      50.612
+smmlv                   18.1041     15.747      1.150      0.251     -12.801      49.009
+==============================================================================
+Omnibus:                      342.338   Durbin-Watson:                   1.774
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           143398.781
+Skew:                          -0.006   Prob(JB):                         0.00
+Kurtosis:                      64.701   Cond. No.                     1.27e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.27e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+Esc1-DIAN 2023
+
+            smmlv    vacantes  exp_prof_relacionada  exp_laboral  \
+count  904.000000  904.000000            904.000000   904.000000   
+mean     5.177378    3.584071              0.317478     1.188053   
+std      1.764250    8.413300              0.712088     1.146052   
+min      2.600000    1.000000              0.000000     0.000000   
+25%      3.990000    1.000000              0.000000     0.000000   
+50%      5.270000    1.000000              0.000000     1.000000   
+75%      5.870000    3.000000              0.000000     2.000000   
+max     12.940000  143.000000              4.000000     3.000000   
+
+       exp_profesional  vacantes_opec  mun_inscritos  
+count       904.000000     904.000000     904.000000  
+mean          0.415929      49.306416     157.497788  
+std           0.502056      59.133164     488.904751  
+min           0.000000       1.000000       1.000000  
+25%           0.000000       9.000000      17.000000  
+50%           0.000000      36.000000      59.000000  
+75%           1.000000      59.000000     126.000000  
+max           2.000000     284.000000   10326.000000  
+
+count      904.000000
+mean       157.497788
+std        488.904751
+min          1.000000
+25%         17.000000
+50%         59.000000
+75%        126.000000
+max      10326.000000
+Name: mun_inscritos, dtype: float64
+
+Esc1-DIAN 2023
+
+Red Neuronal lr001_01
+
+Coeficiente de Determinación por r2_score: 43.606%
+
+Test Mean Squared Error (MSE): 134647.217
+
+Test Mean Absolute Error (MAE): 90.161
+
+Esc1-DIAN 2023
+
+Red Neuronal lr001_015
+
+Coeficiente de Determinación por r2_score: 36.036%
+
+Test Mean Squared Error (MSE): 152721.794
+
+Test Mean Absolute Error (MAE): 99.778
+
+Esc1-DIAN 2023
+
+Red Neuronal lr01_01
+
+Coeficiente de Determinación por r2_score: 23.606%
+
+Test Mean Squared Error (MSE): 182400.944
+
+Test Mean Absolute Error (MAE): 82.798
+
+Esc1-DIAN 2023
+
+Red Neuronal lr01_015
+
+Coeficiente de Determinación por r2_score: -48.553%
+
+Test Mean Squared Error (MSE): 354689.991
+
+Test Mean Absolute Error (MAE): 102.315
+

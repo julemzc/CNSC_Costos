@@ -1,0 +1,191 @@
+mun_inscritos~nivel+vacantes+concurso_ascenso+smmlv
+
+ENTIDADES ORDEN NACIONAL 2022
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.354
+Model:                            OLS   Adj. R-squared:                  0.353
+Method:                 Least Squares   F-statistic:                     201.6
+Date:                Tue, 26 Nov 2024   Prob (F-statistic):          3.11e-205
+Time:                        14:35:15   Log-Likelihood:                -8114.5
+No. Observations:                2210   AIC:                         1.624e+04
+Df Residuals:                    2203   BIC:                         1.628e+04
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                   11.3757      1.506      7.556      0.000       8.423      14.328
+nivel[T.Asistencial]         9.6751      1.516      6.383      0.000       6.703      12.647
+nivel[T.Profesional]         3.6921      1.173      3.147      0.002       1.392       5.993
+nivel[T.Técnico]             3.9679      1.419      2.796      0.005       1.185       6.751
+concurso_ascenso[T.True]   -14.8466      0.466    -31.835      0.000     -15.761     -13.932
+vacantes                     1.1236      0.420      2.675      0.008       0.300       1.947
+smmlv                        0.5307      0.156      3.400      0.001       0.225       0.837
+==============================================================================
+Omnibus:                       99.596   Durbin-Watson:                   1.291
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              112.703
+Skew:                           0.553   Prob(JB):                     3.36e-25
+Kurtosis:                       3.034   Cond. No.                         62.3
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Esc1-DIAN 2023
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.544
+Model:                            OLS   Adj. R-squared:                  0.541
+Method:                 Least Squares   F-statistic:                     170.4
+Date:                Tue, 26 Nov 2024   Prob (F-statistic):          3.83e-119
+Time:                        14:35:15   Log-Likelihood:                -3414.6
+No. Observations:                 719   AIC:                             6841.
+Df Residuals:                     713   BIC:                             6869.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                   80.9854      4.806     16.851      0.000      71.550      90.421
+nivel[T.Profesional]       -23.5332      5.781     -4.071      0.000     -34.884     -12.183
+nivel[T.Técnico]           -37.0038      4.128     -8.964      0.000     -45.108     -28.899
+concurso_ascenso[T.True]   -66.0354      2.668    -24.751      0.000     -71.273     -60.797
+vacantes                     3.3042      0.374      8.828      0.000       2.569       4.039
+smmlv                        2.1964      1.156      1.900      0.058      -0.073       4.466
+==============================================================================
+Omnibus:                       56.730   Durbin-Watson:                   1.302
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               68.187
+Skew:                           0.734   Prob(JB):                     1.56e-15
+Kurtosis:                       3.345   Cond. No.                         39.6
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+ENTIDADES ORDEN NACIONAL 2022
+
+             smmlv     vacantes  mun_inscritos
+count  2210.000000  2210.000000     2210.00000
+mean      4.244389     1.152036       13.79276
+std       1.682217     0.483740       11.84457
+min       1.150000     1.000000        1.00000
+25%       3.070000     1.000000        3.00000
+50%       3.850000     1.000000       10.00000
+75%       5.320000     1.000000       23.00000
+max       9.700000     6.000000       41.00000
+
+count    2210.00000
+mean       13.79276
+std        11.84457
+min         1.00000
+25%         3.00000
+50%        10.00000
+75%        23.00000
+max        41.00000
+Name: mun_inscritos, dtype: float64
+
+Esc1-DIAN 2023
+
+            smmlv    vacantes  mun_inscritos
+count  719.000000  719.000000     719.000000
+mean     5.219708    1.912378      48.741307
+std      1.653547    2.864021      41.427621
+min      2.600000    1.000000       1.000000
+25%      3.990000    1.000000       9.000000
+50%      5.270000    1.000000      38.000000
+75%      5.870000    2.000000      76.000000
+max     12.940000   43.000000     145.000000
+
+count    719.000000
+mean      48.741307
+std       41.427621
+min        1.000000
+25%        9.000000
+50%       38.000000
+75%       76.000000
+max      145.000000
+Name: mun_inscritos, dtype: float64
+
+ENTIDADES ORDEN NACIONAL 2022
+
+Red Neuronal bajo2
+
+Coeficiente de Determinación por r2_score: 30.926%
+
+Test Mean Squared Error (MSE): 96.862
+
+Test Mean Absolute Error (MAE): 7.373
+
+ENTIDADES ORDEN NACIONAL 2022
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: 22.328%
+
+Test Mean Squared Error (MSE): 108.920
+
+Test Mean Absolute Error (MAE): 7.678
+
+ENTIDADES ORDEN NACIONAL 2022
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: 33.241%
+
+Test Mean Squared Error (MSE): 93.616
+
+Test Mean Absolute Error (MAE): 7.553
+
+ENTIDADES ORDEN NACIONAL 2022
+
+Red Neuronal alto2
+
+Coeficiente de Determinación por r2_score: 34.492%
+
+Test Mean Squared Error (MSE): 91.863
+
+Test Mean Absolute Error (MAE): 7.678
+
+Esc1-DIAN 2023
+
+Red Neuronal bajo2
+
+Coeficiente de Determinación por r2_score: 39.481%
+
+Test Mean Squared Error (MSE): 1037.213
+
+Test Mean Absolute Error (MAE): 20.622
+
+Esc1-DIAN 2023
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: 43.218%
+
+Test Mean Squared Error (MSE): 973.162
+
+Test Mean Absolute Error (MAE): 19.674
+
+Esc1-DIAN 2023
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: 46.368%
+
+Test Mean Squared Error (MSE): 919.171
+
+Test Mean Absolute Error (MAE): 19.323
+
+Esc1-DIAN 2023
+
+Red Neuronal alto2
+
+Coeficiente de Determinación por r2_score: 52.741%
+
+Test Mean Squared Error (MSE): 809.952
+
+Test Mean Absolute Error (MAE): 18.171
+

@@ -1,0 +1,85 @@
+mun_inscritos~concurso_ascenso+vacantes+exp_prof_relacionada+smmlv
+
+Esc1-DIAN 2023
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.721
+Model:                            OLS   Adj. R-squared:                  0.720
+Method:                 Least Squares   F-statistic:                     580.7
+Date:                Fri, 04 Oct 2024   Prob (F-statistic):          2.15e-247
+Time:                        10:20:33   Log-Likelihood:                -6303.0
+No. Observations:                 904   AIC:                         1.262e+04
+Df Residuals:                     899   BIC:                         1.264e+04
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                   -2.2804     38.969     -0.059      0.953     -78.761      74.200
+concurso_ascenso[T.True]  -135.8340     21.966     -6.184      0.000    -178.944     -92.724
+vacantes                    48.3461      1.026     47.101      0.000      46.332      50.361
+exp_prof_relacionada       -13.0553     20.457     -0.638      0.524     -53.204      27.093
+smmlv                        5.1008      8.415      0.606      0.545     -11.414      21.616
+==============================================================================
+Omnibus:                      350.116   Durbin-Watson:                   1.761
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           167485.181
+Skew:                          -0.088   Prob(JB):                         0.00
+Kurtosis:                      69.682   Cond. No.                         46.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Esc1-DIAN 2023
+
+            smmlv  exp_prof_relacionada    vacantes  mun_inscritos
+count  904.000000            904.000000  904.000000     904.000000
+mean     5.177378              0.317478    3.584071     157.497788
+std      1.764250              0.712088    8.413300     488.904751
+min      2.600000              0.000000    1.000000       1.000000
+25%      3.990000              0.000000    1.000000      17.000000
+50%      5.270000              0.000000    1.000000      59.000000
+75%      5.870000              0.000000    3.000000     126.000000
+max     12.940000              4.000000  143.000000   10326.000000
+
+count      904.000000
+mean       157.497788
+std        488.904751
+min          1.000000
+25%         17.000000
+50%         59.000000
+75%        126.000000
+max      10326.000000
+Name: mun_inscritos, dtype: float64
+
+Esc1-DIAN 2023
+
+Red Neuronal lr001_01
+
+Coeficiente de Determinación por r2_score: 78.758%
+
+Test Mean Squared Error (MSE): 50718.184
+
+Test Mean Absolute Error (MAE): 91.163
+
+Esc1-DIAN 2023
+
+Red Neuronal lr001_015
+
+Coeficiente de Determinación por r2_score: 79.867%
+
+Test Mean Squared Error (MSE): 48070.174
+
+Test Mean Absolute Error (MAE): 74.794
+
+Esc1-DIAN 2023
+
+Red Neuronal lr01_01
+
+Coeficiente de Determinación por r2_score: -129.917%
+
+Test Mean Squared Error (MSE): 548958.009
+
+Test Mean Absolute Error (MAE): 103.458
+

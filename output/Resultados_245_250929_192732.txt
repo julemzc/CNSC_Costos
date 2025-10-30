@@ -1,0 +1,148 @@
+inscritos ~ smmlv + sin_experiencia + vacantes_opec
+
+SENA-0
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.215
+Model:                            OLS   Adj. R-squared:                  0.215
+Method:                 Least Squares   F-statistic:                     338.4
+Date:                Mon, 29 Sep 2025   Prob (F-statistic):          3.69e-194
+Time:                        19:27:33   Log-Likelihood:                -4731.7
+No. Observations:                3700   AIC:                             9471.
+Df Residuals:                    3696   BIC:                             9496.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+===========================================================================================
+                              coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+Intercept                   1.4217      0.064     22.333      0.000       1.297       1.547
+sin_experiencia[T.True]     1.5138      0.080     18.933      0.000       1.357       1.671
+smmlv                       0.3092      0.015     21.321      0.000       0.281       0.338
+vacantes_opec               0.1707      0.010     16.294      0.000       0.150       0.191
+==============================================================================
+Omnibus:                       87.078   Durbin-Watson:                   1.411
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               93.176
+Skew:                           0.372   Prob(JB):                     5.85e-21
+Kurtosis:                       3.224   Cond. No.                         25.0
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+inscritos ~ smmlv + sin_experiencia + vacantes_opec
+
+SENA-1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.470
+Model:                            OLS   Adj. R-squared:                  0.460
+Method:                 Least Squares   F-statistic:                     47.62
+Date:                Mon, 29 Sep 2025   Prob (F-statistic):           4.38e-22
+Time:                        19:27:33   Log-Likelihood:                -178.36
+No. Observations:                 165   AIC:                             364.7
+Df Residuals:                     161   BIC:                             377.1
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+===========================================================================================
+                              coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+Intercept                   0.3489      0.213      1.638      0.103      -0.072       0.770
+sin_experiencia[T.True]     2.1034      0.725      2.903      0.004       0.673       3.534
+smmlv                       0.3330      0.043      7.782      0.000       0.248       0.417
+vacantes_opec               0.0967      0.011      9.065      0.000       0.076       0.118
+==============================================================================
+Omnibus:                        1.743   Durbin-Watson:                   1.764
+Prob(Omnibus):                  0.418   Jarque-Bera (JB):                1.710
+Skew:                           0.245   Prob(JB):                        0.425
+Kurtosis:                       2.906   Cond. No.                         90.3
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+SENA-0
+
+             smmlv  vacantes_opec  mun_inscritos
+count  3700.000000    3700.000000    3700.000000
+mean      4.000581       1.425676      30.825405
+std       1.000030       1.382953      48.648302
+min       2.270000       1.000000       1.000000
+25%       3.410000       1.000000       8.000000
+50%       3.410000       1.000000      17.000000
+75%       4.910000       1.000000      37.000000
+max       8.290000      29.000000    1330.000000
+
+count    3700.000000
+mean       30.825405
+std        48.648302
+min         1.000000
+25%         8.000000
+50%        17.000000
+75%        37.000000
+max      1330.000000
+Name: mun_inscritos, dtype: float64
+
+SENA-1
+
+            smmlv  vacantes_opec  mun_inscritos
+count  165.000000     165.000000     165.000000
+mean     4.687333       3.333333      14.884848
+std      1.319533       5.294191      20.046411
+min      2.550000       1.000000       1.000000
+25%      3.370000       1.000000       4.000000
+50%      4.760000       1.000000       8.000000
+75%      5.750000       3.000000      15.000000
+max      8.200000      35.000000     112.000000
+
+count    165.000000
+mean      14.884848
+std       20.046411
+min        1.000000
+25%        4.000000
+50%        8.000000
+75%       15.000000
+max      112.000000
+Name: mun_inscritos, dtype: float64
+
+SENA-0
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 49.522%
+
+Test Mean Squared Error (MSE): 0.505
+
+Test Mean Absolute Error (MAE): 0.559
+
+SENA-0
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 48.359%
+
+Test Mean Squared Error (MSE): 0.516
+
+Test Mean Absolute Error (MAE): 0.567
+
+SENA-1
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: -285.104%
+
+Test Mean Squared Error (MSE): 3.851
+
+Test Mean Absolute Error (MAE): 0.684
+
+SENA-1
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 53.370%
+
+Test Mean Squared Error (MSE): 0.466
+
+Test Mean Absolute Error (MAE): 0.544
+

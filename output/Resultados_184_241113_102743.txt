@@ -1,0 +1,342 @@
+mun_inscritos~tipo_entidad+vacantes_opec+concurso_ascenso+smmlv
+
+Esc1-DIAN 2023
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.191
+Model:                            OLS   Adj. R-squared:                  0.188
+Method:                 Least Squares   F-statistic:                     68.19
+Date:                Wed, 13 Nov 2024   Prob (F-statistic):           1.33e-39
+Time:                        10:27:50   Log-Likelihood:                -5494.0
+No. Observations:                 872   AIC:                         1.100e+04
+Df Residuals:                     868   BIC:                         1.102e+04
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                   42.7039     16.281      2.623      0.009      10.748      74.659
+concurso_ascenso[T.True]  -130.7023     11.483    -11.382      0.000    -153.241    -108.164
+vacantes_opec                0.5669      0.081      7.023      0.000       0.408       0.725
+smmlv                       12.9031      2.908      4.438      0.000       7.197      18.610
+==============================================================================
+Omnibus:                      563.179   Durbin-Watson:                   1.754
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             5661.178
+Skew:                           2.887   Prob(JB):                         0.00
+Kurtosis:                      14.066   Cond. No.                         286.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Esc1-DIAN 2023 ascenso-0
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.066
+Model:                            OLS   Adj. R-squared:                  0.063
+Method:                 Least Squares   F-statistic:                     22.54
+Date:                Wed, 13 Nov 2024   Prob (F-statistic):           3.47e-10
+Time:                        10:27:50   Log-Likelihood:                -4242.5
+No. Observations:                 641   AIC:                             8491.
+Df Residuals:                     638   BIC:                             8504.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                   27.7948     25.997      1.069      0.285     -23.255      78.845
+concurso_ascenso[T.True]  1.281e-14   3.72e-15      3.441      0.001     5.5e-15    2.01e-14
+vacantes_opec                0.7535      0.115      6.534      0.000       0.527       0.980
+smmlv                       16.1152      4.717      3.417      0.001       6.853      25.377
+==============================================================================
+Omnibus:                      456.269   Durbin-Watson:                   1.805
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             5629.628
+Skew:                           3.132   Prob(JB):                         0.00
+Kurtosis:                      16.098   Cond. No.                     1.15e+18
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 3.66e-30. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+Esc1-DIAN 2023 ascenso-1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.279
+Model:                            OLS   Adj. R-squared:                  0.273
+Method:                 Least Squares   F-statistic:                     45.47
+Date:                Wed, 13 Nov 2024   Prob (F-statistic):           2.03e-17
+Time:                        10:27:50   Log-Likelihood:                -1014.7
+No. Observations:                 238   AIC:                             2035.
+Df Residuals:                     235   BIC:                             2046.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                  -16.9899      2.460     -6.905      0.000     -21.837     -12.143
+concurso_ascenso[T.True]   -16.9899      2.460     -6.905      0.000     -21.837     -12.143
+vacantes_opec               -0.0131      0.040     -0.326      0.745      -0.092       0.066
+smmlv                        6.9622      0.730      9.534      0.000       5.523       8.401
+==============================================================================
+Omnibus:                      155.937   Durbin-Watson:                   1.501
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1339.753
+Skew:                           2.540   Prob(JB):                    1.19e-291
+Kurtosis:                      13.455   Cond. No.                     8.65e+18
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 4.65e-33. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+Esc1-DIAN 2023
+
+            smmlv  vacantes_opec  mun_inscritos
+count  872.000000     872.000000     872.000000
+mean     5.171009      49.025229     103.494266
+std      1.773062      58.588579     146.635055
+min      2.600000       1.000000       2.000000
+25%      3.990000       9.000000      20.000000
+50%      5.270000      36.000000      58.000000
+75%      5.870000      59.000000     119.000000
+max     12.940000     284.000000    1011.000000
+
+count     872.000000
+mean      103.494266
+std       146.635055
+min         2.000000
+25%        20.000000
+50%        58.000000
+75%       119.000000
+max      1011.000000
+Name: mun_inscritos, dtype: float64
+
+Esc1-DIAN 2023 ascenso-0
+
+            smmlv  vacantes_opec  mun_inscritos
+count  641.000000     641.000000     641.000000
+mean     4.715133      56.914197     146.666147
+std      1.594096      65.199864     187.630382
+min      2.600000       1.000000      17.000000
+25%      3.420000      14.000000      42.000000
+50%      4.700000      42.000000      78.000000
+75%      5.870000      68.000000     147.000000
+max     12.940000     284.000000    1370.000000
+
+count     641.000000
+mean      146.666147
+std       187.630382
+min        17.000000
+25%        42.000000
+50%        78.000000
+75%       147.000000
+max      1370.000000
+Name: mun_inscritos, dtype: float64
+
+Esc1-DIAN 2023 ascenso-1
+
+            smmlv  vacantes_opec  mun_inscritos
+count  238.000000     238.000000     238.000000
+mean     6.487311      25.718487      10.848739
+std      1.541781      27.966687      20.294099
+min      3.420000       1.000000       1.000000
+25%      5.270000       4.000000       2.000000
+50%      6.870000      13.000000       4.000000
+75%      6.870000      46.000000       9.000000
+max     12.940000      97.000000     126.000000
+
+count    238.000000
+mean      10.848739
+std       20.294099
+min        1.000000
+25%        2.000000
+50%        4.000000
+75%        9.000000
+max      126.000000
+Name: mun_inscritos, dtype: float64
+
+Esc1-DIAN 2023
+
+Red Neuronal bajo1
+
+Coeficiente de Determinación por r2_score: -49.117%
+
+Test Mean Squared Error (MSE): 32026.105
+
+Test Mean Absolute Error (MAE): 102.718
+
+Esc1-DIAN 2023
+
+Red Neuronal bajo2
+
+Coeficiente de Determinación por r2_score: -50.277%
+
+Test Mean Squared Error (MSE): 32275.296
+
+Test Mean Absolute Error (MAE): 103.973
+
+Esc1-DIAN 2023
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: 18.975%
+
+Test Mean Squared Error (MSE): 17401.836
+
+Test Mean Absolute Error (MAE): 72.895
+
+Esc1-DIAN 2023
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: -49.851%
+
+Test Mean Squared Error (MSE): 32183.713
+
+Test Mean Absolute Error (MAE): 103.475
+
+Esc1-DIAN 2023
+
+Red Neuronal alto1
+
+Coeficiente de Determinación por r2_score: -50.164%
+
+Test Mean Squared Error (MSE): 32250.997
+
+Test Mean Absolute Error (MAE): 103.616
+
+Esc1-DIAN 2023
+
+Red Neuronal alto2
+
+Coeficiente de Determinación por r2_score: -48.737%
+
+Test Mean Squared Error (MSE): 31944.476
+
+Test Mean Absolute Error (MAE): 102.458
+
+Esc1-DIAN 2023 ascenso-0
+
+Red Neuronal bajo1
+
+Coeficiente de Determinación por r2_score: -61.195%
+
+Test Mean Squared Error (MSE): 56660.322
+
+Test Mean Absolute Error (MAE): 146.663
+
+Esc1-DIAN 2023 ascenso-0
+
+Red Neuronal bajo2
+
+Coeficiente de Determinación por r2_score: -61.195%
+
+Test Mean Squared Error (MSE): 56660.334
+
+Test Mean Absolute Error (MAE): 146.663
+
+Esc1-DIAN 2023 ascenso-0
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: -61.192%
+
+Test Mean Squared Error (MSE): 56659.439
+
+Test Mean Absolute Error (MAE): 146.660
+
+Esc1-DIAN 2023 ascenso-0
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: -61.197%
+
+Test Mean Squared Error (MSE): 56661.109
+
+Test Mean Absolute Error (MAE): 146.663
+
+Esc1-DIAN 2023 ascenso-0
+
+Red Neuronal alto1
+
+Coeficiente de Determinación por r2_score: -60.721%
+
+Test Mean Squared Error (MSE): 56493.732
+
+Test Mean Absolute Error (MAE): 146.159
+
+Esc1-DIAN 2023 ascenso-0
+
+Red Neuronal alto2
+
+Coeficiente de Determinación por r2_score: -61.224%
+
+Test Mean Squared Error (MSE): 56670.456
+
+Test Mean Absolute Error (MAE): 146.675
+
+Esc1-DIAN 2023 ascenso-1
+
+Red Neuronal bajo1
+
+Coeficiente de Determinación por r2_score: 3.559%
+
+Test Mean Squared Error (MSE): 395.525
+
+Test Mean Absolute Error (MAE): 8.457
+
+Esc1-DIAN 2023 ascenso-1
+
+Red Neuronal bajo2
+
+Coeficiente de Determinación por r2_score: -28.690%
+
+Test Mean Squared Error (MSE): 527.783
+
+Test Mean Absolute Error (MAE): 10.847
+
+Esc1-DIAN 2023 ascenso-1
+
+Red Neuronal medio1
+
+Coeficiente de Determinación por r2_score: -28.666%
+
+Test Mean Squared Error (MSE): 527.684
+
+Test Mean Absolute Error (MAE): 10.835
+
+Esc1-DIAN 2023 ascenso-1
+
+Red Neuronal medio2
+
+Coeficiente de Determinación por r2_score: -28.682%
+
+Test Mean Squared Error (MSE): 527.752
+
+Test Mean Absolute Error (MAE): 10.846
+
+Esc1-DIAN 2023 ascenso-1
+
+Red Neuronal alto1
+
+Coeficiente de Determinación por r2_score: -28.525%
+
+Test Mean Squared Error (MSE): 527.108
+
+Test Mean Absolute Error (MAE): 10.819
+
+Esc1-DIAN 2023 ascenso-1
+
+Red Neuronal alto2
+
+Coeficiente de Determinación por r2_score: -28.948%
+
+Test Mean Squared Error (MSE): 528.843
+
+Test Mean Absolute Error (MAE): 10.919
+

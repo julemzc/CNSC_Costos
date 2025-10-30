@@ -14,9 +14,8 @@ TRUE etiqueta
 FROM public.requisito_minimo rm
 INNER JOIN public.criterio cr ON (rm.id = cr.id AND cr.tipo = 'RM' AND rm.id NOT IN (318271909,756853788,456467562))
 INNER JOIN public.criterio_item ci ON (cr.id = ci.criterio_id )
-INNER JOIN public.item_criterio_etiqueta ce ON ci.id = ce.criterio_item_id
+INNER JOIN public.item_criterio_etiqueta ce ON ci.id = ce.criterio_item_id AND ce.etiqueta_id IN (40001, 40005, 40003, 40006, 40002)
 LEFT JOIN public.cantidad_criterio cc ON ce.id = cc.item_criterio_etiqueta_id
-WHERE ce.etiqueta_id IN (40001, 40005, 40003, 40006, 40002)
 GROUP BY 1,2,3
 UNION
 SELECT

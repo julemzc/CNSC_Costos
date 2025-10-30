@@ -1,0 +1,167 @@
+mun_inscritos~vacantes+smmlv+nivel
+
+Esc1-DIAN 2023-0
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.782
+Model:                            OLS   Adj. R-squared:                  0.781
+Method:                 Least Squares   F-statistic:                     593.8
+Date:                Fri, 04 Oct 2024   Prob (F-statistic):          3.84e-217
+Time:                        10:30:19   Log-Likelihood:                -4651.6
+No. Observations:                 666   AIC:                             9313.
+Df Residuals:                     661   BIC:                             9336.
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+========================================================================================
+                           coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------
+Intercept               69.6609     40.547      1.718      0.086      -9.955     149.277
+nivel[T.Profesional]   -81.1047     49.767     -1.630      0.104    -178.825      16.616
+nivel[T.Técnico]      -171.3310     32.125     -5.333      0.000    -234.410    -108.252
+vacantes                51.6250      1.094     47.182      0.000      49.476      53.773
+smmlv                   11.2235     10.748      1.044      0.297      -9.881      32.328
+==============================================================================
+Omnibus:                      482.626   Durbin-Watson:                   1.776
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           153125.756
+Skew:                          -2.070   Prob(JB):                         0.00
+Kurtosis:                      77.168   Cond. No.                         59.1
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Esc1-DIAN 2023-1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          mun_inscritos   R-squared:                       0.484
+Model:                            OLS   Adj. R-squared:                  0.477
+Method:                 Least Squares   F-statistic:                     73.14
+Date:                Fri, 04 Oct 2024   Prob (F-statistic):           2.08e-33
+Time:                        10:30:19   Log-Likelihood:                -974.94
+No. Observations:                 238   AIC:                             1958.
+Df Residuals:                     234   BIC:                             1972.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+Intercept          -43.2929      5.767     -7.506      0.000     -54.656     -31.930
+nivel[T.Técnico]     8.6273      2.822      3.058      0.002       3.068      14.186
+vacantes             1.9334      0.210      9.193      0.000       1.519       2.348
+smmlv                7.2261      0.811      8.906      0.000       5.628       8.825
+==============================================================================
+Omnibus:                      214.228   Durbin-Watson:                   0.887
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             4561.318
+Skew:                           3.505   Prob(JB):                         0.00
+Kurtosis:                      23.269   Cond. No.                         49.3
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Esc1-DIAN 2023-0
+
+            smmlv    vacantes  mun_inscritos
+count  666.000000  666.000000     666.000000
+mean     4.709264    3.930931     209.903904
+std      1.595556    9.379134     560.339623
+min      2.600000    1.000000       8.000000
+25%      3.420000    1.000000      42.000000
+50%      4.700000    1.000000      78.000000
+75%      5.870000    3.000000     157.000000
+max     12.940000  143.000000   10326.000000
+
+count      666.000000
+mean       209.903904
+std        560.339623
+min          8.000000
+25%         42.000000
+50%         78.000000
+75%        157.000000
+max      10326.000000
+Name: mun_inscritos, dtype: float64
+
+Esc1-DIAN 2023-1
+
+            smmlv    vacantes  mun_inscritos
+count  238.000000  238.000000     238.000000
+mean     6.487311    2.613445      10.848739
+std      1.541781    4.645417      20.294099
+min      3.420000    1.000000       1.000000
+25%      5.270000    1.000000       2.000000
+50%      6.870000    1.000000       4.000000
+75%      6.870000    2.000000       9.000000
+max     12.940000   43.000000     126.000000
+
+count    238.000000
+mean      10.848739
+std       20.294099
+min        1.000000
+25%        2.000000
+50%        4.000000
+75%        9.000000
+max      126.000000
+Name: mun_inscritos, dtype: float64
+
+Esc1-DIAN 2023-0
+
+Red Neuronal lr001_01
+
+Coeficiente de Determinación por r2_score: 65.027%
+
+Test Mean Squared Error (MSE): 109644.008
+
+Test Mean Absolute Error (MAE): 109.119
+
+Esc1-DIAN 2023-0
+
+Red Neuronal lr001_015
+
+Coeficiente de Determinación por r2_score: 63.918%
+
+Test Mean Squared Error (MSE): 113120.410
+
+Test Mean Absolute Error (MAE): 108.077
+
+Esc1-DIAN 2023-0
+
+Red Neuronal lr01_01
+
+Coeficiente de Determinación por r2_score: 71.466%
+
+Test Mean Squared Error (MSE): 89455.643
+
+Test Mean Absolute Error (MAE): 110.171
+
+Esc1-DIAN 2023-1
+
+Red Neuronal lr001_01
+
+Coeficiente de Determinación por r2_score: 41.117%
+
+Test Mean Squared Error (MSE): 241.492
+
+Test Mean Absolute Error (MAE): 6.691
+
+Esc1-DIAN 2023-1
+
+Red Neuronal lr001_015
+
+Coeficiente de Determinación por r2_score: 12.348%
+
+Test Mean Squared Error (MSE): 359.478
+
+Test Mean Absolute Error (MAE): 7.194
+
+Esc1-DIAN 2023-1
+
+Red Neuronal lr01_01
+
+Coeficiente de Determinación por r2_score: 81.262%
+
+Test Mean Squared Error (MSE): 76.848
+
+Test Mean Absolute Error (MAE): 3.801
+
