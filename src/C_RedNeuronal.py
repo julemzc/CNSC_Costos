@@ -260,26 +260,29 @@ def fAjustarModelo(Dict, listaRed, es_kfold=False):
         historico_modelos = []
         for red in listaRed:
             modelo = fRegresion(datos['entradas'], red[2], red[3])
+
             detener = EarlyStopping(
                 monitor='val_loss',
-                patience=max(20, red[4] // 10),
+                patience=25, #max(20, red[4] // 10),
                 restore_best_weights=True,
                 mode='min',
-                min_delta=0.0001
+                min_delta=0.0005
             )
             aprenda = ReduceLROnPlateau(
                 monitor='val_loss',
                 factor=0.5,  
-                patience=max(20, red[4] // 20),
+                patience=10, #max(5, red[4] // 20),
+                min_delta=0.0005,
                 min_lr=1e-6,
-                verbose=1
+                verbose=1,
+                cooldown=2
             )
-
             checkpoint = ModelCheckpoint(
                 f'Mejor escenario: {escenario}_red_{red[0]}.keras',
                 monitor='val_loss',
                 save_best_only=True,
-                mode='min'
+                mode='min',
+                verbose=1
             )
 
             if es_kfold:

@@ -1,0 +1,405 @@
+inscritos ~ vacantes_opec + reqs_estudio + reqs_estudio_DOCTORADO + reqs_estudio_ESPECIALIZACION_PROFESIONAL + reqs_estudio_ESPECIALIZACION_TECNICA_PROFESIONAL + reqs_estudio_ESPECIALIZACION_TECNOLOGICA + reqs_estudio_MAESTRIA + reqs_estudio_PROFESIONAL + reqs_estudio_TECNICO_PROFESIONAL + reqs_estudio_TECNOLOGICO + nivel + nivel_ASESOR + nivel_ASISTENCIAL + nivel_AUXILIAR + nivel_DIRECTIVO + nivel_ESPECIALISTA_AERONAUTICO + nivel_INSPECTOR_DE_LA_AVIACION_CIVIL + nivel_INSTRUCTOR + nivel_PROFESIONAL + nivel_PROFESIONAL_AERONAUTICO + nivel_TECNICO + nivel_TECNICO_AERONAUTICO + vacantes + mun_categoria + mun_categoria_1 + mun_categoria_2 + mun_categoria_3 + mun_categoria_4 + mun_categoria_5 + mun_categoria_6 + mun_categoria_7 + mun_categoria_NONE + smmlv + sin_experiencia
+
+SIMO_asc-0
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.248
+Model:                            OLS   Adj. R-squared:                  0.247
+Method:                 Least Squares   F-statistic:                     167.4
+Date:                Fri, 31 Oct 2025   Prob (F-statistic):               0.00
+Time:                        09:27:30   Log-Likelihood:                -20628.
+No. Observations:               15247   AIC:                         4.132e+04
+Df Residuals:                   15216   BIC:                         4.156e+04
+Df Model:                          30                                         
+Covariance Type:            nonrobust                                         
+====================================================================================================================
+                                                       coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------
+Intercept                                            2.0463      0.104     19.749      0.000       1.843       2.249
+sin_experiencia[T.True]                              0.6501      0.094      6.930      0.000       0.466       0.834
+vacantes_opec                                        0.0016      0.000     10.597      0.000       0.001       0.002
+reqs_estudio                                        -0.0846      0.046     -1.836      0.066      -0.175       0.006
+reqs_estudio_DOCTORADO                               1.1266      0.404      2.788      0.005       0.334       1.919
+reqs_estudio_ESPECIALIZACION_PROFESIONAL            -0.6345      0.024    -26.652      0.000      -0.681      -0.588
+reqs_estudio_ESPECIALIZACION_TECNICA_PROFESIONAL    -0.3523      0.235     -1.499      0.134      -0.813       0.108
+reqs_estudio_ESPECIALIZACION_TECNOLOGICA             0.1542      0.182      0.848      0.397      -0.202       0.511
+reqs_estudio_MAESTRIA                               -1.8929      0.105    -18.039      0.000      -2.099      -1.687
+reqs_estudio_PROFESIONAL                             0.1374      0.041      3.388      0.001       0.058       0.217
+reqs_estudio_TECNICO_PROFESIONAL                    -0.0354      0.040     -0.885      0.376      -0.114       0.043
+reqs_estudio_TECNOLOGICO                             0.1991      0.039      5.059      0.000       0.122       0.276
+nivel                                            -9.126e-16    6.3e-16     -1.449      0.147   -2.15e-15    3.22e-16
+nivel_ASESOR                                         0.0415      0.156      0.266      0.790      -0.264       0.347
+nivel_ASISTENCIAL                                    1.1691      0.109     10.771      0.000       0.956       1.382
+nivel_AUXILIAR                                       1.7665      0.143     12.387      0.000       1.487       2.046
+nivel_DIRECTIVO                                     -5.0172      0.897     -5.592      0.000      -6.776      -3.259
+nivel_ESPECIALISTA_AERONAUTICO                       1.4001      0.209      6.696      0.000       0.990       1.810
+nivel_INSPECTOR_DE_LA_AVIACION_CIVIL                 0.4511      0.613      0.736      0.462      -0.750       1.653
+nivel_INSTRUCTOR                                    -0.9164      0.147     -6.234      0.000      -1.205      -0.628
+nivel_PROFESIONAL                                    0.3983      0.103      3.879      0.000       0.197       0.600
+nivel_PROFESIONAL_AERONAUTICO                        1.2797      0.132      9.717      0.000       1.022       1.538
+nivel_TECNICO                                        0.6028      0.108      5.560      0.000       0.390       0.815
+nivel_TECNICO_AERONAUTICO                            0.8709      0.140      6.225      0.000       0.597       1.145
+vacantes                                             0.0236      0.001     28.715      0.000       0.022       0.025
+mun_categoria                                    -1.438e-15   2.27e-16     -6.333      0.000   -1.88e-15   -9.93e-16
+mun_categoria_1                                      0.5096      0.028     18.509      0.000       0.456       0.564
+mun_categoria_2                                      0.4675      0.038     12.452      0.000       0.394       0.541
+mun_categoria_3                                      0.1634      0.041      3.974      0.000       0.083       0.244
+mun_categoria_4                                      0.3508      0.041      8.596      0.000       0.271       0.431
+mun_categoria_5                                     -0.1171      0.048     -2.435      0.015      -0.211      -0.023
+mun_categoria_6                                     -0.3522      0.031    -11.354      0.000      -0.413      -0.291
+mun_categoria_7                                      0.4594      0.026     17.605      0.000       0.408       0.511
+mun_categoria_NONE                                   0.5648      0.141      4.018      0.000       0.289       0.840
+smmlv                                                0.2315      0.007     32.792      0.000       0.218       0.245
+==============================================================================
+Omnibus:                      604.042   Durbin-Watson:                   1.011
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1407.674
+Skew:                           0.234   Prob(JB):                    2.13e-306
+Kurtosis:                       4.413   Cond. No.                     1.10e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 5.02e-25. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ vacantes_opec + reqs_estudio + reqs_estudio_DOCTORADO + reqs_estudio_ESPECIALIZACION_PROFESIONAL + reqs_estudio_ESPECIALIZACION_TECNICA_PROFESIONAL + reqs_estudio_ESPECIALIZACION_TECNOLOGICA + reqs_estudio_MAESTRIA + reqs_estudio_PROFESIONAL + reqs_estudio_TECNICO_PROFESIONAL + reqs_estudio_TECNOLOGICO + nivel + nivel_ASESOR + nivel_ASISTENCIAL + nivel_AUXILIAR + nivel_ESPECIALISTA_AERONAUTICO + nivel_INSTRUCTOR + nivel_PROFESIONAL + nivel_PROFESIONAL_AERONAUTICO + nivel_TECNICO + nivel_TECNICO_AERONAUTICO + vacantes + mun_categoria + mun_categoria_1 + mun_categoria_2 + mun_categoria_3 + mun_categoria_4 + mun_categoria_5 + mun_categoria_6 + mun_categoria_7 + mun_categoria_NONE + smmlv + sin_experiencia
+
+SIMO_asc-1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.225
+Model:                            OLS   Adj. R-squared:                  0.222
+Method:                 Least Squares   F-statistic:                     65.22
+Date:                Fri, 31 Oct 2025   Prob (F-statistic):          1.48e-321
+Time:                        09:27:30   Log-Likelihood:                -7280.0
+No. Observations:                6311   AIC:                         1.462e+04
+Df Residuals:                    6282   BIC:                         1.481e+04
+Df Model:                          28                                         
+Covariance Type:            nonrobust                                         
+====================================================================================================================
+                                                       coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------
+Intercept                                            0.7476      0.060     12.558      0.000       0.631       0.864
+sin_experiencia[T.True]                              1.6956      0.169     10.042      0.000       1.365       2.027
+vacantes_opec                                       -0.0012      0.000     -3.425      0.001      -0.002      -0.001
+reqs_estudio                                         0.6139      0.060     10.255      0.000       0.497       0.731
+reqs_estudio_DOCTORADO                               1.1585      0.183      6.332      0.000       0.800       1.517
+reqs_estudio_ESPECIALIZACION_PROFESIONAL            -0.1575      0.026     -6.115      0.000      -0.208      -0.107
+reqs_estudio_ESPECIALIZACION_TECNICA_PROFESIONAL    -0.2071      0.200     -1.037      0.300      -0.599       0.184
+reqs_estudio_ESPECIALIZACION_TECNOLOGICA             0.3478      0.137      2.546      0.011       0.080       0.616
+reqs_estudio_MAESTRIA                                0.3068      0.146      2.098      0.036       0.020       0.594
+reqs_estudio_PROFESIONAL                             0.0567      0.052      1.081      0.280      -0.046       0.160
+reqs_estudio_TECNICO_PROFESIONAL                    -0.0586      0.050     -1.171      0.242      -0.157       0.039
+reqs_estudio_TECNOLOGICO                            -0.0726      0.051     -1.433      0.152      -0.172       0.027
+nivel                                             2.051e-16   1.21e-16      1.689      0.091    -3.3e-17    4.43e-16
+nivel_ASESOR                                        -0.1485      0.085     -1.740      0.082      -0.316       0.019
+nivel_ASISTENCIAL                                   -0.1219      0.052     -2.332      0.020      -0.224      -0.019
+nivel_AUXILIAR                                       0.7296      0.212      3.440      0.001       0.314       1.145
+nivel_ESPECIALISTA_AERONAUTICO                      -0.1383      0.115     -1.199      0.230      -0.364       0.088
+nivel_INSTRUCTOR                                    -0.2705      0.115     -2.351      0.019      -0.496      -0.045
+nivel_PROFESIONAL                                   -0.1237      0.042     -2.942      0.003      -0.206      -0.041
+nivel_PROFESIONAL_AERONAUTICO                        0.7064      0.117      6.056      0.000       0.478       0.935
+nivel_TECNICO                                        0.0326      0.053      0.613      0.540      -0.072       0.137
+nivel_TECNICO_AERONAUTICO                            0.0819      0.141      0.580      0.562      -0.195       0.358
+vacantes                                             0.0943      0.004     22.274      0.000       0.086       0.103
+mun_categoria                                      3.38e-16   3.55e-17      9.519      0.000    2.68e-16    4.08e-16
+mun_categoria_1                                      0.0530      0.030      1.751      0.080      -0.006       0.112
+mun_categoria_2                                      0.1577      0.044      3.559      0.000       0.071       0.245
+mun_categoria_3                                     -0.0318      0.054     -0.583      0.560      -0.139       0.075
+mun_categoria_4                                      0.2214      0.050      4.442      0.000       0.124       0.319
+mun_categoria_5                                      0.0433      0.073      0.597      0.551      -0.099       0.186
+mun_categoria_6                                     -0.1240      0.044     -2.837      0.005      -0.210      -0.038
+mun_categoria_7                                      0.1350      0.028      4.808      0.000       0.080       0.190
+mun_categoria_NONE                                   0.2930      0.148      1.982      0.048       0.003       0.583
+smmlv                                                0.1019      0.008     12.784      0.000       0.086       0.118
+==============================================================================
+Omnibus:                     1236.296   Durbin-Watson:                   0.945
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             2819.765
+Skew:                           1.113   Prob(JB):                         0.00
+Kurtosis:                       5.402   Cond. No.                     3.60e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 6.32e-27. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ vacantes_opec + reqs_estudio + reqs_estudio_DOCTORADO + reqs_estudio_ESPECIALIZACION_PROFESIONAL + reqs_estudio_MAESTRIA + reqs_estudio_PROFESIONAL + reqs_estudio_TECNICO_PROFESIONAL + reqs_estudio_TECNOLOGICO + nivel + nivel_ASISTENCIAL + nivel_PROFESIONAL + nivel_TECNICO + vacantes + mun_categoria + mun_categoria_1 + mun_categoria_2 + mun_categoria_3 + mun_categoria_4 + mun_categoria_5 + mun_categoria_6 + mun_categoria_7 + mun_categoria_NONE + smmlv + sin_experiencia
+
+DIAN_asc-0
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.389
+Model:                            OLS   Adj. R-squared:                  0.380
+Method:                 Least Squares   F-statistic:                     47.41
+Date:                Fri, 31 Oct 2025   Prob (F-statistic):          2.26e-115
+Time:                        09:27:30   Log-Likelihood:                -1413.8
+No. Observations:                1211   AIC:                             2862.
+Df Residuals:                    1194   BIC:                             2948.
+Df Model:                          16                                         
+Covariance Type:            nonrobust                                         
+============================================================================================================
+                                               coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------------
+Intercept                                    2.9204      0.080     36.569      0.000       2.764       3.077
+sin_experiencia[T.True]                     -0.0184      0.579     -0.032      0.975      -1.153       1.117
+vacantes_opec                               -0.0013      0.000     -4.868      0.000      -0.002      -0.001
+reqs_estudio                                 1.1220      0.079     14.264      0.000       0.968       1.276
+reqs_estudio_DOCTORADO                      -0.3182      0.125     -2.548      0.011      -0.563      -0.073
+reqs_estudio_ESPECIALIZACION_PROFESIONAL    -0.3182      0.125     -2.548      0.011      -0.563      -0.073
+reqs_estudio_MAESTRIA                       -0.3182      0.125     -2.548      0.011      -0.563      -0.073
+reqs_estudio_PROFESIONAL                     1.7984      0.093     19.396      0.000       1.616       1.980
+reqs_estudio_TECNICO_PROFESIONAL             0.0421      0.161      0.261      0.794      -0.275       0.359
+reqs_estudio_TECNOLOGICO                     0.0421      0.161      0.261      0.794      -0.275       0.359
+nivel                                     1.223e-17   5.66e-17      0.216      0.829   -9.87e-17    1.23e-16
+nivel_ASISTENCIAL                            1.3690      0.108     12.689      0.000       1.157       1.581
+nivel_PROFESIONAL                            1.2905      0.137      9.426      0.000       1.022       1.559
+nivel_TECNICO                                0.2609      0.214      1.222      0.222      -0.158       0.680
+vacantes                                     0.0481      0.003     17.904      0.000       0.043       0.053
+mun_categoria                            -1.412e-17    1.9e-17     -0.745      0.457   -5.13e-17    2.31e-17
+mun_categoria_1                              0.3738      0.053      7.038      0.000       0.270       0.478
+mun_categoria_2                              0.2040      0.081      2.520      0.012       0.045       0.363
+mun_categoria_3                              0.1942      0.128      1.515      0.130      -0.057       0.446
+mun_categoria_4                              0.2644      0.072      3.656      0.000       0.123       0.406
+mun_categoria_5                              0.3909      0.167      2.343      0.019       0.064       0.718
+mun_categoria_6                              0.2934      0.090      3.265      0.001       0.117       0.470
+mun_categoria_7                              0.6769      0.054     12.463      0.000       0.570       0.783
+mun_categoria_NONE                           0.5228      0.183      2.852      0.004       0.163       0.882
+smmlv                                       -0.1987      0.025     -8.081      0.000      -0.247      -0.150
+==============================================================================
+Omnibus:                       32.513   Durbin-Watson:                   0.948
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               28.017
+Skew:                           0.307   Prob(JB):                     8.25e-07
+Kurtosis:                       2.577   Cond. No.                     4.15e+19
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 1.11e-32. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ vacantes_opec + reqs_estudio + reqs_estudio_DOCTORADO + reqs_estudio_ESPECIALIZACION_PROFESIONAL + reqs_estudio_MAESTRIA + reqs_estudio_PROFESIONAL + reqs_estudio_TECNICO_PROFESIONAL + reqs_estudio_TECNOLOGICO + nivel + nivel_PROFESIONAL + nivel_TECNICO + vacantes + mun_categoria + mun_categoria_1 + mun_categoria_2 + mun_categoria_3 + mun_categoria_4 + mun_categoria_5 + mun_categoria_6 + mun_categoria_7 + mun_categoria_NONE + smmlv + sin_experiencia
+
+DIAN_asc-1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.431
+Model:                            OLS   Adj. R-squared:                  0.416
+Method:                 Least Squares   F-statistic:                     28.88
+Date:                Fri, 31 Oct 2025   Prob (F-statistic):           7.77e-49
+Time:                        09:27:30   Log-Likelihood:                -488.80
+No. Observations:                 471   AIC:                             1004.
+Df Residuals:                     458   BIC:                             1058.
+Df Model:                          12                                         
+Covariance Type:            nonrobust                                         
+============================================================================================================
+                                               coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------------
+Intercept                                   -0.1393      0.081     -1.723      0.085      -0.298       0.020
+sin_experiencia[T.True]                  -1.131e-15   5.26e-16     -2.151      0.032   -2.16e-15   -9.79e-17
+vacantes_opec                                0.0009      0.002      0.589      0.556      -0.002       0.004
+reqs_estudio                              3.432e-17   1.18e-16      0.291      0.771   -1.98e-16    2.66e-16
+reqs_estudio_DOCTORADO                       0.1021      0.063      1.628      0.104      -0.021       0.225
+reqs_estudio_ESPECIALIZACION_PROFESIONAL     0.1021      0.063      1.628      0.104      -0.021       0.225
+reqs_estudio_MAESTRIA                        0.1021      0.063      1.628      0.104      -0.021       0.225
+reqs_estudio_PROFESIONAL                    -0.1393      0.081     -1.723      0.085      -0.298       0.020
+reqs_estudio_TECNICO_PROFESIONAL             0.0144      0.025      0.587      0.557      -0.034       0.063
+reqs_estudio_TECNOLOGICO                     0.0144      0.025      0.587      0.557      -0.034       0.063
+nivel                                    -4.751e-17   4.22e-17     -1.125      0.261    -1.3e-16    3.54e-17
+nivel_PROFESIONAL                           -0.1537      0.083     -1.858      0.064      -0.316       0.009
+nivel_TECNICO                                0.0144      0.025      0.587      0.557      -0.034       0.063
+vacantes                                     0.0967      0.011      8.731      0.000       0.075       0.118
+mun_categoria                                     0          0        nan        nan           0           0
+mun_categoria_1                              0.1174      0.078      1.496      0.135      -0.037       0.272
+mun_categoria_2                             -0.0426      0.128     -0.332      0.740      -0.295       0.209
+mun_categoria_3                              0.0262      0.174      0.151      0.880      -0.316       0.368
+mun_categoria_4                             -0.0863      0.106     -0.811      0.418      -0.295       0.123
+mun_categoria_5                              0.1569      0.310      0.507      0.613      -0.452       0.765
+mun_categoria_6                             -0.0091      0.139     -0.065      0.948      -0.282       0.264
+mun_categoria_7                              0.0979      0.077      1.278      0.202      -0.053       0.249
+mun_categoria_NONE                          -0.3998      0.225     -1.781      0.076      -0.841       0.041
+smmlv                                        0.3228      0.033      9.755      0.000       0.258       0.388
+==============================================================================
+Omnibus:                       17.459   Durbin-Watson:                   0.803
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               26.589
+Skew:                           0.289   Prob(JB):                     1.68e-06
+Kurtosis:                       4.010   Cond. No.                     8.87e+33
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 8.95e-63. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+SIMO_asc-0
+
+       vacantes_opec      vacantes         smmlv  mun_inscritos
+count   15247.000000  15247.000000  15247.000000   15247.000000
+mean       24.902538      2.289696      3.718272     100.763035
+std        58.158154      9.837848      1.671590     255.877388
+min         1.000000      1.000000      1.000000       5.000000
+25%         1.000000      1.000000      2.370000      22.000000
+50%         2.000000      1.000000      3.380000      43.000000
+75%        18.000000      2.000000      4.920000      96.000000
+max       600.000000    600.000000     43.000000   10326.000000
+
+count    15247.000000
+mean       100.763035
+std        255.877388
+min          5.000000
+25%         22.000000
+50%         43.000000
+75%         96.000000
+max      10326.000000
+Name: mun_inscritos, dtype: float64
+
+SIMO_asc-1
+
+       vacantes_opec     vacantes        smmlv  mun_inscritos
+count    6311.000000  6311.000000  6311.000000    6311.000000
+mean       12.084297     1.451751     4.635723       7.589605
+std        33.969729     2.377758     1.906290      26.124525
+min         1.000000     1.000000     1.180000       1.000000
+25%         1.000000     1.000000     3.130000       1.000000
+50%         1.000000     1.000000     4.510000       2.000000
+75%         7.000000     1.000000     5.870000       5.000000
+max       242.000000    67.000000    13.280000     788.000000
+
+count    6311.000000
+mean        7.589605
+std        26.124525
+min         1.000000
+25%         1.000000
+50%         2.000000
+75%         5.000000
+max       788.000000
+Name: mun_inscritos, dtype: float64
+
+DIAN_asc-0
+
+       vacantes_opec     vacantes        smmlv  mun_inscritos
+count    1211.000000  1211.000000  1211.000000    1211.000000
+mean       76.572254     4.230388     4.833898     324.199009
+std        98.993749     9.670895     1.611060     616.761602
+min         1.000000     1.000000     2.260000      33.000000
+25%        17.000000     1.000000     3.420000      78.000000
+50%        45.000000     2.000000     5.010000     145.000000
+75%        79.000000     3.000000     5.870000     325.000000
+max       437.000000   143.000000    12.940000   10326.000000
+
+count     1211.000000
+mean       324.199009
+std        616.761602
+min         33.000000
+25%         78.000000
+50%        145.000000
+75%        325.000000
+max      10326.000000
+Name: mun_inscritos, dtype: float64
+
+DIAN_asc-1
+
+       vacantes_opec    vacantes       smmlv  mun_inscritos
+count     471.000000  471.000000  471.000000     471.000000
+mean       27.331210    2.233546    6.628662      12.233546
+std        26.830053    3.631514    1.456618      19.824030
+min         1.000000    1.000000    2.940000       1.000000
+25%         5.000000    1.000000    5.740000       3.000000
+50%        16.000000    1.000000    6.720000       5.000000
+75%        49.000000    2.000000    7.090000      10.000000
+max        97.000000   43.000000   12.940000     137.000000
+
+count    471.000000
+mean      12.233546
+std       19.824030
+min        1.000000
+25%        3.000000
+50%        5.000000
+75%       10.000000
+max      137.000000
+Name: mun_inscritos, dtype: float64
+
+SIMO_asc-0
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 59.263%
+
+Test Mean Squared Error (MSE): 0.407
+
+Test Mean Absolute Error (MAE): 0.471
+
+SIMO_asc-0
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: 56.835%
+
+Test Mean Squared Error (MSE): 0.432
+
+Test Mean Absolute Error (MAE): 0.497
+
+SIMO_asc-1
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 40.088%
+
+Test Mean Squared Error (MSE): 0.599
+
+Test Mean Absolute Error (MAE): 0.557
+
+SIMO_asc-1
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: 43.980%
+
+Test Mean Squared Error (MSE): 0.560
+
+Test Mean Absolute Error (MAE): 0.528
+
+DIAN_asc-0
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 67.724%
+
+Test Mean Squared Error (MSE): 0.323
+
+Test Mean Absolute Error (MAE): 0.447
+
+DIAN_asc-0
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: 67.277%
+
+Test Mean Squared Error (MSE): 0.327
+
+Test Mean Absolute Error (MAE): 0.456
+
+DIAN_asc-1
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 64.808%
+
+Test Mean Squared Error (MSE): 0.352
+
+Test Mean Absolute Error (MAE): 0.428
+
+DIAN_asc-1
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: 65.151%
+
+Test Mean Squared Error (MSE): 0.348
+
+Test Mean Absolute Error (MAE): 0.441
+
