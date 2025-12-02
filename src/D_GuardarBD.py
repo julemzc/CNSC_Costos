@@ -125,8 +125,8 @@ def fInsertar_nnStats(Dict, dfCostos):
     #### Insertar en la tabla nn_stats
     sql = f"""
     INSERT INTO {ml}.nn_stats
-    (ejecucion_id, escenario_id, redneuronal_id, r2, mse, rmse, mae, porc_rm, porc_escritas, fecha_creacion, ascenso)
-    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    (ejecucion_id, escenario_id, redneuronal_id, r2, mse, rmse, mae, porc_rm, porc_escritas, porc_pcd, fecha_creacion, ascenso)
+    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
     """
     for e in Dict:
         boolAscenso = bool(Dict[e].get('Ascenso', False))
@@ -151,11 +151,12 @@ def fInsertar_nnStats(Dict, dfCostos):
 
             lprint(str(dfCostos['ejecucion_id'][0]) +"/"+ str(Dict[e]['Id'])+"/"+ str(hist['red'][0])+"/"+ 
                    str(r2)+"/"+str(mse)+"/"+ str(rmse)+"/"+ str(mae)+"/"+
-                   str(Dict[e]['Porc_RM'])+"/"+ str(Dict[e]['Porc_Escrit'])+"/"+ str(dfCostos['fecha_creacion'][0])+"/"+ str(boolAscenso))
+                   str(Dict[e]['Porc_RM'])+"/"+ str(Dict[e]['Porc_Escrit'])+"/"+ str(Dict[e]['Porc_PCD'])+"/"+ 
+                   str(dfCostos['fecha_creacion'][0])+"/"+ str(boolAscenso))
             
             cursor.execute(sql, (str(dfCostos['ejecucion_id'][0]), str(Dict[e]['Id']), hist['red'][0], 
                                  float(r2), float(mse), float(rmse), float(mae),
-                                 float(Dict[e]['Porc_RM']), float(Dict[e]['Porc_Escrit']), 
+                                 float(Dict[e]['Porc_RM']), float(Dict[e]['Porc_Escrit']), float(Dict[e]['Porc_PCD']),
                                  dfCostos['fecha_creacion'][0], boolAscenso))
 
     conexion.commit()
@@ -182,8 +183,8 @@ def fInsertar_nnProyeccion(Dict, dfCostos, Convocatoria):
     #### Insertar en la tabla 'nn_proyeccion' las proyecciones por cada empleo, escenario y red neuronal
     sqlProy = f"""
     INSERT INTO {ml}.nn_proyeccion
-    (id, ejecucion_id, escenario_id, redneuronal_id, nn_empleo_id, mun_inscritos, mun_aprobo_vrm, mun_aprobo_escritas, fecha_creacion, ascenso)
-    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    (id, ejecucion_id, escenario_id, redneuronal_id, nn_empleo_id, mun_inscritos, mun_aprobo_vrm, mun_aprobo_escritas, mun_pcd_inscritos, fecha_creacion, ascenso)
+    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
     """
     for empleo in Convocatoria:
         for e in Dict:
@@ -196,11 +197,12 @@ def fInsertar_nnProyeccion(Dict, dfCostos, Convocatoria):
                     inscritos = empleo[f]['Neuronas'][hist['red'][0]]
                     inscritosRM = int(round(Dict[e]['Porc_RM'] * inscritos,0))
                     inscritosEsc = int(round(Dict[e]['Porc_Escrit'] * inscritos,0))
+                    inscritosPcd = int(round(Dict[e]['Porc_PCD'] * inscritos,0))
                     ProyeccionId += 1
                     empleo[f]['ProyeccionId'].append(ProyeccionId)
                     cursor.execute(sqlProy, (ProyeccionId, str(dfCostos['ejecucion_id'][0]), str(Dict[e]['Id']), 
                                              hist['red'][0], str(empleo['Indice']), str(inscritos), str(inscritosRM), 
-                                             str(inscritosEsc), dfCostos['fecha_creacion'][0], bool(divAsc)))
+                                             str(inscritosEsc), str(inscritosPcd), dfCostos['fecha_creacion'][0], bool(divAsc)))
 
     conexion.commit()
     closeConnection(conexion)

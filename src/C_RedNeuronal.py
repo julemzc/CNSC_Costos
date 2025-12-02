@@ -47,7 +47,7 @@ def fEscenarios(dfEmpleo):
     SELECT
     es.id, es.nombre, de.campo, de.operador,
     de.valor, de.percmin, de.percmax, COALESCE(de.concatena,''),
-    COUNT(*) FILTER (WHERE de.activo) OVER (PARTITION BY de.escena_id) AS cont, de.id, es.divide_ascenso
+    COUNT(*) FILTER (WHERE de.activo) OVER (PARTITION BY de.escena_id) AS cont, de.id d_id, es.divide_ascenso
     FROM {ml}.np_escenas es
     JOIN {ml}.np_escenas_detalle de on (es.id = de.escena_id)
     WHERE es.activo AND de.activo
@@ -111,7 +111,7 @@ def fFiltroEscenario(dfFiltra, Campo, Operador, Valor):
             'notnull': dfFiltra[dfFiltra[Campo].notnull()]
         }
 
-    if type(Valor) == int:
+    elif type(Valor) == int:
         switcher = {
             '==': dfFiltra[dfFiltra[Campo] == Valor],
             '!=': dfFiltra[dfFiltra[Campo] != Valor],
@@ -151,8 +151,8 @@ def fEntrenamiento(dfEmpleo, kfold=False):
   lprint("Inicio - Realizar entrenamiento de escenarios")
   ml = openCosteo()[1]
   boolEntrena = fConsultaScript(openCosteo, f"select valor from {ml}.np_parametros where tipo = 'entrenamiento'").loc[0,'valor']
-
-  if eval(boolEntrena):
+  archivoPkl = 'config/Dict.pkl'
+  if eval(boolEntrena) or not os.path.exists(archivoPkl):
     Dict = fEscenarios(dfEmpleo)
     query = f"""
         SELECT id, neuronas, learnrate, dropout, epocas, batch, nombre
@@ -169,10 +169,10 @@ def fEntrenamiento(dfEmpleo, kfold=False):
     fDiccionario(Dict, kfold)
     fAjustarModelo(Dict, listaRed, kfold)
 
-    with open('config/Dict.pkl', 'wb') as fileP:
+    with open(archivoPkl, 'wb') as fileP:
         pickle.dump(Dict, fileP)
   else:
-    with open('config/Dict.pkl', 'rb') as fileP:
+    with open(archivoPkl, 'rb') as fileP:
         Dict = pickle.load(fileP)
   lprint("FIN de entrenamiento de escenarios \n")
   return Dict
@@ -216,9 +216,11 @@ def fDiccionario(Dict, es_kfold=False, n_splits=5):
 
         Dict[e]['Porc_RM'] = 0
         Dict[e]['Porc_Escrit'] = 0
+        Dict[e]['Porc_PCD'] = 0
         if Dict[e]['dfEscenario']['mun_inscritos'].sum() != 0:
             Dict[e]['Porc_RM'] = Dict[e]['dfEscenario']['mun_aprobo_vrm'].sum() / Dict[e]['dfEscenario']['mun_inscritos'].sum()
             Dict[e]['Porc_Escrit'] = Dict[e]['dfEscenario']['mun_aprobo_escritas'].sum() / Dict[e]['dfEscenario']['mun_inscritos'].sum()
+            Dict[e]['Porc_PCD'] = Dict[e]['dfEscenario']['mun_pcd_inscritos'].sum() / Dict[e]['dfEscenario']['mun_inscritos'].sum()
     lprint("Fin fDiccionario()")
 
 

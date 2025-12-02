@@ -42,8 +42,9 @@ def fResultadosEmpleos(ejecucion):
         alias = str(row[1])+'_'+str(row[3])
         campos = campos + f"""
         {alias}.mun_inscritos {alias}_inscritos,
-        {alias}.mun_aprobo_vrm {alias}_ins_vrm,
-        {alias}.mun_aprobo_escritas {alias}_ins_esc,"""
+        {alias}.mun_aprobo_vrm {alias}_aprueba_vrm,
+        {alias}.mun_aprobo_escritas {alias}_aprueba_esc,
+        {alias}.mun_pcd_inscritos {alias}_inscritos_pcd,"""
         if bool(row[4]):
             condicion = condicion + f""" LEFT JOIN {ml}.nn_proyeccion {alias} on (ne.ejecucion_id = {alias}.ejecucion_id and ne.id = {alias}.nn_empleo_id AND {alias}.escenario_id = {str(row[0])} AND {alias}.redneuronal_id = {str(row[2])} AND {alias}.ascenso = ne.concurso_ascenso ) """
         else:
@@ -207,8 +208,13 @@ def fResultadosGraficas(Dict, dfEmpleo, nombre):
 # Valores OLS - Mínimos cuadrados ordinarios
 def fAnalisisOLS(Dict, listaArchivo):
     for e in Dict:
+        """
         Dict[e]['DatosX'].columns = Dict[e]['DatosX'].columns.str.replace(' ', '_')
         col_names = Dict[e]['DatosX'].columns.tolist()
+        """
+        col_names = Dict[e]['dfModelo'].columns.tolist()
+        col_names.remove('mun_inscritos')
+
         modelo = 'inscritos ~ ' + ' + '.join(col_names)
         listaArchivo.append(modelo)
     

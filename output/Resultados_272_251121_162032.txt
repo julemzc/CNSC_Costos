@@ -1,0 +1,308 @@
+inscritos ~ departamento + denominacion + sin_experiencia + vacantes_opec
+
+SIMO_asc_ing-0
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.158
+Model:                            OLS   Adj. R-squared:                  0.158
+Method:                 Least Squares   F-statistic:                     928.5
+Date:                Fri, 21 Nov 2025   Prob (F-statistic):               0.00
+Time:                        16:20:38   Log-Likelihood:                -14848.
+No. Observations:                9866   AIC:                         2.970e+04
+Df Residuals:                    9863   BIC:                         2.972e+04
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+===========================================================================================
+                              coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+Intercept                   4.0365      0.013    310.959      0.000       4.011       4.062
+sin_experiencia[T.True]     0.0441      0.025      1.769      0.077      -0.005       0.093
+departamento                     0          0        nan        nan           0           0
+denominacion                     0          0        nan        nan           0           0
+vacantes_opec               0.0166      0.000     41.952      0.000       0.016       0.017
+==============================================================================
+Omnibus:                      607.092   Durbin-Watson:                   1.201
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             2143.220
+Skew:                           0.235   Prob(JB):                         0.00
+Kurtosis:                       5.234   Cond. No.                          inf
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is      0. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ departamento + denominacion + sin_experiencia + vacantes_opec
+
+SIMO_asc_ing-1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.120
+Model:                            OLS   Adj. R-squared:                  0.120
+Method:                 Least Squares   F-statistic:                     219.5
+Date:                Fri, 21 Nov 2025   Prob (F-statistic):           4.61e-90
+Time:                        16:20:38   Log-Likelihood:                -4360.8
+No. Observations:                3216   AIC:                             8728.
+Df Residuals:                    3213   BIC:                             8746.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+===========================================================================================
+                              coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+Intercept                   1.3809      0.018     76.906      0.000       1.346       1.416
+sin_experiencia[T.True]     0.3011      0.063      4.782      0.000       0.178       0.425
+departamento                     0          0        nan        nan           0           0
+denominacion                     0          0        nan        nan           0           0
+vacantes_opec               0.0508      0.003     20.205      0.000       0.046       0.056
+==============================================================================
+Omnibus:                     1089.638   Durbin-Watson:                   0.887
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            10196.890
+Skew:                           1.336   Prob(JB):                         0.00
+Kurtosis:                      11.304   Cond. No.                          inf
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is      0. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ departamento + denominacion + sin_experiencia + vacantes_opec
+
+Conductores-0
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.222
+Model:                            OLS   Adj. R-squared:                  0.220
+Method:                 Least Squares   F-statistic:                     99.88
+Date:                Fri, 21 Nov 2025   Prob (F-statistic):           6.80e-39
+Time:                        16:20:38   Log-Likelihood:                -1025.8
+No. Observations:                 704   AIC:                             2058.
+Df Residuals:                     701   BIC:                             2071.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+===========================================================================================
+                              coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+Intercept                   2.6874      0.049     54.813      0.000       2.591       2.784
+sin_experiencia[T.True]     0.1521      0.107      1.416      0.157      -0.059       0.363
+departamento                     0          0        nan        nan           0           0
+denominacion                     0          0        nan        nan           0           0
+vacantes_opec               0.1529      0.011     13.976      0.000       0.131       0.174
+==============================================================================
+Omnibus:                        5.745   Durbin-Watson:                   1.272
+Prob(Omnibus):                  0.057   Jarque-Bera (JB):                5.459
+Skew:                           0.173   Prob(JB):                       0.0653
+Kurtosis:                       2.742   Cond. No.                          inf
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is      0. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ departamento + denominacion + sin_experiencia + vacantes_opec
+
+Conductores-1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.033
+Model:                            OLS   Adj. R-squared:                 -0.128
+Method:                 Least Squares   F-statistic:                    0.2066
+Date:                Fri, 21 Nov 2025   Prob (F-statistic):              0.816
+Time:                        16:20:38   Log-Likelihood:                -7.5128
+No. Observations:                  15   AIC:                             21.03
+Df Residuals:                      12   BIC:                             23.15
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+===========================================================================================
+                              coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+Intercept                   0.9954      0.360      2.766      0.017       0.211       1.780
+sin_experiencia[T.True]    -0.2158      0.499     -0.432      0.673      -1.303       0.872
+departamento                     0          0        nan        nan           0           0
+denominacion                     0          0        nan        nan           0           0
+vacantes_opec               0.1595      0.264      0.604      0.557      -0.416       0.735
+==============================================================================
+Omnibus:                        2.673   Durbin-Watson:                   2.188
+Prob(Omnibus):                  0.263   Jarque-Bera (JB):                1.500
+Skew:                           0.774   Prob(JB):                        0.472
+Kurtosis:                       2.943   Cond. No.                          inf
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is      0. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+SIMO_asc_ing-0
+
+       vacantes_opec  mun_inscritos
+count    9866.000000    9866.000000
+mean        6.642307     177.068518
+std        28.202301     726.760413
+min         1.000000       7.000000
+25%         1.000000      26.000000
+50%         1.000000      56.000000
+75%         3.000000     128.000000
+max      1066.000000   23889.000000
+
+count     9866.000000
+mean       177.068518
+std        726.760413
+min          7.000000
+25%         26.000000
+50%         56.000000
+75%        128.000000
+max      23889.000000
+Name: mun_inscritos, dtype: float64
+
+SIMO_asc_ing-1
+
+       vacantes_opec  mun_inscritos
+count    3216.000000    3216.000000
+mean        2.086132      10.735697
+std         6.587824      40.664624
+min         1.000000       1.000000
+25%         1.000000       1.000000
+50%         1.000000       2.000000
+75%         1.000000       5.000000
+max       242.000000     788.000000
+
+count    3216.000000
+mean       10.735697
+std        40.664624
+min         1.000000
+25%         1.000000
+50%         2.000000
+75%         5.000000
+max       788.000000
+Name: mun_inscritos, dtype: float64
+
+Conductores-0
+
+       vacantes_opec  mun_inscritos
+count     704.000000     704.000000
+mean        2.264205      44.531250
+std         3.593668      73.922428
+min         1.000000       1.000000
+25%         1.000000       8.000000
+50%         1.000000      17.000000
+75%         2.000000      45.000000
+max        48.000000     646.000000
+
+count    704.000000
+mean      44.531250
+std       73.922428
+min        1.000000
+25%        8.000000
+50%       17.000000
+75%       45.000000
+max      646.000000
+Name: mun_inscritos, dtype: float64
+
+Conductores-1
+
+       vacantes_opec  mun_inscritos
+count      15.000000      15.000000
+mean        1.333333       2.600000
+std         0.487950       1.681836
+min         1.000000       1.000000
+25%         1.000000       1.500000
+50%         1.000000       2.000000
+75%         2.000000       3.000000
+max         2.000000       7.000000
+
+count    15.000000
+mean      2.600000
+std       1.681836
+min       1.000000
+25%       1.500000
+50%       2.000000
+75%       3.000000
+max       7.000000
+Name: mun_inscritos, dtype: float64
+
+SIMO_asc_ing-0
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 44.664%
+
+Test Mean Squared Error (MSE): 0.553
+
+Test Mean Absolute Error (MAE): 0.588
+
+SIMO_asc_ing-0
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: 54.082%
+
+Test Mean Squared Error (MSE): 0.459
+
+Test Mean Absolute Error (MAE): 0.536
+
+SIMO_asc_ing-1
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 31.477%
+
+Test Mean Squared Error (MSE): 0.685
+
+Test Mean Absolute Error (MAE): 0.582
+
+SIMO_asc_ing-1
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: 36.106%
+
+Test Mean Squared Error (MSE): 0.639
+
+Test Mean Absolute Error (MAE): 0.569
+
+Conductores-0
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 30.778%
+
+Test Mean Squared Error (MSE): 0.692
+
+Test Mean Absolute Error (MAE): 0.678
+
+Conductores-0
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: 30.868%
+
+Test Mean Squared Error (MSE): 0.691
+
+Test Mean Absolute Error (MAE): 0.680
+
+Conductores-1
+
+Red Neuronal lento
+
+Coeficiente de Determinación por r2_score: 5.195%
+
+Test Mean Squared Error (MSE): 0.948
+
+Test Mean Absolute Error (MAE): 0.787
+
+Conductores-1
+
+Red Neuronal rapido
+
+Coeficiente de Determinación por r2_score: 2.969%
+
+Test Mean Squared Error (MSE): 0.970
+
+Test Mean Absolute Error (MAE): 0.781
+

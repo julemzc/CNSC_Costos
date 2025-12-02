@@ -3,7 +3,9 @@
 
 # #### Librerias
 import pandas as pd
+import numpy as np
 import math
+import os
 import pickle
 from sqlalchemy.types import String
 
@@ -13,33 +15,43 @@ from src.A_Generales import lprint, openSimo, openCosteo, fConsultaScript, fCons
 #Retorna los datos de la tabla nn_simo
 def rDatosSimo():
     lprint("Inicio - Crear y Leer historico de Simo")
-    if nnSimoUltimo():
-        lprint("\n\nConsulta Simo y completar base nn_simo")
+    archivoPkl = 'config/dfEmpleo.pkl'
+    if nnSimoUltimo() or not os.path.exists(archivoPkl):
+        lprint("Consulta Simo y completar base nn_simo")
+        lprint("Consulta Historico")
         df = ConsultaSQL(openSimo, 'sql/historico.sql')
-
+        lprint("Cruce con Municipios")
         df = pd.merge(df, bdMunicipio(), on='codigo_dane', how='left')
+        lprint("Cruce con Experiencia")
         df = pd.merge(df, ConsultaSQL(openSimo, 'sql/experiencia.sql'), on='empleo_id', how= 'left')
+        lprint("Rellenar Datos")
         df = fRellenarDatos(df)
+        lprint("Agregar SMMLV")
         df = fAgregarSmmlvAgno(df)
 
         # corregir tipo de datos
+        lprint("Corregir tipos de datos")
         df, dty = fCorregirTipoDatos(df)
 
         # Insertar datos histórico en la tabla nn_simo
         ml = openCosteo()[1]
+        lprint("Eliminar vista")
         fEjecutaScript(openCosteo, f'DROP VIEW IF EXISTS {ml}.nn_simo_unico;')
+        lprint("Crear tabla nn_simo")
         fCrearTabla(df, engineCosteo(), ml,'nn_simo', dty)
+        lprint("Crear vista nn_simo_unico")
         fEjecutaDDL(openCosteo, 'sql/nn_simo_unico.sql')
 
         # consulta nn_simo
         lprint("Consulta tabla nn_simo")
         df = fConsultaSimo()
 
-        with open('config/dfEmpleo.pkl', 'wb') as fileP:
+        with open(archivoPkl, 'wb') as fileP:
             pickle.dump(df, fileP)
     else:
-        with open('config/dfEmpleo.pkl', 'rb') as fileP:
+        with open(archivoPkl, 'rb') as fileP:
             df = pickle.load(fileP)
+        
     lprint("FIN de lectura de nn_simo \n")
     return df
 
@@ -47,14 +59,16 @@ def rDatosSimo():
 # retorna si debe actualizar la tabla nn_simo si supera los días del parametro
 def nnSimoUltimo():
     ml = openCosteo()[1]
+    lprint("Consulta de los días para actualizar nn_simo")
     dias = int(fConsultaScript(openCosteo, f"select valor from {ml}.np_parametros where tipo = 'nn_simo'").loc[0,'valor'])
-
+    lprint("Consulta fecha última actualización nn_simo")
     query =  f"""
         select max(fecha_actualizacion) fecha_simo, 
         current_timestamp AT TIME ZONE 'EST' AS fecha_actual
         from {ml}.nn_simo
         """
     df = fConsultaScript(openCosteo, query)
+    lprint("Calcular diferencia de días")
     df['diferencia'] = df['fecha_actual'].dt.tz_localize(None) - df['fecha_simo'].dt.tz_localize(None)
     df['diferencia'] = df['diferencia'].dt.total_seconds() / (60 * 60 * 24)
     diferencia = math.ceil(df['diferencia'].loc[0])
@@ -92,10 +106,10 @@ def fRellenarDatos(df):
     vsn = vs[vs['grado_nivel_id'].isnull()]
     vsc = vsn.groupby('empleo_id').size().reset_index(name='cont')
     vs1 = vsc[vsc['cont'] == 1]
-    vs_final = vsn[vsn['empleo_id'].isin(vs1['empleo_id'])]
-    if vs_final.shape[0] > 0:
-        df.loc[df['empleo_id'].isin(vs_final['empleo_id']), 'grado_nivel_id'] = vs_final['grado_nivel'].values
-        df.loc[df['empleo_id'].isin(vs_final['empleo_id']), 'grado'] = vs_final['grado_gn1'].values
+#    vs_final = vs.copy()
+#    if vs_final.shape[0] > 0:
+#        df.loc[df['empleo_id'].isin(vs_final['empleo_id']), 'grado_nivel_id'] = vs_final['grado_nivel'].values
+#        df.loc[df['empleo_id'].isin(vs_final['empleo_id']), 'grado'] = vs_final['grado_gn1'].values
     return df
 
 
@@ -107,7 +121,9 @@ def fAgregarSmmlvAgno(df):
 
     # Ajuste de Salarios mínimos
     sl = pd.merge(df, fSalarios(), on='agno', how='inner')
-    sl['smmlv'] = round(sl['asignacion_salarial'] / sl['agno_smmlv'],2)
+    sl['smmlv'] = 0
+    if sl['agno_smmlv'].count() > 0:  # count() ignora nulos
+        sl['smmlv'] = ((sl['asignacion_salarial'] / sl['agno_smmlv']).round(2)).fillna(0)
     sl1 = sl[fCorregirInt(sl['smmlv']) >= 1]
     if sl1.shape[0] > 0:
         df.loc[df['empleo_id'].isin(sl1['empleo_id']), 'smmlv'] = sl1['smmlv'].values
@@ -128,7 +144,7 @@ def fCorregirTipoDatos(df):
 
     # ajustar datos de la base nn_simo
     if 'inscritos' in df.columns:
-        for col in ['inscritos', 'aprobo_vrm', 'aprobo_escritas', 'mun_inscritos', 'mun_aprobo_vrm', 'mun_aprobo_escritas']:
+        for col in ['inscritos', 'aprobo_vrm', 'aprobo_escritas', 'mun_inscritos', 'mun_aprobo_vrm', 'mun_aprobo_escritas', 'pcd_inscritos', 'pcd_psicosocial', 'pcd_intelectual', 'pcd_auditiva', 'pcd_visual', 'pcd_fisica', 'pcd_multiple', 'pcd_sordoceguera']:
             df[col] = fCorregirInt(df[col])
 
     for col in ['concurso_ascenso','etiqueta','sin_experiencia']:
@@ -170,6 +186,7 @@ def fConsultaSimo():
     df = fCorregirTipoDatos(df)[0]
 
     if any(item in lista for item in ['smmlv', 'asignacion_salarial']):
+#        print("ENTRÓ A ELIMINAR LOS NULOS SMMLV -----------------------------")
         df = df[~pd.isnull(df['smmlv'])]
         df.reset_index(drop=True, inplace=True)
 
@@ -225,6 +242,31 @@ def rConvocatoriaSimo(id_convocatoria =0):
         lprint("Convocatoria NO se encuentra seleccionada")
     lprint("FIN de proyección de convocatoria")
     return df, conv
+
+
+def rEmpleosCargo(empleos=None):
+    lprint("Consulta por Cargos")
+    df = pd.DataFrame({})
+    ml = openCosteo()[1]
+
+    lista = fRetornaLista(openCosteo, f"""SELECT nombre, tipo, id FROM {ml}.np_variables WHERE activo """)
+    lista = [x.strip("'") for x in lista[0].split(',')]
+
+    col_mun = fRetornaLista(openCosteo, f"""SELECT nombre FROM {ml}.np_variables WHERE no_unico """)
+    col_mun = [x.strip("'") for x in col_mun.split(',')]
+    col_mun = col_mun + ['mun_inscritos', 'mun_aprobo_vrm', 'mun_aprobo_escritas']
+
+    df = ConsultaSQL(openSimo, 'sql/cargos.sql',empleos)
+
+    # Capturar la categoria del municipio
+    df = pd.merge(df, bdMunicipio(), on='codigo_dane', how='left')
+    df = pd.merge(df, ConsultaSQL(openSimo, 'sql/experiencia.sql'), on='empleo_id', how='left')
+    lprint('Cruce con los municipios y la experiencia')
+    df['etiqueta'] = df['etiqueta'].fillna(False).astype('bool')
+    df = fAgregarSmmlvAgno(df)
+    df, dty = fCorregirTipoDatos(df)
+    lprint("FIN de consulta de cargos")
+    return df
 
 
 # Si la convocatoria se recibe en un Excel

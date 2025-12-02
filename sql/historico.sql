@@ -39,6 +39,15 @@ esc.aprobo_escritas,
 ceil(va.vacantes*1.0 / vat.vacantes_opec * ins.inscritos) AS mun_inscritos,
 ceil(va.vacantes*1.0 / vat.vacantes_opec * vrm.aprobo_vrm) AS mun_aprobo_vrm,
 ceil(va.vacantes*1.0 / vat.vacantes_opec * esc.aprobo_escritas) AS mun_aprobo_escritas,
+pcd_inscritos,
+va.vacantes*1.0 / vat.vacantes_opec * pcd_inscritos AS mun_pcd_inscritos,
+pcd_psicosocial,
+pcd_intelectual,
+pcd_auditiva,
+pcd_visual,
+pcd_fisica,
+pcd_multiple,
+pcd_sordoceguera,
 current_timestamp AS fecha_actualizacion
 FROM public.empleo em
 LEFT JOIN public.convocatoria co ON (em.convocatoria_id = co.id AND em.entidad_id IS NULL and co.estado IN ('A','P'))
@@ -114,5 +123,29 @@ LEFT JOIN (
     GROUP BY ic.empleo_id, ic.id HAVING COUNT(*) = COUNT(CASE WHEN ep.aprobo THEN 1 END)
     ) sub GROUP BY 1
   ) esc ON (em.id = esc.empleo_id)
+LEFT JOIN (
+  SELECT
+  empleo_id,
+  count(DISTINCT dc.ciudadano_id) pcd_inscritos,
+  count(DISTINCT dc1.ciudadano_id) pcd_psicosocial,
+  count(DISTINCT dc3.ciudadano_id) pcd_intelectual,
+  count(DISTINCT dc4.ciudadano_id) pcd_auditiva,
+  count(DISTINCT dc5.ciudadano_id) pcd_visual,
+  count(DISTINCT dc6.ciudadano_id) pcd_fisica,
+  count(DISTINCT dc7.ciudadano_id) pcd_multiple,
+  count(DISTINCT dc8.ciudadano_id) pcd_sordoceguera
+  FROM public.empleo em
+  INNER JOIN public.inscripcion_convocatoria ic ON (em.id = ic.empleo_id AND ic.estado = 'I')
+  INNER JOIN public.ciudadano c ON ic.ciudadano_id = c.id AND c.certificado_discapacidad
+  INNER JOIN public.discapacidad_ciudadano dc ON ic.ciudadano_id = dc.ciudadano_id
+  LEFT JOIN public.discapacidad_ciudadano dc1 ON ic.ciudadano_id = dc1.ciudadano_id AND dc1.discapacidad_id = 1
+  LEFT JOIN public.discapacidad_ciudadano dc3 ON ic.ciudadano_id = dc3.ciudadano_id AND dc3.discapacidad_id = 3
+  LEFT JOIN public.discapacidad_ciudadano dc4 ON ic.ciudadano_id = dc4.ciudadano_id AND dc4.discapacidad_id = 4
+  LEFT JOIN public.discapacidad_ciudadano dc5 ON ic.ciudadano_id = dc5.ciudadano_id AND dc5.discapacidad_id = 5
+  LEFT JOIN public.discapacidad_ciudadano dc6 ON ic.ciudadano_id = dc6.ciudadano_id AND dc6.discapacidad_id = 6
+  LEFT JOIN public.discapacidad_ciudadano dc7 ON ic.ciudadano_id = dc7.ciudadano_id AND dc7.discapacidad_id = 7
+  LEFT JOIN public.discapacidad_ciudadano dc8 ON ic.ciudadano_id = dc8.ciudadano_id AND dc8.discapacidad_id = 8
+  GROUP BY 1
+  ) pcd on em.id = pcd.empleo_id
 WHERE co.id NOT IN (434453448, 434453496, 58430971, 249696787, 108234, 460524154, 216315919, 59252980, 53155286, 1599964, 1160535)
 AND COALESCE(padre.id, -1) NOT IN (10000, 10010, 10110, 10220, 145543242, 434431366);
