@@ -8,9 +8,9 @@ import pickle
 import time
 import ast
 import os
-import mlflow
-import mlflow.keras
-from mlflow.models.signature import infer_signature
+import mlflow # type: ignore
+import mlflow.keras # type: ignore
+from mlflow.models.signature import infer_signature # type: ignore
 
 # Librerias redes neuronales
 from sklearn.preprocessing import StandardScaler #, PowerTransformer, QuantileTransformer, RobustScaler, LabelEncoder, MinMaxScaler
@@ -97,7 +97,7 @@ def fFiltroEscenario(dfFiltra, Campo, Operador, Valor):
     except ValueError:
         pass
 
-    if type(Valor) == str:
+    if type(Valor) == str or Campo == 'nit':
         switcher = {
             '==': dfFiltra[dfFiltra[Campo] == Valor],
             '!=': dfFiltra[dfFiltra[Campo] != Valor],
@@ -111,7 +111,7 @@ def fFiltroEscenario(dfFiltra, Campo, Operador, Valor):
             'notnull': dfFiltra[dfFiltra[Campo].notnull()]
         }
 
-    elif type(Valor) == int:
+    elif type(Valor) == int and Campo != 'nit':
         switcher = {
             '==': dfFiltra[dfFiltra[Campo] == Valor],
             '!=': dfFiltra[dfFiltra[Campo] != Valor],
@@ -265,19 +265,20 @@ def fAjustarModelo(Dict, listaRed, es_kfold=False):
 
             detener = EarlyStopping(
                 monitor='val_loss',
-                patience=25, #max(20, red[4] // 10),
+                patience=10,
                 restore_best_weights=True,
                 mode='min',
-                min_delta=0.0005
+                min_delta=0.001,
+                verbose=1
             )
             aprenda = ReduceLROnPlateau(
                 monitor='val_loss',
                 factor=0.5,  
-                patience=10, #max(5, red[4] // 20),
-                min_delta=0.0005,
-                min_lr=1e-6,
+                patience=5,
+                min_delta=0.001,
+                min_lr=1e-5,
                 verbose=1,
-                cooldown=2
+                cooldown=1
             )
             checkpoint = ModelCheckpoint(
                 f'Mejor escenario: {escenario}_red_{red[0]}.keras',
@@ -303,7 +304,7 @@ def fAjustarModelo(Dict, listaRed, es_kfold=False):
                         batch_size=red[5],
                         validation_data=(X_val, y_val),
                         verbose=0,
-                        callbacks=[detener, aprenda, checkpoint]
+                        callbacks=[detener, aprenda]
                     )
                     val_scores.append(min(historial.history['val_loss']))
             else:

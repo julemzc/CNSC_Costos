@@ -80,7 +80,7 @@ def generar_excel(ejecucion_id):
     
     lprint(f"Generando Excel...")
     lprint(f" Ubicación: {nombre}.xlsx")
-    
+
     try:
         fResultadosExcel(ejecucion_id, nombre)
         # Verificar que se haya creado el archivo

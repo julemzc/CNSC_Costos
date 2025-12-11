@@ -3,14 +3,13 @@
 
 # #### Librerias
 import pandas as pd
-import numpy as np
 import math
 import os
 import pickle
 from sqlalchemy.types import String
 
 # Funciones Generales
-from src.A_Generales import lprint, openSimo, openCosteo, fConsultaScript, fConsultaTabla, fCrearTabla, engineCosteo, fSalarios, fRetornaLista, fCorregirInt, rTecho, ConsultaSQL, fEjecutaDDL, fEjecutaScript # type: ignore
+from src.A_Generales import *
 
 #Retorna los datos de la tabla nn_simo
 def rDatosSimo():

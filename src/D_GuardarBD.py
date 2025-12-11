@@ -10,7 +10,7 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 from sklearn.preprocessing import MinMaxScaler
 
 # Funciones Generales
-from src.A_Generales import lprint, closeConnection, fConsultaScript, fEjecutaScript, fRetornaLista, openCosteo, fInsertaRegistros, fCorregirInt # type: ignore
+from src.A_Generales import *
 from src.B_Historico import fVariables # type: ignore
 
 # Generar el Json de auditoria
@@ -61,36 +61,38 @@ def fInsertar_npEjecucion(Dict, dfCostos, ml, filtro=None):
   
     #### Crea una nueva ejecución
     query = f"""
-    INSERT INTO {ml}.np_ejecucion (id, fecha_creacion, hostname, ip, variables, redneuronal, escenarios, filtro)
-    SELECT COALESCE(max(id),0) + 1 AS maximo,
+    INSERT INTO {ml}.np_ejecucion (id, fecha_creacion, hostname, ip, variables, redneuronal, escenarios, filtro, ruta)
+    SELECT COALESCE(max(id),0) + 1 AS id,
     CURRENT_TIMESTAMP as fecha_creacion,
     '{socket.gethostname()}' AS hostname,
     '{socket.gethostbyname(socket.gethostname())}' AS ip,
     '{variables}' AS variables,
     '{redNeuronal}' AS redneuronal,
     '{escenarios}' AS escenarios,
-    '{filtro}' AS filtro
+    '{filtro}' AS filtro,
+    '{load_config()['output_dir']}' || 'Resultados_' || (COALESCE(max(id),0) + 1) || '_' || TO_CHAR(CURRENT_TIMESTAMP, 'yymmdd-hh24mi') AS ruta
     FROM {ml}.np_ejecucion
     """
     fEjecutaScript(openCosteo, query)
 
     #### Calcula ultima ejecución y la hora del sistema
     query = f"""
-        SELECT COALESCE(max(id),0) AS maximo, CURRENT_TIMESTAMP AS tiempo
-        FROM {ml}.np_ejecucion
+    SELECT id, fecha_creacion, ruta
+    FROM {ml}.np_ejecucion
+    ORDER BY id DESC
+    LIMIT 1;
     """
     dfTemp = fConsultaScript(openCosteo, query)
 
-    ejecucion = dfTemp.iloc[0]['maximo']
-    fecha_creacion = dfTemp.iloc[0]['tiempo']
+    ejecucion = dfTemp.iloc[0]['id']
+    fecha_creacion = dfTemp.iloc[0]['fecha_creacion']
+    ruta = dfTemp.iloc[0]['ruta']
 
     #### Agregar campos adicionales a dfCostos
-    dfCostos['id'] = dfCostos.index
-    dfCostos['ejecucion_id'] = ejecucion
-    dfCostos['fecha_creacion'] = fecha_creacion
+    dfCostos = dfCostos.assign(id=dfCostos.index, ejecucion_id=ejecucion, fecha_creacion=fecha_creacion, ruta=ruta)
 
     lprint(f"Ejecucion creada: {str(ejecucion)}")
-    return dfCostos, ejecucion
+    return dfCostos, ejecucion, ruta
 
 
 # Insertar datos en nn_empleo
@@ -276,7 +278,7 @@ def fProyectaConvocatoria(ml, ejecucion, listaConv):
 def fGuardarResultados(Dict, dfCostos, Convocatoria, co):
     lprint("Inicio - Guardar resultados en la BD")
     ml = openCosteo()[1]
-    dfCostos, ejecucion = fInsertar_npEjecucion(Dict, dfCostos, ml, co[0])
+    dfCostos, ejecucion, ruta = fInsertar_npEjecucion(Dict, dfCostos, ml, co[0])
 
     if dfCostos.shape[0] > 0:
         #Insertar los datos en cada una de las tablas de bdCosteo
@@ -289,4 +291,4 @@ def fGuardarResultados(Dict, dfCostos, Convocatoria, co):
         fProyectaConvocatoria(ml, ejecucion, co[1])
         lprint('Inserción en tablas finalizada')
     lprint("FIN - Resultados guardados en la BD \n")
-    return dfCostos, ejecucion
+    return dfCostos, ejecucion, ruta

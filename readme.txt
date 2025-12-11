@@ -3,8 +3,10 @@ python -m venv .venv
 
 
 .venv\Scripts\python.exe -m pip install --upgrade pip 
-pip install pandas psycopg2 sqlalchemy unidecode mlflow keras tensorflow seaborn statsmodels xlsxwriter
-pip install streamlit, flask_restful flask_cors geopy folium
+# pip install pandas flask_restful flask_cors geopy folium
+pip install streamlit psycopg2 pyyaml sqlalchemy unidecode mlflow
+pip install keras tensorflow seaborn statsmodels xlsxwriter
+
 
 pip freeze > requeriments.txt
 
