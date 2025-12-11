@@ -11,11 +11,11 @@ sum(CASE WHEN ce.etiqueta_id = 40003 THEN CASE WHEN cc.unidad_id = 12 THEN cc.va
 sum(CASE WHEN ce.etiqueta_id = 40006 THEN CASE WHEN cc.unidad_id = 12 THEN cc.valor::int ELSE CEIL(cc.valor::int / 12.0) END ELSE 0 END) AS exp_labo_relacionada,
 sum(CASE WHEN ce.etiqueta_id = 40002 THEN CASE WHEN cc.unidad_id = 12 THEN cc.valor::int ELSE CEIL(cc.valor::int / 12.0) END ELSE 0 END) AS exp_relacionada,
 TRUE etiqueta
-FROM public.requisito_minimo rm
-INNER JOIN public.criterio cr ON (rm.id = cr.id AND cr.tipo = 'RM' AND rm.id NOT IN (318271909,756853788,456467562))
-INNER JOIN public.criterio_item ci ON (cr.id = ci.criterio_id )
-LEFT JOIN public.item_criterio_etiqueta ce ON ci.id = ce.criterio_item_id AND ce.etiqueta_id IN (40001, 40005, 40003, 40006, 40002)
-LEFT JOIN public.cantidad_criterio cc ON ce.id = cc.item_criterio_etiqueta_id
+FROM {esquema}.requisito_minimo rm
+INNER JOIN {esquema}.criterio cr ON (rm.id = cr.id AND cr.tipo = 'RM' AND rm.id NOT IN (318271909,756853788,456467562))
+INNER JOIN {esquema}.criterio_item ci ON (cr.id = ci.criterio_id )
+LEFT JOIN {esquema}.item_criterio_etiqueta ce ON ci.id = ce.criterio_item_id AND ce.etiqueta_id IN (40001, 40005, 40003, 40006, 40002)
+LEFT JOIN {esquema}.cantidad_criterio cc ON ce.id = cc.item_criterio_etiqueta_id
 GROUP BY 1,2,3
 UNION
 SELECT
@@ -66,9 +66,9 @@ FROM (
       OR COALESCE(cr.experiencia, '') ~* '(sin exper|no requie|no se requie|n/a|ning|cero|00 mes|0000|no aplica|no exige|no se exige|sin requisito|o reporta|o requerida|No  Aplica|no especifica|No / Aplica)')
     THEN 'NO REQUIERE EXPERIENCIA'
     ELSE trim(REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(TRANSLATE(lower(experiencia),'áéíóú','aeiou'),'28 años|25 años|18 años|año 2005|160 horas',''), E'[\\n\\r\\t,;:°|().”•]+', ' ', 'g'),'  ',' ')) END AS experiencia
-    FROM public.requisito_minimo rm
-    LEFT JOIN public.criterio cr ON (rm.id = cr.id AND cr.tipo = 'RM')
-    WHERE cr.id NOT IN (SELECT criterio_id FROM public.criterio_item)
+    FROM {esquema}.requisito_minimo rm
+    LEFT JOIN {esquema}.criterio cr ON (rm.id = cr.id AND cr.tipo = 'RM')
+    WHERE cr.id NOT IN (SELECT criterio_id FROM {esquema}.criterio_item)
     ORDER BY rm.empleo_id, cr.id DESC
   ) rm1
   LEFT JOIN ( VALUES ('un ',1), ('uno ',1), ('dos ',2), ('tres ',3), ('cuatro ',4), ('cinco ',5), ('seis ',6), ('siete ',7), ('ocho ',8), ('nueve ',9), ('diez ',10), ('once ',11), ('doce ',12), 

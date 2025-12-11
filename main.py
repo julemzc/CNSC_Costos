@@ -2,22 +2,21 @@
 # coding: utf-8
 
 # # Red neuronal para proyectar los inscritos para una convocatoria
+# Autor: Julián Leonardo Martínez C.
+# Fecha: Diciembre de 2025
+# Descripción: Este script implementa una red neuronal para proyectar los inscritos en una convocatoria específica utilizando datos históricos de empleo. El proceso incluye la lectura de datos, entrenamiento del modelo, proyección de resultados y almacenamiento de los mismos en una base de datos, así como la generación de reportes en Excel y PDF.
 
 #librerias
-import os
 import pandas as pd
-import time
-from datetime import datetime
-
-# Maximo de columnas
-pd.options.display.max_columns = None
 import warnings
+import os
 warnings.filterwarnings('ignore')
+pd.options.display.max_columns = None
 
 # Importar funciones
-from src.A_Generales import lprint, load_config
-from src.B_Historico import rDatosSimo, rConvocatoriaSimo
-from src.C_RedNeuronal import fEscenarios, fEntrenamiento, fProyeccion
+from src.A_Generales import *
+from src.B_Historico import *
+from src.C_RedNeuronal import fEntrenamiento, fProyeccion
 from src.D_GuardarBD import fGuardarResultados
 from src.E_Resultados import fResultadosExcel, fResultadosTexto, fResultadosGraficas, rArchivoZip
 
@@ -41,18 +40,17 @@ def pipeline(id_convocatoria):
         lprint("FIN - Proyección de inscritos finalizada \n")
         
         lprint("Inicio - Guardar resultados en la BD")
-        dfCostos, ejecucion = fGuardarResultados(Dict, dfCostos, Convocatoria, co)
+        dfCostos, ejecucion, ruta = fGuardarResultados(Dict, dfCostos, Convocatoria, co)
         lprint("FIN - Resultados guardados en la BD \n")
 
         lprint("Inicio - Exportar resultados a Excel y PDF")
-        nombre = load_config()['output_dir'] + 'Resultados_' + str(ejecucion)+"_"+time.strftime("%y%m%d_%H%M%S")
-        fResultadosExcel(ejecucion, nombre)
-        fResultadosGraficas(Dict, dfEmpleo, nombre)
-        fResultadosTexto(Dict, nombre)
-        rArchivoZip(nombre)
-        lprint(f"FIN - Resultados en Excel y PDF {nombre}")
+        fResultadosExcel(ejecucion, ruta)
+        fResultadosTexto(Dict, ruta)
+        fResultadosGraficas(Dict, dfEmpleo, ruta)
+        rArchivoZip(ruta)
+        lprint(f"FIN - Resultados en Excel y PDF {ruta}")
     else:
-        lprint("Convocatoria NO seleccionada")
+        lprint(f"Convocatoria {id_convocatoria} NO seleccionada")
 
     lprint("FIN del Pipeline")
 
