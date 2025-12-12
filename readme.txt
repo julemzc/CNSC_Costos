@@ -23,3 +23,10 @@ cd Costos
 .venv\Scripts\activate
 
 streamlit run main_streamlit.py
+
+
+# actualizar el GIT
+git add .
+git commit -m "Ajustes x"
+git push gitlab develop
+git push origin develop

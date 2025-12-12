@@ -194,27 +194,27 @@ def fConsultaSimo():
 
 
 # ####  Consulta de Empleos a proyectar 
-def rConvocatoriaSimo(id_convocatoria =0):
+def rConvocatoriaSimo(conv_id=0):
     lprint("Inicio - Seleccionar convocatoria a proyectar")
     df = pd.DataFrame({})
     ml = openCosteo()[1]
 
-    lprint(f'La convocatoria es: {str(id_convocatoria)}')
-    if id_convocatoria == 0:
-        id_convocatoria = fConsultaScript(openCosteo, f"select valor from {ml}.np_parametros where tipo = 'convocatorias'").loc[0,'valor']
+    lprint(f'La convocatoria es: {str(conv_id)}')
+    if conv_id == 0:
+        conv_id = fConsultaScript(openCosteo, f"select valor from {ml}.np_parametros where tipo = 'convocatorias'").loc[0,'valor']
     query = f"""
-    SELECT convocatoria_id, id
+    SELECT convocatoria_id, id, nombre
     FROM seleccion_convocatoria
     WHERE NOT proyectar
     AND ejecucion_id IS NULL
-    AND convocatoria_id IN ({str(id_convocatoria)})
+    AND (convocatoria_id IN ({str(conv_id)}) OR nombre = '{str(conv_id)}')
     ORDER BY id
     LIMIT 1
     """
     conv = fRetornaLista(openCosteo, query)
 
     if conv != None:
-        lprint(f'Consulta de la convocatoria {str(conv[0])}')
+        lprint(f'Consulta de la convocatoria {str(conv[0])} / {str(conv[2])}')
 
         lista = fRetornaLista(openCosteo, f"""SELECT nombre, tipo, id FROM {openCosteo()[1]}.np_variables WHERE activo """)
         lista = [x.strip("'") for x in lista[0].split(',')]
@@ -223,11 +223,17 @@ def rConvocatoriaSimo(id_convocatoria =0):
         col_mun = [x.strip("'") for x in col_mun.split(',')]
         col_mun = col_mun + ['mun_inscritos', 'mun_aprobo_vrm', 'mun_aprobo_escritas']
 
+        lprint(str(conv))
+        par_conv = conv[2] if int(conv[0].replace("'", "")) == -1 else conv[0]
+        par_ids = [int(x.strip()) for x in par_conv.replace("'", "").split(',') if x.strip()]
+        par_ids = f"({par_ids[0]})" if len(par_ids) == 1 else str(tuple(par_ids))
+        lprint(par_ids)
+
         # si hay una variable de municipio
         if any(item in lista for item in col_mun):
-            df = ConsultaSQL(openSimo, 'sql/convocatorias.sql', conv[0])
+            df = ConsultaSQL(openSimo, 'sql/convocatorias.sql', par_ids)
         else:
-            df = ConsultaSQL(openSimo, 'sql/convocatorias_unico.sql', conv[0])
+            df = ConsultaSQL(openSimo, 'sql/convocatorias_unico.sql', par_ids)
 
         # Capturar la categoria del municipio
         df = pd.merge(df, bdMunicipio(), on='codigo_dane', how='left')

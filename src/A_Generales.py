@@ -208,12 +208,12 @@ def fCrearTabla(miDF, miEngine, miEsquema, miTabla, miDtype=False):
 
 
 # #### Consulta desde un archivo .sql
-def ConsultaSQL(conexion, ruta, convocatoria_id=None):
+def ConsultaSQL(conexion, ruta, conv_id=None):
     lprint("Inicio consulta " + ruta)
     try:
         with open(ruta, 'r', encoding='utf-8') as archivo:
             query = archivo.read()
-            query = query.format(esquema=conexion()[1], convocatoria_id=convocatoria_id)
+            query = query.format(esquema=conexion()[1], convocatoria_id=conv_id)
 
         df = fConsultaScript(conexion, query)
         lprint("Fin consulta " + ruta + " " + str(df.shape))

@@ -1,0 +1,335 @@
+inscritos ~ mun_categoria + smmlv + vacantes + nivel
+
+SIMO_asc_ing-0
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.093
+Model:                            OLS   Adj. R-squared:                  0.093
+Method:                 Least Squares   F-statistic:                     601.4
+Date:               ju., 11 dic. 2025   Prob (F-statistic):          2.26e-249
+Time:                        18:11:49   Log-Likelihood:                -16457.
+No. Observations:               11721   AIC:                         3.292e+04
+Df Residuals:                   11718   BIC:                         3.294e+04
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept         3.7136      0.023    162.094      0.000       3.669       3.759
+mun_categoria  1.469e-17   9.71e-20    151.200      0.000    1.45e-17    1.49e-17
+smmlv             0.0899      0.005     16.506      0.000       0.079       0.101
+vacantes          0.0281      0.001     31.117      0.000       0.026       0.030
+nivel                  0          0        nan        nan           0           0
+==============================================================================
+Omnibus:                      733.205   Durbin-Watson:                   0.911
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             2031.738
+Skew:                           0.338   Prob(JB):                         0.00
+Kurtosis:                       4.925   Cond. No.                          inf
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is      0. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ mun_categoria + smmlv + vacantes + nivel
+
+SIMO_asc_ing-1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.090
+Model:                            OLS   Adj. R-squared:                  0.090
+Method:                 Least Squares   F-statistic:                     243.4
+Date:               ju., 11 dic. 2025   Prob (F-statistic):          1.60e-101
+Time:                        18:11:49   Log-Likelihood:                -5985.5
+No. Observations:                4926   AIC:                         1.198e+04
+Df Residuals:                    4923   BIC:                         1.200e+04
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept         1.0732      0.031     34.096      0.000       1.012       1.135
+mun_categoria  1.551e-16   9.58e-18     16.195      0.000    1.36e-16    1.74e-16
+smmlv             0.0481      0.006      7.969      0.000       0.036       0.060
+vacantes          0.0982      0.005     20.501      0.000       0.089       0.108
+nivel                  0          0        nan        nan           0           0
+==============================================================================
+Omnibus:                     1870.151   Durbin-Watson:                   0.719
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             7965.282
+Skew:                           1.836   Prob(JB):                         0.00
+Kurtosis:                       8.033   Cond. No.                          inf
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is      0. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ mun_categoria + smmlv + vacantes + nivel
+
+Territorial >2020-0
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.112
+Model:                            OLS   Adj. R-squared:                  0.112
+Method:                 Least Squares   F-statistic:                     1478.
+Date:               ju., 11 dic. 2025   Prob (F-statistic):               0.00
+Time:                        18:11:49   Log-Likelihood:                -34859.
+No. Observations:               23379   AIC:                         6.972e+04
+Df Residuals:                   23376   BIC:                         6.975e+04
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept         2.7786      0.018    150.252      0.000       2.742       2.815
+mun_categoria  8.826e-18   1.13e-18      7.791      0.000    6.61e-18     1.1e-17
+smmlv             0.1764      0.004     39.307      0.000       0.168       0.185
+vacantes          0.0326      0.001     40.722      0.000       0.031       0.034
+nivel                  0          0        nan        nan           0           0
+==============================================================================
+Omnibus:                      414.393   Durbin-Watson:                   0.920
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              832.354
+Skew:                          -0.059   Prob(JB):                    1.81e-181
+Kurtosis:                       3.917   Cond. No.                          inf
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is      0. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ mun_categoria + smmlv + vacantes + nivel
+
+Territorial >2020-1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.119
+Model:                            OLS   Adj. R-squared:                  0.118
+Method:                 Least Squares   F-statistic:                     196.9
+Date:               ju., 11 dic. 2025   Prob (F-statistic):           6.25e-81
+Time:                        18:11:49   Log-Likelihood:                -3244.2
+No. Observations:                2919   AIC:                             6494.
+Df Residuals:                    2916   BIC:                             6512.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept         0.9712      0.043     22.515      0.000       0.887       1.056
+mun_categoria  3.495e-17   1.44e-18     24.228      0.000    3.21e-17    3.78e-17
+smmlv             0.0623      0.009      6.856      0.000       0.044       0.080
+vacantes          0.0954      0.005     19.218      0.000       0.086       0.105
+nivel                  0          0        nan        nan           0           0
+==============================================================================
+Omnibus:                      862.092   Durbin-Watson:                   1.036
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             2606.982
+Skew:                           1.513   Prob(JB):                         0.00
+Kurtosis:                       6.504   Cond. No.                          inf
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is      0. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+inscritos ~ mun_categoria + smmlv + vacantes + nivel
+
+Hospitales
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              inscritos   R-squared:                       0.134
+Model:                            OLS   Adj. R-squared:                  0.133
+Method:                 Least Squares   F-statistic:                     127.9
+Date:               ju., 11 dic. 2025   Prob (F-statistic):           2.12e-52
+Time:                        18:11:49   Log-Likelihood:                -2535.8
+No. Observations:                1661   AIC:                             5078.
+Df Residuals:                    1658   BIC:                             5094.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept         2.0064      0.055     36.343      0.000       1.898       2.115
+mun_categoria -5.259e-17   3.28e-18    -16.040      0.000    -5.9e-17   -4.62e-17
+smmlv             0.1066      0.015      6.884      0.000       0.076       0.137
+vacantes          0.0333      0.002     14.512      0.000       0.029       0.038
+nivel                  0          0        nan        nan           0           0
+==============================================================================
+Omnibus:                       34.064   Durbin-Watson:                   1.315
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               25.376
+Skew:                           0.205   Prob(JB):                     3.09e-06
+Kurtosis:                       2.554   Cond. No.                          inf
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is      0. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+SIMO_asc_ing-0
+
+              smmlv      vacantes  mun_inscritos
+count  11721.000000  11721.000000   11721.000000
+mean       3.822074      2.412678     121.161932
+std        1.671559     10.075123     287.848920
+min        1.000000      1.000000      10.000000
+25%        2.540000      1.000000      27.000000
+50%        3.390000      1.000000      54.000000
+75%        5.010000      2.000000     116.000000
+max       43.000000    600.000000   10326.000000
+
+count    11721.000000
+mean       121.161932
+std        287.848920
+min         10.000000
+25%         27.000000
+50%         54.000000
+75%        116.000000
+max      10326.000000
+Name: mun_inscritos, dtype: float64
+
+SIMO_asc_ing-1
+
+             smmlv     vacantes  mun_inscritos
+count  4926.000000  4926.000000    4926.000000
+mean      4.706539     1.503654       7.373731
+std       1.925507     2.427651      27.805127
+min       1.180000     1.000000       1.000000
+25%       3.200000     1.000000       1.000000
+50%       4.700000     1.000000       2.000000
+75%       5.870000     1.000000       5.000000
+max      12.940000    67.000000     788.000000
+
+count    4926.000000
+mean        7.373731
+std        27.805127
+min         1.000000
+25%         1.000000
+50%         2.000000
+75%         5.000000
+max       788.000000
+Name: mun_inscritos, dtype: float64
+
+Territorial >2020-0
+
+              smmlv      vacantes  mun_inscritos
+count  23379.000000  23379.000000   23379.000000
+mean       3.753870      2.306514      66.957654
+std        1.571627      8.819260     146.114126
+min        1.000000      1.000000       1.000000
+25%        2.550000      1.000000      15.000000
+50%        3.480000      1.000000      32.000000
+75%        4.830000      2.000000      70.000000
+max       11.360000    440.000000    5968.000000
+
+count    23379.000000
+mean        66.957654
+std        146.114126
+min          1.000000
+25%         15.000000
+50%         32.000000
+75%         70.000000
+max       5968.000000
+Name: mun_inscritos, dtype: float64
+
+Territorial >2020-1
+
+             smmlv     vacantes  mun_inscritos
+count  2919.000000  2919.000000    2919.000000
+mean      4.344786     1.529633       5.529291
+std       1.507108     2.756585      14.841304
+min       1.210000     1.000000       1.000000
+25%       3.190000     1.000000       1.000000
+50%       4.180000     1.000000       2.000000
+75%       5.350000     1.000000       5.000000
+max      10.670000    67.000000     389.000000
+
+count    2919.000000
+mean        5.529291
+std        14.841304
+min         1.000000
+25%         1.000000
+50%         2.000000
+75%         5.000000
+max       389.000000
+Name: mun_inscritos, dtype: float64
+
+Hospitales
+
+            smmlv     vacantes  mun_inscritos
+count  1661.00000  1661.000000    1661.000000
+mean      3.05012     3.420831      24.983143
+std       1.76719    11.920137      50.305450
+min       1.00000     1.000000       1.000000
+25%       1.75000     1.000000       3.000000
+50%       2.31000     1.000000       9.000000
+75%       3.98000     2.000000      25.000000
+max      10.00000   258.000000     881.000000
+
+count    1661.000000
+mean       24.983143
+std        50.305450
+min         1.000000
+25%         3.000000
+50%         9.000000
+75%        25.000000
+max       881.000000
+Name: mun_inscritos, dtype: float64
+
+SIMO_asc_ing-0
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 38.967%
+
+Test Mean Squared Error (MSE): 0.610
+
+Test Mean Absolute Error (MAE): 0.614
+
+SIMO_asc_ing-1
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 23.789%
+
+Test Mean Squared Error (MSE): 0.762
+
+Test Mean Absolute Error (MAE): 0.628
+
+Territorial >2020-0
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 37.645%
+
+Test Mean Squared Error (MSE): 0.624
+
+Test Mean Absolute Error (MAE): 0.614
+
+Territorial >2020-1
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 24.262%
+
+Test Mean Squared Error (MSE): 0.757
+
+Test Mean Absolute Error (MAE): 0.639
+
+Hospitales
+
+Red Neuronal medio
+
+Coeficiente de Determinación por r2_score: 39.642%
+
+Test Mean Squared Error (MSE): 0.604
+
+Test Mean Absolute Error (MAE): 0.621
+

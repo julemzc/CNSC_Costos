@@ -14,6 +14,7 @@ co.id AS conv_id,
 trim(regexp_replace(co.nombre, E'[\\n\\r\\t,;|]+', ' ', 'g')) AS conv_nombre,
 co.agno AS conv_agno,
 co.estado AS conv_estado,
+co.tipo_proceso AS conv_proceso,
 padre.id AS conv_padre_id,
 padre.nombre AS conv_padre,
 regexp_replace(en.nombre,'\t|\n','') AS entidad,
@@ -84,4 +85,4 @@ LEFT JOIN (
     GROUP BY 1,2,3
     ) sub GROUP BY 1
   ) nbc ON (em.id = nbc.empleo_id)
-WHERE co.id in ({convocatoria_id}) OR padre.id in ({convocatoria_id})
+WHERE co.id in {convocatoria_id} OR padre.id in {convocatoria_id}
